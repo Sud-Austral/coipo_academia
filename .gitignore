@@ -1,0 +1,46 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Ningún dato ni secreto entra a este repositorio.
+#
+#   · bitnami_moodle.sql pesa 295 MB → GitHub rechaza archivos sobre 100 MB.
+#   · Ese dump contiene datos personales de ~2.800 funcionarios (Ley 19.628).
+#   · moodledata pesa 10,9 GB y vive en /opt/moodledata/ del servidor.
+#
+# El repositorio guarda SOLO cómo se construye y se despliega el sistema.
+# ─────────────────────────────────────────────────────────────────────────────
+
+# Secretos
+.env
+.env.*
+!.env.example
+!.env.migracion.example
+
+# Volcados de base de datos y artefactos de migración
+*.sql
+!db/setup_bd.sql
+!plugins/**/*.sql
+/_migracion/
+traslado.log
+
+# Código fuente y datos de Moodle: se descargan en el build o viven en el servidor
+#
+# La barra inicial ancla el patrón a la raíz del repositorio, y NO es opcional:
+# git en Windows compara sin distinguir mayúsculas, así que un "Moodle/" suelto
+# también ignoraba plugins/theme/boost_magnific/scss/moodle/ y dejaba el tema
+# sin sus estilos.
+/Moodle/
+/moodledata/
+
+# Comprimidos (nunca deberían estar acá, pero por si acaso)
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.gz
+*.7z
+
+# Herramientas locales
+.claude/
+
+# Sistema
+.DS_Store
+Thumbs.db

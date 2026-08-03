@@ -1,0 +1,22 @@
+# Sin esto, cada `docker build` envía como contexto el volcado de 295 MB y todo
+# lo que haya en moodledata: minutos de espera y datos personales viajando a
+# donde no corresponde.
+
+.git
+.github
+.claude
+Moodle/
+moodledata/
+_migracion/
+docs/
+INSUMO/
+*.md
+*.sql
+*.zip
+*.tar
+*.tar.gz
+*.gz
+.env
+.env.*
+!.env.example
+traslado.log

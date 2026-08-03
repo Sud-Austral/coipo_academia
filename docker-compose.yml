@@ -1,0 +1,60 @@
+# Moodle de CONAF — estado final, sobre PostgreSQL 17 compartido.
+#
+# La base de datos NO está aquí: es el PostgreSQL 17 de 172.31.2.40, compartido
+# entre las apps de CONAF y administrado aparte. Este compose solo se conecta.
+#
+# Para la fase de conversión (cargar el volcado MariaDB), este archivo se combina
+# con docker-compose.migracion.yml — ver docs/MIGRACION.md.
+
+services:
+  app:
+    build:
+      context: .
+      args:
+        MOODLE_VERSION: ${MOODLE_VERSION:-v4.5.10}
+    env_file: .env
+    volumes:
+      # moodledata FUERA del contenedor: lectura y escritura directa sobre el
+      # disco del host. La carpeta debe pertenecer al UID 33 (www-data).
+      - ${MOODLEDATA_HOST_PATH:-/opt/moodledata/coipo_moodle}:/var/moodledata
+      # Caché local del nodo: volumen de Docker, no bind mount. Son miles de
+      # archivos chicos y Moodle los regenera solo.
+      - localcache_app:/var/localcache
+    ports:
+      # Único servicio con puerto publicado. El Nginx del servidor proxea aquí.
+      - "${APP_PORT:-8115}:80"
+    healthcheck:
+      # /health comprueba de verdad las dos cosas que pueden estar rotas: la
+      # conexión a la base y que moodledata sea escribible. Es además la ruta
+      # que usa el smoke test del despliegue CONAF.
+      test: ["CMD", "curl", "-fsS", "-o", "/dev/null", "http://localhost/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 120s
+    restart: unless-stopped
+
+  cron:
+    build:
+      context: .
+      args:
+        MOODLE_VERSION: ${MOODLE_VERSION:-v4.5.10}
+    # Explícito, y no es un detalle: si el cron corriera como root, todo lo que
+    # escriba en moodledata quedaría con dueño root y Apache (UID 33) dejaría de
+    # poder escribir ahí. Es la causa número uno de "andaba y se cayó solo".
+    user: "33:33"
+    env_file: .env
+    volumes:
+      - ${MOODLEDATA_HOST_PATH:-/opt/moodledata/coipo_moodle}:/var/moodledata
+      - localcache_cron:/var/localcache
+    # Sin puerto: no es un servicio web. El horario viaja dentro de la imagen
+    # (docker/moodle-crontab), no depende del cron de la máquina.
+    command: ["supercronic", "/etc/moodle-crontab"]
+    depends_on:
+      app:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  localcache_app:
+  localcache_cron:

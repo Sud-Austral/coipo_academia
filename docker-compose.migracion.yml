@@ -1,0 +1,73 @@
+# Fase de conversión — TEMPORAL Y DESECHABLE.
+#
+# El volcado de la plataforma original es un dump de MariaDB y no puede cargarse
+# en PostgreSQL: la sintaxis, los tipos y las secuencias son incompatibles. Este
+# MariaDB existe solo para poder leerlo; una vez que admin/tool/dbtransfer copió
+# todo a PostgreSQL, se apaga y se borra el volumen.
+#
+# Uso (ver docs/MIGRACION.md):
+#   docker compose -f docker-compose.yml -f docker-compose.migracion.yml \
+#                  --env-file /opt/migracion/coipo_moodle/.env.migracion up -d --build
+
+services:
+  mariadb-tmp:
+    # 10.11 es la misma serie del servidor de origen (10.11.15) y supera el
+    # mínimo 10.6.7 que exige Moodle 4.5.
+    image: mariadb:10.11
+    environment:
+      MARIADB_ROOT_PASSWORD: ${MARIADB_ROOT_PASSWORD:?falta MARIADB_ROOT_PASSWORD en .env.migracion}
+      MARIADB_DATABASE: ${DATABASE_NAME:-bitnami_moodle}
+      TZ: America/Santiago
+    command:
+      # El volcado trae sentencias INSERT enormes (contenido de cursos en
+      # longtext). Con el valor por defecto la carga se corta a mitad con
+      # "MySQL server has gone away" y deja la base incompleta.
+      - --max_allowed_packet=512M
+      # El volcado usa ROW_FORMAT=COMPRESSED, que exige file_per_table.
+      - --innodb_file_per_table=1
+      - --innodb_buffer_pool_size=2G
+      - --innodb_flush_log_at_trx_commit=2
+      # La carga de 295 MB tarda; sin esto la sesión expira antes de terminar.
+      - --wait_timeout=28800
+      - --interactive_timeout=28800
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+    volumes:
+      # Volumen con nombre, nunca bind mount: los datos de InnoDB sobre un
+      # sistema de archivos montado del host van de lento a inviable.
+      - mariadb_tmp:/var/lib/mysql
+      - ${DUMP_HOST_PATH:-/opt/migracion/coipo_moodle}:/dump:ro
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 10s
+      timeout: 5s
+      retries: 60
+      start_period: 60s
+    restart: unless-stopped
+
+  app:
+    depends_on:
+      mariadb-tmp:
+        condition: service_healthy
+    # El compose base trae `env_file: .env`, que apunta a PostgreSQL, y la opción
+    # --env-file NO lo cambia: esa opción solo alimenta la interpolación de
+    # ${...} dentro del propio compose. Sin esto, el contenedor seguía hablando
+    # con PostgreSQL (vacío) y Moodle fallaba con "Config table does not contain
+    # the version". `environment:` tiene prioridad sobre `env_file:`, así que
+    # aquí es donde deben ir las variables de la fase de conversión.
+    environment:
+      MOODLE_DBTYPE: mariadb
+      DATABASE_HOST: mariadb-tmp
+      DATABASE_PORT: "3306"
+      DATABASE_NAME: ${DATABASE_NAME:-bitnami_moodle}
+      DATABASE_USER: root
+      DATABASE_PASSWORD: ${MARIADB_ROOT_PASSWORD:?falta MARIADB_ROOT_PASSWORD en .env.migracion}
+
+  cron:
+    # El cron NO debe correr durante la conversión: con código 4.5.10 sobre una
+    # base 4.4.2 falla en bucle, y una vez actualizada dispararía tareas
+    # programadas sobre datos a medio migrar. Este perfil no se activa nunca.
+    profiles: ["deshabilitado"]
+
+volumes:
+  mariadb_tmp:

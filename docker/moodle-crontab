@@ -1,0 +1,11 @@
+# Cron de Moodle — lo ejecuta supercronic dentro del contenedor "cron".
+#
+# Moodle está diseñado para que esto corra cada minuto: de aquí dependen los
+# correos, las notificaciones, los respaldos automáticos, la reindexación y el
+# cálculo de notas. Si no corre, el sitio parece funcionar pero se va
+# degradando en silencio.
+#
+# El propio cron.php toma un bloqueo, así que dos ejecuciones superpuestas no
+# se pisan.
+
+* * * * * php /var/www/html/admin/cli/cron.php
