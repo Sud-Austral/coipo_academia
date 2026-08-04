@@ -28,7 +28,6 @@ namespace theme_academi;
  * Helper class for additional function on the acadmei theme.
  */
 class helper {
-
     /**
      * Load all configurable image url into the scss content.
      *
@@ -44,11 +43,11 @@ class helper {
         // Prepend variables first.
         foreach ($configurable as $configkey => $targets) {
             $url = ( $theme->setting_file_url($configkey, $configkey) ) ? $theme->setting_file_url($configkey, $configkey) : null;
-            $value = (!empty($url)) ? "('".$url."')" : '';
+            $value = (!empty($url)) ? "('" . $url . "')" : '';
             if (empty($value)) {
                 continue;
             }
-            array_map(function($target) use (&$scss, $value) {
+            array_map(function ($target) use (&$scss, $value) {
                 $scss .= '$' . $target . ': ' . $value . ";\n";
             }, (array) $targets);
         }
@@ -68,23 +67,6 @@ class helper {
         $slideopacity = (!empty($slideoverlayval)) ? $this->get_hexa('#000000', $slideoverlayval) : 0.4;
         $footerbgoverlayval = theme_academi_get_setting('footerbgOverlay');
 
-        if (empty($primary)) {
-            switch (theme_academi_get_setting('preset')) {
-                case 'eguru':
-                    $primary = '#a55ba5';
-                    break;
-                case 'klass':
-                    $primary = '#009fe5';
-                    break;
-                case 'enlightlite':
-                    $primary = '#39b3e6';
-                    break;
-                default:
-                    $primary = '#88b77b';
-                    break;
-            }
-        }
-
         $footerbgopacity = (!empty($footerbgoverlayval)) ? $this->get_hexa($primary, $footerbgoverlayval) : 0.4;
         $pagesizecustomval = theme_academi_get_setting('pagesizecustomval');
         $fontsize = theme_academi_get_setting('fontsize');
@@ -93,21 +75,21 @@ class helper {
         $primary50 = $this->get_hexa($primary, '0.5');
         $primary70 = $this->get_hexa($primary, '0.7');
         $secondary70 = $this->get_hexa($secondary, '0.7');
-        $scss .= $primary ? '$primary:'.$primary.";\n" : "";
-        $scss .= $secondary ? '$secondary:'.$secondary.";\n" : "";
-        $scss .= $slideopacity ? '$url_1:'.$slideopacity.";\n" : "";
-        $scss .= $pagesizecustomval ? '$custom-container:'.$pagesizecustomval."px;\n" : "";
-        $scss .= $fontsize ? '$fontsize:'.$fontsize. "px;" : "";
-        $scss .= $footerbgopacity ? '$footerbgopacity:'.$footerbgopacity.";\n" : "";
+        $scss .= $primary ? '$primary:' . $primary . ";\n" : "";
+        $scss .= $secondary ? '$secondary:' . $secondary . ";\n" : "";
+        $scss .= $slideopacity ? '$url_1:' . $slideopacity . ";\n" : "";
+        $scss .= $pagesizecustomval ? '$custom-container:' . $pagesizecustomval . "px;\n" : "";
+        $scss .= $fontsize ? '$fontsize:' . $fontsize . "px;" : "";
+        $scss .= $footerbgopacity ? '$footerbgopacity:' . $footerbgopacity . ";\n" : "";
 
         if (!empty($primary)) {
-            $scss .= $primary30 ? '$primary_30:'.$primary30.";\n" : "";
-            $scss .= $primary50 ? '$primary_50:'.$primary50.";\n" : "";
-            $scss .= $primary70 ? '$primary_70:'.$primary70.";\n" : "";
+            $scss .= $primary30 ? '$primary_30:' . $primary30 . ";\n" : "";
+            $scss .= $primary50 ? '$primary_50:' . $primary50 . ";\n" : "";
+            $scss .= $primary70 ? '$primary_70:' . $primary70 . ";\n" : "";
         }
         if (!empty($secondary)) {
-            $scss .= $secondary30 ? '$secondary_30:'.$secondary30.";\n" : "";
-            $scss .= $secondary70 ? '$secondary_70:'.$secondary70.";\n" : "";
+            $scss .= $secondary30 ? '$secondary_30:' . $secondary30 . ";\n" : "";
+            $scss .= $secondary70 ? '$secondary_70:' . $secondary70 . ";\n" : "";
         }
         return $scss;
     }
@@ -121,12 +103,12 @@ class helper {
      */
     public function get_hexa($hexa, $opacity) {
         $hexa = trim($hexa, "#");
-        if ( strlen($hexa) == 6 ) {
-            $r = hexdec( substr($hexa, 0, 2) );
-            $g = hexdec( substr($hexa, 2, 2) );
-            $b = hexdec( substr($hexa, 4, 2) );
+        if (strlen($hexa) == 6) {
+            $r = hexdec(substr($hexa, 0, 2));
+            $g = hexdec(substr($hexa, 2, 2));
+            $b = hexdec(substr($hexa, 4, 2));
             $a = (!empty($opacity)) ? $opacity : 0;
-            return "rgba(".$r.", ".$g.", ".$b.", ".$a.")";
+            return "rgba(" . $r . ", " . $g . ", " . $b . ", " . $a . ")";
         }
         return "";
     }
@@ -184,7 +166,7 @@ class helper {
             ],
             $text
         );
-        return strip_tags( $text );
+        return strip_tags($text);
     }
 
     /**
@@ -207,7 +189,7 @@ class helper {
 
         $out = "";
         $small = substr($str, 0, $n);
-        $out = $small.$endchar;
+        $out = $small . $endchar;
         return $out;
     }
 
@@ -222,7 +204,7 @@ class helper {
         // Get slide image or fallback to default.
         $slideimage = '';
         if (theme_academi_get_setting($slidername)) {
-            $slideimage = $PAGE->theme->setting_file_url($slidername , $slidername);
+            $slideimage = $PAGE->theme->setting_file_url($slidername, $slidername);
         }
         if (empty($slidername)) {
             $slideimage = '';

@@ -7,5 +7,13 @@
 #
 # El propio cron.php toma un bloqueo, así que dos ejecuciones superpuestas no
 # se pisan.
+#
+# La ruta NO lleva public/, y no es un olvido. En Moodle 5.2 la raíz web se movió
+# a public/, pero los scripts de línea de comandos se quedaron en la raíz del
+# repositorio: admin/cli/cron.php hace require('../../config.php') y encuentra el
+# config.php de /var/www/html. Verificado en el árbol de 5.2.1.
+#
+# Si algún día esto falla con "No such file or directory", la respuesta es mirar
+# dónde quedó admin/cli en esa versión, no agregarle public/ a ciegas.
 
 * * * * * php /var/www/html/admin/cli/cron.php

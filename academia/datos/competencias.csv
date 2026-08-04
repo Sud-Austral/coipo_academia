@@ -1,0 +1,76 @@
+# Marcos de competencias de la Academia CONAF.
+# Fuente: prototipo pantalla 13 sección 3, Anexo C.3 de la Propuesta,
+# IF-151_Diseno-de-curso Parte 1.1 y prototipo pantalla 16.
+#
+# QUÉ CAMBIA ESTA PIEZA. Sin competencias, la plataforma responde qué cursos hizo
+# una persona. Con competencias, responde qué está habilitada para hacer, y desde
+# cuándo hasta cuándo. La segunda es la pregunta que importa cuando ocurre algo, y
+# es la única que un servicio público puede necesitar responder formalmente.
+#
+# El subsistema ya viene instalado en Moodle y está apagado. La malla numerada de
+# incendios YA ES un marco de competencias: lo único que falta es escribirlo.
+#
+# ESCALA DE LOGRO — tres valores, el último marcado como «competente»:
+#   No demostrada · En desarrollo · Demostrada
+# El script la crea como escala global si no existe.
+#
+# Columnas:
+#   marco    idnumber del marco al que pertenece la fila
+#   nivel    marco | unidad | competencia
+#   idnumber identificador estable; es lo que cruza con otros sistemas
+#   nombre   el texto que se ve
+#   padre    idnumber de la unidad madre (solo para competencias)
+#   correspondencia   equivalencia con marcos internacionales (ver nota al pie)
+#   descripcion
+
+marco,nivel,idnumber,nombre,padre,correspondencia,descripcion
+# ═══ Marco 1 · Protección contra Incendios Forestales ════════════════════════
+MARCO-IF,marco,MARCO-IF,Protección contra Incendios Forestales,,,"La malla de incendios existente, escrita como marco de competencias. Tres unidades que corresponden a las tres mallas, más el itinerario de fundamentos técnicos."
+
+MARCO-IF,unidad,IF-U1,Malla Estándar,,,"Nivel básico operativo. Es el itinerario del brigadista."
+MARCO-IF,competencia,IF-C101,Aplica los fundamentos de la protección contra incendios forestales,IF-U1,,
+MARCO-IF,competencia,IF-C107,Aplica las medidas de seguridad y salud ocupacional en operaciones,IF-U1,NFPA 1051 Wildland Fire Fighter I,"Lección de seguridad: es de las prioritarias para rediseño instruccional, porque el costo de un error no es una respuesta mala en un cuestionario."
+MARCO-IF,competencia,IF-C108,Detiene o ajusta la operación cuando falta una condición de seguridad,IF-U1,NWCG L-180 Human Factors,"La acredita IF-108. Ver prototipo pantalla 12."
+MARCO-IF,competencia,IF-C114,Opera motosierra conforme a protocolo,IF-U1,NWCG S-212 Wildland Fire Chain Saws,
+MARCO-IF,competencia,IF-C115,Aplica primeros auxilios en terreno,IF-U1,,
+
+MARCO-IF,unidad,IF-U2,Malla Intermedia,,,"Mandos y funciones especializadas del Sistema de Comando de Incidentes."
+MARCO-IF,competencia,IF-C213,Aplica el Sistema de Comando de Incidentes en nivel intermedio,IF-U2,NWCG I-300,
+MARCO-IF,competencia,IF-C214,Coordina operaciones aéreas de extinción,IF-U2,NWCG S-270 Basic Air Operations,
+MARCO-IF,competencia,IF-C215,Ejerce la función de Oficial de Seguridad en un incidente,IF-U2,NWCG Safety Officer (SOF2),
+
+MARCO-IF,unidad,IF-U3,Malla Avanzada,,,"Conducción del incidente."
+MARCO-IF,competencia,IF-C218,Ejerce la función de Comandante del Incidente,IF-U3,NWCG Incident Commander Type 3 (ICT3),
+
+# Unidad nueva: la exige IF-151, que inaugura el itinerario. No está en la
+# pantalla 13 porque el prototipo es anterior al diseño del curso.
+MARCO-IF,unidad,IF-U4,Fundamentos Técnicos Comunes,,,"Base técnica común para profesionales de la Gerencia, cualquiera sea su función. Lo inaugura IF-151."
+MARCO-IF,competencia,IF-C151,"Explica el comportamiento de un incendio forestal con el marco del ambiente del fuego, calibrado con evidencia chilena",IF-U4,,"La acredita IF-151. Se verifica en cómo la persona redacta un informe, argumenta una prioridad de prevención o explica un evento a terceros: no requiere evaluarla en terreno."
+
+# ═══ Marco 2 · Gestión de la formación ═══════════════════════════════════════
+# Marco aparte y no una unidad del anterior: no es una competencia de incendios,
+# es transversal a las siete áreas. Quien la acredita puede crear cursos en la
+# suya, sea cual sea.
+MARCO-TR,marco,MARCO-TR,Gestión de la formación de la Academia,,,"Competencias transversales de quienes producen y administran formación en la Academia, en cualquier área temática."
+MARCO-TR,unidad,TR-U1,Producción de cursos,,,"Diseñar, construir y publicar cursos conforme al estándar institucional."
+MARCO-TR,competencia,TR-C104,Diseña y publica un curso conforme al estándar de la Academia CONAF,TR-U1,,"La acredita TR-104. Su evidencia no es un cuestionario sino un proyecto: la ficha de diseño de un curso real del área de quien la rinde, calificada con rúbrica por el Gestor de Área."
+
+# ─── Sobre la columna `correspondencia` ──────────────────────────────────────
+#
+# La pantalla 13 pide que «cada competencia lleve un campo de correspondencia con
+# NFPA 1051 / NWCG», porque ese mapeo es lo que hace que el certificado de un
+# brigadista chileno sea interpretable por cualquier organización de incendios
+# del hemisferio. La necesidad ya existe y hoy se resuelve con un curso hecho a
+# la medida: «Certificados C-111 para apoyo internacional».
+#
+# PERO Moodle no tiene campos personalizados en competencias. El script escribe
+# la correspondencia dentro de la DESCRIPCIÓN de cada competencia, que es donde
+# queda visible y exportable. Es una solución de segunda: no se puede filtrar ni
+# agrupar por ella.
+#
+# Y LAS EQUIVALENCIAS DE ESTA COLUMNA SON UNA PROPUESTA, NO DOCTRINA. Ningún
+# documento de INSUMO_MEJORA trae el mapeo hecho: la pantalla 13 dice que hay que
+# hacerlo, no cuál es. Las de aquí son las correspondencias evidentes por nombre
+# de función, y las tiene que validar el Departamento de Protección contra
+# Incendios Forestales antes de que aparezcan en un certificado. Las competencias
+# sin correspondencia propuesta se dejaron en blanco a propósito.

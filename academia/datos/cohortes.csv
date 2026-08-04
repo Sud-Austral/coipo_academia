@@ -1,0 +1,94 @@
+# Cohortes de la Academia CONAF. Se crean a nivel de sistema.
+# Fuente: prototipo pantalla 13 sección 2, y Anexo C.2 de la Propuesta.
+#
+# Hoy la plataforma tiene CERO cohortes. Son la pieza que permite matricular a un
+# grupo completo y, sobre todo, CONSULTAR por él: mientras no existan, «región»
+# no es un atributo y la pregunta «¿cuántos brigadistas del Biobío completaron la
+# malla estándar este año?» no tiene respuesta posible — no por falta de
+# herramienta de reportes, sino porque el dato no existe.
+#
+# TRES FAMILIAS INDEPENDIENTES. Cada persona pertenece a una de cada familia, y
+# al cruzarlas se obtiene cualquier segmento sin crear cohortes nuevas. Esa es la
+# razón de que NO haya cohortes tipo «brigadistas del Biobío 2026»: eso es el
+# cruce de tres, no una cuarta.
+#
+# Y ES LO QUE REEMPLAZA A LOS CURSOS DUPLICADOS POR EDICIÓN. Una formación es un
+# curso; las ediciones son cohortes. Hoy «Curso C-111 Nivel 2» existe dos veces
+# —1.ª edición en Cursos CONAF y 2.ª en Cursos MBZ— porque la edición se modeló
+# como curso y el financiador como categoría. Sin esta regla, ese patrón se
+# multiplica por siete áreas.
+
+idnumber,nombre,familia,descripcion
+# ─── Familia territorial · 16, una por Dirección Regional ────────────────────
+# Numeración oficial de regiones, de norte a sur.
+REG-15,Arica y Parinacota,territorial,Dirección Regional de Arica y Parinacota
+REG-01,Tarapacá,territorial,Dirección Regional de Tarapacá
+REG-02,Antofagasta,territorial,Dirección Regional de Antofagasta
+REG-03,Atacama,territorial,Dirección Regional de Atacama
+REG-04,Coquimbo,territorial,Dirección Regional de Coquimbo
+REG-05,Valparaíso,territorial,Dirección Regional de Valparaíso
+REG-13,Metropolitana,territorial,Dirección Regional Metropolitana
+REG-06,O'Higgins,territorial,Dirección Regional del Libertador General Bernardo O'Higgins
+REG-07,Maule,territorial,Dirección Regional del Maule
+REG-16,Ñuble,territorial,Dirección Regional de Ñuble
+REG-08,Biobío,territorial,Dirección Regional del Biobío
+REG-09,La Araucanía,territorial,Dirección Regional de La Araucanía
+REG-14,Los Ríos,territorial,Dirección Regional de Los Ríos
+REG-10,Los Lagos,territorial,Dirección Regional de Los Lagos
+REG-11,Aysén,territorial,Dirección Regional de Aysén del General Carlos Ibáñez del Campo
+REG-12,Magallanes,territorial,Dirección Regional de Magallanes y de la Antártica Chilena
+
+# ─── Familia ocupacional · 7 ─────────────────────────────────────────────────
+# Sirven para asignar automáticamente la formación obligatoria por cargo, y para
+# comparar quién DEBÍA tomar un curso contra quién lo tomó.
+PERF-BRIG,Brigadista,ocupacional,Personal operativo de brigada
+PERF-JCUAD,Jefe de cuadrilla,ocupacional,Mando directo de cuadrilla en terreno
+PERF-GPARQ,Guardaparque,ocupacional,"Personal de Áreas Silvestres Protegidas. Se traspasa al SBAP en marzo de 2027"
+PERF-FISC,Fiscalizador,ocupacional,Personal de fiscalización y legislación forestal
+PERF-PROF,Profesional,ocupacional,"Profesionales de cualquier gerencia: prevención, análisis, planificación, comunicaciones"
+PERF-JEFAT,Jefatura,ocupacional,Jefaturas de unidad y de departamento
+PERF-ADM,Administrativo y apoyo,ocupacional,Personal administrativo y de apoyo
+
+# ─── Familia de temporada · TEMP-AAAA-AA ─────────────────────────────────────
+# Una por temporada operativa. Crece en una cada año: la crea el administrador de
+# plataforma al planificar la temporada, no un script.
+TEMP-2025-26,Temporada 2025-2026,temporada,Temporada operativa 2025-2026
+TEMP-2026-27,Temporada 2026-2027,temporada,Temporada operativa 2026-2027 — vigente
+TEMP-2027-28,Temporada 2027-2028,temporada,Temporada operativa 2027-2028 — en planificación
+
+# ─── Cohortes funcionales · DECISIÓN PENDIENTE ───────────────────────────────
+# Estas dos NO están en el modelo de datos de la pantalla 13, pero los dos cursos
+# que este repositorio construye las exigen. Se crean para que IF-151 y TR-104
+# funcionen; qué son formalmente es una decisión que hay que tomar:
+#
+#   ¿son una CUARTA familia («funcional»), o son cohortes ocupacionales que
+#   faltaban? De la respuesta depende si el modelo tiene 3 familias o 4, y si el
+#   total es 26 —lo que dice el Anexo C.2— o 28, que es lo que hay acá.
+#
+# GER-IF-PROF la pide IF-151 Parte 5.5, y el propio documento reconoce el hueco:
+# «ninguna [de las tres familias] identifica profesional de la Gerencia de
+# Incendios». Es el destinatario de TODO el itinerario Fundamentos Técnicos
+# Comunes, no solo de IF-151.
+GER-IF-PROF,Profesionales de la Gerencia de Incendios Forestales,funcional,"Destinatario del itinerario Fundamentos Técnicos Comunes (IF-151 y siguientes). Ver IF-151_Diseno-de-curso, Parte 5.5"
+# PERF-AUTOR aparece en la pantalla 16: es la cohorte a la que se agrega a quien
+# aprueba TR-104, y que a su vez le habilita el rol de edición en su área. O sea
+# NO es un cargo —es una habilitación que se gana—, y por eso encaja mal entre
+# las ocupacionales aunque lleve su prefijo.
+PERF-AUTOR,Autores habilitados de la Academia,funcional,"Habilitación para crear cursos, obtenida al aprobar TR-104. Ver prototipo pantalla 16"
+
+# ─── Lo que este archivo NO trae, a propósito ────────────────────────────────
+#
+# Cohortes de acceso externo (EXT-, socios internacionales, ClaveÚnica). Son la
+# etapa 3 de la secuencia de escalamiento —«abrir hacia afuera»— y dependen de
+# definiciones jurídicas previas sobre el certificado de participación y de la
+# política de datos de la Ley 21.719. Crearlas ahora sería adelantar una
+# decisión que no está tomada.
+#
+# ─── Cómo se llenan ──────────────────────────────────────────────────────────
+#
+# Este script crea las cohortes VACÍAS. Poblarlas es otra cosa:
+#   · a mano o por CSV mientras la identidad sea manual (hoy);
+#   · sincronizadas desde el directorio institucional en la etapa 2 del
+#     escalamiento, que desarrolla la UIA. Ahí la pertenencia deja de mantenerse
+#     y se acaba también el riesgo de que alguien que ya no está en CONAF
+#     conserve acceso, que hoy no tiene solución automática.

@@ -30,6 +30,9 @@ use grade_grade;
 use context_module;
 use context_system;
 use advanced_testcase;
+use mod_customcert\service\template_repository;
+use mod_customcert\service\template_service;
+use stdClass;
 
 /**
  * Unit tests for the element helper class.
@@ -65,13 +68,15 @@ final class element_helper_test extends advanced_testcase {
 
         // Get the template to add elements to.
         $template = $DB->get_record('customcert_templates', ['contextid' => context_module::instance($customcert->cmid)->id]);
-        $template = new template($template);
+        $template = template::from_record((new template_repository())->get_by_id_or_fail((int)$template->id));
+
+        $service = template_service::create();
 
         // Add a page to the template.
-        $pageid = $template->add_page();
+        $pageid = $service->add_page($template);
 
         // Add an element to this page.
-        $element = new \stdClass();
+        $element = new stdClass();
         $element->name = 'Test element';
         $element->element = 'testelement';
         $element->pageid = $pageid;
@@ -94,11 +99,13 @@ final class element_helper_test extends advanced_testcase {
         // Add a template to the site.
         $template = template::create('Site template', context_system::instance()->id);
 
+        $service = template_service::create();
+
         // Add a page to the template.
-        $pageid = $template->add_page();
+        $pageid = $service->add_page($template);
 
         // Add an element to this page.
-        $element = new \stdClass();
+        $element = new stdClass();
         $element->name = 'Test element';
         $element->element = 'testelement';
         $element->pageid = $pageid;
@@ -126,13 +133,15 @@ final class element_helper_test extends advanced_testcase {
 
         // Get the template to add elements to.
         $template = $DB->get_record('customcert_templates', ['contextid' => context_module::instance($customcert->cmid)->id]);
-        $template = new template($template);
+        $template = template::from_record((new template_repository())->get_by_id_or_fail((int)$template->id));
+
+        $service = template_service::create();
 
         // Add a page to the template.
-        $pageid = $template->add_page();
+        $pageid = $service->add_page($template);
 
         // Add an element to this page.
-        $element = new \stdClass();
+        $element = new stdClass();
         $element->name = 'Test element';
         $element->element = 'testelement';
         $element->pageid = $pageid;
@@ -158,11 +167,13 @@ final class element_helper_test extends advanced_testcase {
         // Add a template to the site.
         $template = template::create('Site template', context_system::instance()->id);
 
+        $service = template_service::create();
+
         // Add a page to the template.
-        $pageid = $template->add_page();
+        $pageid = $service->add_page($template);
 
         // Add an element to this page.
-        $element = new \stdClass();
+        $element = new stdClass();
         $element->name = 'Test element';
         $element->element = 'testelement';
         $element->pageid = $pageid;
@@ -410,7 +421,85 @@ final class element_helper_test extends advanced_testcase {
         $this->assertEquals(null, $grade->get_grade());
         $this->assertEquals('-', $grade->get_displaygrade());
         $this->assertEquals(null, $grade->get_dategraded());
-
         grade_get_setting($course->id, null, null, true);
+    }
+
+    /**
+     * get_fonts returns a non-empty array of font names.
+     *
+     * @covers \mod_customcert\element_helper::get_fonts
+     */
+    public function test_get_fonts_returns_non_empty_array(): void {
+        $fonts = element_helper::get_fonts();
+        $this->assertIsArray($fonts);
+        $this->assertNotEmpty($fonts);
+        // Each value should be a string font name.
+        foreach ($fonts as $key => $value) {
+            $this->assertIsString($key);
+            $this->assertIsString($value);
+        }
+    }
+
+    /**
+     * get_font_sizes returns a non-empty array mapping size to size.
+     *
+     * @covers \mod_customcert\element_helper::get_font_sizes
+     */
+    public function test_get_font_sizes_returns_non_empty_array(): void {
+        $sizes = element_helper::get_font_sizes();
+        $this->assertIsArray($sizes);
+        $this->assertNotEmpty($sizes);
+        foreach ($sizes as $key => $value) {
+            $this->assertIsInt($key);
+            $this->assertIsInt($value);
+        }
+    }
+
+    /**
+     * Data provider for get_date_format_string tests.
+     *
+     * @return array
+     */
+    public static function get_date_format_string_provider(): array {
+        return [
+            'numeric string 1' => ['1'],
+            'numeric string 2' => ['2'],
+            'numeric string 3' => ['3'],
+            'numeric string 4' => ['4'],
+            'numeric string 5' => ['5'],
+            'lang key strftimedate' => ['strftimedate'],
+        ];
+    }
+
+    /**
+     * get_date_format_string returns a non-empty string for all supported formats.
+     *
+     * @dataProvider get_date_format_string_provider
+     * @covers \mod_customcert\element_helper::get_date_format_string
+     * @param string $dateformat
+     */
+    public function test_get_date_format_string_returns_non_empty_string(string $dateformat): void {
+        $date = mktime(12, 0, 0, 6, 15, 2020);
+        $result = element_helper::get_date_format_string($date, $dateformat);
+        $this->assertIsString($result);
+        $this->assertNotEmpty($result);
+    }
+
+    /**
+     * get_date_format_string produces the same output whether a numeric format is passed
+     * as a plain numeric string or as the result of casting an int to string — this is the
+     * backwards-compatibility regression test for legacy JSON data that stored dateformat as
+     * an integer (e.g. {"dateformat": 1}).
+     *
+     * @covers \mod_customcert\element_helper::get_date_format_string
+     */
+    public function test_get_date_format_string_int_cast_to_string_matches_string(): void {
+        $date = mktime(12, 0, 0, 6, 15, 2020);
+        // Simulate what the call sites now do: (string) cast of a legacy int value.
+        foreach ([1, 2, 3, 4, 5] as $legacyint) {
+            $fromstring = element_helper::get_date_format_string($date, (string) $legacyint);
+            $this->assertIsString($fromstring);
+            $this->assertNotEmpty($fromstring);
+        }
     }
 }

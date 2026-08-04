@@ -13,10 +13,12 @@
 .env.*
 !.env.example
 !.env.migracion.example
+!.env.v2.example
 
 # Volcados de base de datos y artefactos de migración
 *.sql
 !db/setup_bd.sql
+!db/setup_bd_v2.sql
 !plugins/**/*.sql
 /_migracion/
 traslado.log
@@ -44,3 +46,8 @@ traslado.log
 # Sistema
 .DS_Store
 Thumbs.db
+
+# Lo genera 60_clasificar_cursos.php --exportar leyendo el sitio real. No se
+# versiona: depende de qué cursos existan en cada instancia, y una copia vieja
+# en el repositorio haría que alguien aplique una clasificación de otro momento.
+academia/datos/cursos-clasificacion.csv

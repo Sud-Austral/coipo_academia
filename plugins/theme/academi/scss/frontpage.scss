@@ -569,9 +569,6 @@
                 color: $white;
                 background: $primary;
             }
-            // span {
-            //     margin: 5px 0;
-            // }
         }
         > div.d-flex .btn {
             color: $white;
@@ -1050,6 +1047,7 @@
         }
     }
     .slick-arrow {
+        width: 38px;
         text-indent: -999em;
         border-radius: 5px;
         position: absolute;
@@ -1135,8 +1133,6 @@
                     max-width: 160px;
                     max-height: none;
                     height: 100%;
-                    background: none;
-                    box-shadow: none;
                 }
             }
         }
@@ -1263,12 +1259,6 @@
     }
 }
 
-// @media (min-width: 1200px) {
-//     .course_category_tree .category > .content {
-//         margin-bottom: 10px;
-//     }
-// }
-
 @media (min-width: 768px) {
     .dir-rtl .course_category_tree .coursebox .content {
         .teachers {
@@ -1386,9 +1376,6 @@
 .marketing-spot {
     padding: 40px 0 0;
     background-color: $primary_70;
-    // .row .col-lg-6:last-child {
-    //     align-self: end;
-    // }
     *:empty {
         display: none;
     }

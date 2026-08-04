@@ -131,16 +131,11 @@
         .dropdown-menu {
             border-radius: 5px;
             .carousel .carousel-inner .carousel-item a {
-                height: auto;
                 padding: 10px 15px;
                 position: relative;
                 &:after {
                     top: 14px;
                 }
-            }
-            .submenu .header .icon {
-                background: none;
-                box-shadow: none;
             }
         }
     }
@@ -205,6 +200,9 @@
         height: 100%;
         color: $white;
         margin-right: 10px;
+        .btn .icon {
+            color: $white;
+        }
         a.btn-open {
             color: $white;
             border: 0;
@@ -330,34 +328,26 @@
     .editmode-switch-form {
         margin-left: 10px;
         .input-group {
-            flex-wrap: nowrap;
-            align-items: center;
             label {
                 color: $white !important;
             }
-        }
-        .custom-control {
-            .custom-control-input {
-                ~ .custom-control-label:before {
-                    border-color: $white;
+            .form-switch .form-check-input {
+                line-height: 16px;
+                background-color: $white_50;
+                &:checked {
+                    border-color: $white_50;
+                    --bs-form-switch-bg: none;
+                    &:before {
+                        float: right;
+                    }
+                }
+                &:before {
+                    content: '';
+                    width: 13px;
+                    height: 13px;
+                    border-radius: 50%;
                     background: $white;
-                }
-                &:checked ~ .custom-control-label:before {
-                    background-color: $primary;
-                }
-                &:focus:not(:checked) ~ .custom-control-label:before,
-                &:focus ~ .custom-control-label:before,
-                &:not(:disabled):active ~ .custom-control-label:before {
-                    border-color: $white;
-                    box-shadow: none;
-                }
-            }
-            &.custom-switch {
-                .custom-control-label:after {
-                    background-color: $primary;
-                }
-                .custom-control-input:checked ~ .custom-control-label:after {
-                    background-color: $white;
+                    display: inline-flex;
                 }
             }
         }
@@ -527,8 +517,6 @@
                         height: auto;
                         max-height: 90px;
                         object-fit: contain;
-                        background: none;
-                        box-shadow: none;
                     }
                 }
             }

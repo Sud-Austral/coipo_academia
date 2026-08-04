@@ -196,6 +196,8 @@ antiguo; si no, saldrán rotas. Se resuelve en el paso de reescritura de URLs.
 
 | Documento | Contenido |
 |---|---|
+| **`docs/V2-ACADEMIA.md`** | **La v2.** Modelo de datos, vistas, el rol de Gestor de Área, los dos cursos y las decisiones abiertas. Empezar por acá para todo lo de `INSUMO_MEJORA` |
+| **`academia/README.md`** | Orden de ejecución de los scripts de provisión, los CSV de datos y las pruebas |
 | `docs/TRASLADO.md` | Fase F0: mover el volcado y los 10,9 GB al servidor. Lo ejecuta Luis |
 | `docs/MIGRACION.md` | Fases F1–F5: imagen, carga, upgrade, paso a PostgreSQL, sitio final |
 | **`docs/TLS-HTTPS.md`** | **Paso a HTTPS (30-07-2026).** El TLS lo termina el Alteon de 172.31.2.100, no nuestro Nginx. Por qué `MOODLE_WWWROOT` y `MOODLE_SSLPROXY` van siempre juntas, cómo se verifica y cómo se revierte |
@@ -266,6 +268,95 @@ bloqueante del build.
 - El `AUTO_INCREMENT` de una tabla dice cuántas filas existieron alguna vez, no cuántas
   quedan. Estimar volumen con él da números inflados.
 
+---
+
+## La v2 — este repositorio
+
+`coipo_moodle` resolvió la infraestructura. **`coipo_academia` resuelve la arquitectura de
+información**, que es lo que `INSUMO_MEJORA` identifica como el problema real: 9 categorías
+planas con cinco criterios mezclados, 1 campo de clasificación, 0 cohortes, 0 roles delegados y
+las competencias apagadas.
+
+**Corre en paralelo, no reemplaza — y va por delante en versión.** El deploy usa el nombre del
+repositorio como `app_name`, así que son dos despliegues distintos en el mismo servidor:
+
+| | Puerto | Base | Moodle | PHP |
+|---|---|---|---|---|
+| `coipo_moodle` | 8115 | `academia_prod` | 4.5.10 LTS | 8.3 |
+| `coipo_academia` | 8116 | `academia_v2` | **5.2.1** | **8.4** |
+
+**Por qué v2 va en 5.2.** El destino es 5.3 LTS + PHP 8.4 en octubre de 2026, que es lo que la
+Propuesta ya planifica. Construir v2 sobre 5.2 ahora ensaya el salto 4.5 → 5.x en un clon
+desechable y convierte el de octubre en 5.2 → 5.3, un paso corto, en vez de cuatro versiones
+de golpe. PHP 8.3 además salió de soporte activo el 31-12-2025; 8.4 lo tiene hasta 12-2026.
+
+**No se usa PHP 8.5** aunque Moodle 5.2 no tenga ningún bloqueo superior —verificado: su
+`environment.xml` pide mínimo 8.3.0 y no trae ni un `<RESTRICT>`—. Moodle solo documenta 8.4.x
+como soportada, y «no da error» no es «está soportado».
+
+### MOODLE 5.2 MOVIÓ LA RAÍZ WEB A `public/`
+
+Es el cambio que más rompe y el que hay que tener presente en cada ruta:
+
+```
+/var/www/html/           raíz del repositorio. Acá va config.php
+/var/www/html/public/    raíz web: DocumentRoot y valor de $CFG->dirroot
+/var/www/html/admin/cli/ los scripts CLI, que NO se movieron
+```
+
+El `index.php` de la raíz lanza una excepción a propósito (`rootdirpublic`) si el DocumentRoot
+quedó mal apuntado. Cambió el `Dockerfile` (DocumentRoot y los `COPY` de plugins a
+`public/<tipo>/`) y `docker/apache-moodle.conf`. **No** cambiaron `docker/moodle-crontab` ni
+`academia/cli/bootstrap.php`, porque los dos apuntan a cosas que se quedaron en la raíz.
+
+Esa misma lista es el trabajo que le espera a `coipo_moodle` cuando actualice.
+
+Lo construido y las decisiones abiertas están en **`docs/V2-ACADEMIA.md`**; el orden de
+ejecución, en **`academia/README.md`**. Cuatro cosas que conviene saber antes de tocar nada:
+
+- **Los scripts se niegan a correr contra `academia_prod`.** Hay que pasar
+  `--permitir-produccion` a mano, script por script.
+- **`MaxRequestWorkers` está en 6 en este repositorio, no en 50.** El `CONNECTION LIMIT` es del
+  ROL `academia`, no de la base, así que las dos instancias comparten el techo de 60:
+  50 (prod) + 6 (v2) + 2 crones = 58. Al promover v2 hay que devolverlo a 50.
+- **`filedir` se clona por hardlink** (`cp -al`), no se copia: son 11 GB de contenido
+  direccionado por hash e inmutable. El clon cuesta ~1 GB en vez de 12.
+- **`MOODLE_NOEMAILEVER=true` es obligatorio en v2**, no una preferencia. Es un clon con los
+  2.869 correos institucionales reales, y sin el freno los avisos llegarían dos veces.
+
+### Lecciones de la v2 que costaron tiempo
+
+- **`customfield_select` guarda un ÍNDICE entero, no el texto de la opción.** Pasarle la
+  etiqueta la convierte en 0 y el campo queda vacío — sin error, sin aviso, y el curso
+  desaparece del catálogo. Los scripts hablan en etiquetas y convierten al escribir.
+- **`enablemobilewebservice` no es una casilla suelta.** En la interfaz dispara
+  `admin_setting_enablemobileservice::write_setting()`, que además habilita el servicio externo
+  `moodle_mobile_app`, agrega el protocolo REST y da `webservice/rest:use` al usuario
+  autenticado. Un `set_config()` solo deja el ajuste en 1 y **la app sigue sin funcionar**.
+- **El rol de Gestor de Área lo define su CONTEXTO, no sus capacidades.**
+  `set_role_contextlevels($id, [CONTEXT_COURSECAT])` es la línea que impide que un gestor vea
+  las siete áreas. Si ahí aparece `CONTEXT_SYSTEM`, el diseño entero se desarma.
+- **Las restricciones por calificación usan PORCENTAJE (0-100), no la nota bruta.** Poner 4
+  pensando en «4 de 5» produce una restricción que se cumple con el 4 %, y el curso deja pasar
+  a todo el mundo sin que nadie lo note.
+- **`docker/apache-moodle.conf` dice que el 31-07-2026 el límite del rol se amplió de 20 a 60**
+  y que `MaxRequestWorkers` quedó en 50. El pendiente 5b de más abajo quedó desactualizado:
+  comprobar con `SELECT rolconnlimit FROM pg_roles WHERE rolname='academia'` antes de creerle a
+  cualquiera de los dos.
+- **El nombre de la fuente de íconos es `Font Awesome 6 Free`, no `FontAwesome`.** El segundo
+  es de FontAwesome 4 y hace años que no existe en Moodle; con él, un `::before` no dibuja
+  nada. Costó caro porque el ícono es lo que impide que el significado viaje solo en el color
+  (WCAG 1.4.1): el CSS compilaba, la clase existía, y el incumplimiento volvía sin que se viera
+  nada roto. Y hace falta `font-weight: 900`, que es lo que selecciona el juego «solid».
+- **`lib/scssphp` cambió de forma en 5.2**: pasó de estar aplanado a tener subdirectorio
+  `src/`. Cualquier cosa que cargue esa biblioteca a mano tiene que probar las dos rutas.
+- **`admin/cli/upgrade.php` es un paso obligatorio de v2**, no un detalle. La base se clona de
+  `academia_prod` con esquema 4.5.10 y la imagen trae 5.2.1: el contenedor levanta igual pero
+  el sitio no funciona hasta ejecutarlo. Después, `check_database_schema.php` tiene que decir
+  `Database structure is ok.`
+
+---
+
 ### Pendientes
 
 0. **Entrar como administrador y verificar con sesión** — es lo único de la migración del
@@ -310,7 +401,14 @@ bloqueante del build.
    `ALTER ROLE ... PASSWORD` en 172.31.2.40, actualizar el `.env` con `chmod 600` y recrear
    los contenedores.
 
-5b. **`CONNECTION LIMIT` del rol `academia` es 20, no 60.** Verificado con
+5b. ~~**`CONNECTION LIMIT` del rol `academia` es 20, no 60.**~~ **DESACTUALIZADO.**
+   `docker/apache-moodle.conf` documenta que el **31-07-2026 el administrador de 172.31.2.40 lo
+   amplió a 60** (y de paso `max_connections` 100 → 300), y dejó `MaxRequestWorkers` en 50.
+   Los dos textos se contradicen: **comprobar antes de creerle a cualquiera** con
+   `SELECT rolconnlimit FROM pg_roles WHERE rolname='academia';`. Importa porque ahora hay dos
+   instancias repartiéndose ese techo. Lo que sigue es el texto original:
+
+   **`CONNECTION LIMIT` del rol `academia` es 20, no 60.** Verificado con
    `SELECT rolconnlimit FROM pg_roles`. El rol **no puede subírselo** (`permission denied to
    alter role`: no tiene `CREATEROLE`): hay que pedírselo al administrador de 172.31.2.40 con
    `ALTER ROLE academia CONNECTION LIMIT 60;`. Mientras tanto, `MaxRequestWorkers` está en

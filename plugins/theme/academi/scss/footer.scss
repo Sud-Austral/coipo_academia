@@ -77,7 +77,6 @@
                         width: 100%;
                         height: auto;
                         max-height: 150px;
-                        background: none;
                         object-fit: contain;
                     }
                 }
@@ -120,7 +119,6 @@
         color: $white;
     }
     ul {
-        /* text-align: center; */
         list-style: none;
         padding: 0;
         margin: 0;
@@ -206,6 +204,7 @@
     button.btn-footer-popover:hover,
     button.btn-footer-popover:focus,
     button.btn-footer-popover:active {
+        height: auto;
         color: $white;
         background: $primary;
     }
@@ -226,12 +225,6 @@
         }
     }
 }
-
-/* @media (min-width: 992px) {
-    body.pagelayout-frontpage #page.drawers.jumbotron-element .footer-popover {
-        margin-top: 210px;
-    }
-} */
 
 @media (max-width: 767px) {
     #footer {

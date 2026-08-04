@@ -1,15 +1,34 @@
-# Moodle 4.5.10 — plataforma de cursos de CONAF
+# Moodle 5.2.1 — Academia CONAF v2
 #
 # Una sola imagen sirve para las dos fases de la migración: apunta a MariaDB
 # mientras se convierte el volcado y a PostgreSQL en el estado final. Lo que
 # cambia son variables de entorno, no la imagen.
 #
-# PHP 8.3: Moodle 4.5 exige >= 8.1 y bloquea 8.4 explícitamente
-# (admin/environment.xml, restrict_php_version_84). 8.3 es la más nueva válida.
+# ─── DOS CAMBIOS GRANDES RESPECTO DE coipo_moodle (4.5.10 + PHP 8.3) ─────────
+#
+# 1. PHP 8.4. Moodle 4.5 lo BLOQUEA explícitamente (restrict_php_version_84 en
+#    admin/environment.xml). Moodle 5.2 no solo lo permite: no tiene ningún
+#    bloqueo superior de PHP. Verificado en el environment.xml de 5.2.1 —
+#    PHP mínimo 8.3.0 y ni un <RESTRICT>.
+#
+#    Aun así NO se usa 8.5, aunque pasaría la comprobación de entorno: Moodle
+#    solo documenta 8.4.x como soportada para 5.2. «No da error» no es «está
+#    soportado», y detrás hay datos de 2.869 funcionarios.
+#
+# 2. LA RAÍZ WEB SE MOVIÓ A public/. Es el cambio estructural de Moodle 5.1/5.2
+#    y es el que más rompe si se pasa por alto:
+#
+#      /var/www/html/               <- raíz del repositorio. Acá va config.php
+#      /var/www/html/public/        <- DocumentRoot de Apache. Acá va TODO lo web
+#      /var/www/html/admin/cli/     <- los scripts CLI se quedan en la raíz
+#
+#    $CFG->dirroot pasa a valer /var/www/html/public (public/lib/setup.php:62),
+#    y el index.php de la raíz LANZA UNA EXCEPCIÓN a propósito si alguien llega
+#    ahí: es la trampa para el DocumentRoot mal apuntado.
 
-FROM php:8.3-apache
+FROM php:8.4-apache
 
-ARG MOODLE_VERSION=v4.5.10
+ARG MOODLE_VERSION=v5.2.1
 # Verificado contra la API de GitHub: v0.2.48 es la última publicada y trae el
 # binario supercronic-linux-amd64.
 ARG SUPERCRONIC_VERSION=v0.2.48
@@ -47,7 +66,7 @@ RUN set -eux; \
 
 # ─── Código de Moodle ────────────────────────────────────────────────────────
 # Se descarga la versión oficial en el build: el repositorio queda liviano y la
-# imagen es reproducible. El tag v4.5.10 fue verificado contra la API de GitHub.
+# imagen es reproducible. El tag v5.2.1 fue verificado contra la API de GitHub.
 # Si el servidor no tuviera salida a internet, ver docs/MIGRACION.md.
 # El `cd /` no es decorativo: la imagen php:8.3-apache trae WORKDIR /var/www/html,
 # así que sin él el shell está parado dentro de la carpeta que borra el rm y git
@@ -67,7 +86,7 @@ RUN set -eux; \
 #   2. La copia vendorizada es la versión 2024042217 exacta que registra la base
 #      de datos original, con sus 19 subplugins de elementos. Una versión menor
 #      que la de la base haría que Moodle se niegue a arrancar.
-COPY --chown=www-data:www-data plugins/mod/customcert/ /var/www/html/mod/customcert/
+COPY --chown=www-data:www-data plugins/mod/customcert/ /var/www/html/public/mod/customcert/
 
 # Los otros tres estaban registrados en la base pero faltaban en el código. Sin
 # ellos, admin/tool/dbtransfer no copiaría las tablas de configurable_reports ni
@@ -78,9 +97,9 @@ COPY --chown=www-data:www-data plugins/mod/customcert/ /var/www/html/mod/customc
 #   tool_mergeusers        2026052700  requires 2024100700  supported [405,502]
 #   block_configurable_reports 2027050401  requires 2022041900  supported [400,500]
 #   theme_boost_magnific   2026062801  requires 2024042200   (era el tema activo)
-COPY --chown=www-data:www-data plugins/admin/tool/mergeusers/       /var/www/html/admin/tool/mergeusers/
-COPY --chown=www-data:www-data plugins/blocks/configurable_reports/ /var/www/html/blocks/configurable_reports/
-COPY --chown=www-data:www-data plugins/theme/boost_magnific/        /var/www/html/theme/boost_magnific/
+COPY --chown=www-data:www-data plugins/admin/tool/mergeusers/       /var/www/html/public/admin/tool/mergeusers/
+COPY --chown=www-data:www-data plugins/blocks/configurable_reports/ /var/www/html/public/blocks/configurable_reports/
+COPY --chown=www-data:www-data plugins/theme/boost_magnific/        /var/www/html/public/theme/boost_magnific/
 
 # theme_academi — recuperado el 31-07-2026. No es un tema nuevo: la base ya traía
 # 134 ajustes suyos con datos reales de CONAF (dirección de Paseo Bulnes, correo
@@ -97,10 +116,34 @@ COPY --chown=www-data:www-data plugins/theme/boost_magnific/        /var/www/htm
 # dentro del contenedor y el siguiente despliegue reconstruye la imagen desde este
 # Dockerfile, así que desaparecerían y el sitio quedaría otra vez con ajustes
 # huérfanos en la base. Todo plugin va vendorizado en plugins/ y copiado acá.
-COPY --chown=www-data:www-data plugins/theme/academi/                /var/www/html/theme/academi/
+COPY --chown=www-data:www-data plugins/theme/academi/                /var/www/html/public/theme/academi/
+
+# theme_academia — el tema de la Academia v2. Es un HIJO de Boost: no trae
+# plantillas ni disposiciones propias, solo variables de SCSS y unas pocas
+# reglas. Por eso no hay que revisarlo en cada actualización de Moodle.
+#
+# Lleva la paleta institucional y las reglas del estándar que son
+# responsabilidad del tema y no del autor: cuerpo de 16 px, interlineado 1,6,
+# alineación siempre a la izquierda, largo de línea acotado y foco de teclado
+# visible. Ver docs/V2-ACADEMIA.md.
+#
+# Comprobar que compila ANTES de desplegar —un error de SCSS no da error, da un
+# sitio sin estilos—:
+#   docker compose exec app php /opt/academia/pruebas/compilar-tema.php
+COPY --chown=www-data:www-data plugins/theme/academia/               /var/www/html/public/theme/academia/
+
+# ─── Scripts de provisión de la Academia ─────────────────────────────────────
+# Van a /opt/academia, FUERA del DocumentRoot de Apache (/var/www/html), a
+# propósito: así ningún script de provisión es alcanzable por HTTP ni por
+# accidente. Se ejecutan siempre con -u www-data:
+#
+#   docker compose exec -u www-data app php /opt/academia/cli/10_categorias.php
+#
+# El orden y qué hace cada uno están en academia/README.md.
+COPY --chown=www-data:www-data academia/ /opt/academia/
 
 COPY docker/config.php         /var/www/html/config.php
-COPY docker/health.php         /var/www/html/health.php
+COPY docker/health.php         /var/www/html/public/health.php
 COPY docker/php.ini            /usr/local/etc/php/conf.d/zzz-moodle.ini
 COPY docker/moodle-crontab     /etc/moodle-crontab
 COPY docker/apache-moodle.conf /etc/apache2/conf-enabled/moodle.conf

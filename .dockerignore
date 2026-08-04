@@ -10,8 +10,21 @@ moodledata/
 _migracion/
 docs/
 INSUMO/
+# Los tres insumos de la v2: 384 KB de .docx y HTML que no hacen nada dentro de
+# la imagen. Son documentos institucionales, no código.
+INSUMO_MEJORA/
 *.md
 *.sql
+
+# ...salvo el README de los scripts de provisión. Quien los ejecuta está DENTRO
+# del contenedor, y ahí es donde necesita tener a mano el orden de ejecución y
+# qué hace cada uno. Sin esta excepción, el `*.md` de arriba lo deja fuera y en
+# /opt/academia queda un cli/ sin ninguna explicación.
+!academia/README.md
+
+# Lo mismo con el CSV de clasificación: lo genera 60_clasificar_cursos.php
+# --exportar leyendo el sitio, y vive en el volumen, no en la imagen.
+academia/datos/cursos-clasificacion.csv
 *.zip
 *.tar
 *.tar.gz

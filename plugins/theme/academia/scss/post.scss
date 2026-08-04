@@ -1,0 +1,179 @@
+// Reglas de la Academia CONAF — se cargan DESPUÉS de Bootstrap.
+//
+// Solo lo que no se puede resolver con una variable. Cada bloque de acá
+// corresponde a un punto de la lista de verificación de 16 puntos o a uno de
+// los siete no negociables de accesibilidad de la pantalla 15.
+//
+// LO QUE ESTE ARCHIVO NO PUEDE ARREGLAR. Un tema no alcanza dentro del contenido
+// de un SCORM ni de un H5P: eso viaja con su propio CSS. Las reglas de abajo
+// gobiernan Moodle —el catálogo, la ficha de curso, los cuestionarios, los
+// informes—, no el interior de un paquete de contenido. El paquete actual, con
+// sus 6.314 reglas y cero media queries, se corrige en el paquete.
+
+// ─── Legibilidad del texto de curso ─────────────────────────────────────────
+// «Alineación: siempre a la izquierda. Nunca justificado, nunca centrado en
+// texto de cuerpo.» El contenido heredado viene justificado Y centrado, que son
+// las dos cosas que la pantalla 04 identifica como perjudiciales para la lectura.
+//
+// Se corrige en el tema porque así ningún autor lo puede reintroducir sin darse
+// cuenta desde el editor.
+.course-content,
+.activity-description,
+.summary,
+[data-region="activity-information"],
+.no-overflow > .text_to_html {
+    text-align: left;
+
+    p, li, dd {
+        text-align: left;
+    }
+}
+
+// «Largo de línea: entre 45 y 75 caracteres.» Una línea de 200 caracteres en
+// una pantalla ancha se lee peor que una columna estrecha: al saltar de renglón
+// el ojo pierde cuál era el siguiente.
+.course-content .summary,
+.activity-description,
+#region-main .box.py-3.generalbox {
+    p, li {
+        max-width: 72ch;
+    }
+}
+
+// ─── Foco de teclado siempre visible ────────────────────────────────────────
+// «Todo funciona con teclado» y «el foco es visible». Algunos componentes de
+// Bootstrap apagan el contorno del foco: acá se vuelve a encender, para todos.
+:focus-visible {
+    outline: 3px solid $conaf-blue;
+    outline-offset: 2px;
+}
+
+a:focus-visible,
+button:focus-visible,
+[role="button"]:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid $conaf-blue;
+    outline-offset: 2px;
+    box-shadow: none;
+}
+
+// ─── Los tres colores de estado, con ícono y palabra ────────────────────────
+// Se ofrecen como utilidades para que el contenido institucional no tenga que
+// inventar su propio verde y su propio rojo cada vez.
+//
+// El ::before con el ícono NO es adorno: es lo que impide que el significado
+// viaje solo en el color. Si alguien usa .academia-estado sin la palabra al
+// lado, el ícono todavía lo salva.
+.academia-estado {
+    display: inline-flex;
+    align-items: center;
+    gap: .4em;
+    font-weight: 600;
+
+    &::before {
+        // "Font Awesome 6 Free", NO "FontAwesome".
+        //
+        // Ese nombre es el de FontAwesome 4 y hace años que no existe en Moodle:
+        // tanto 4.5 como 5.2 declaran $fa-style-family: "Font Awesome 6 Free"
+        // (theme/boost/scss/fontawesome/variables.scss). Con el nombre viejo el
+        // ::before no dibuja nada — y como el ícono es lo que impide que el
+        // significado viaje solo en el color, el incumplimiento de WCAG 1.4.1
+        // vuelve por la puerta de atrás sin que se vea nada roto.
+        //
+        // font-weight 900 no es decoración: en FontAwesome 6 Free es lo que
+        // selecciona el juego «solid». Con el peso por defecto salen cuadros.
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        font-style: normal;
+        line-height: 1;
+        // Se declara sin ancho fijo: los tres glifos son de anchos distintos y
+        // forzarlos deja el texto bailando entre estados.
+        -webkit-font-smoothing: antialiased;
+    }
+
+    &--ok      { color: darken($conaf-ok, 8%);   &::before { content: "\f00c"; } }  // check
+    &--atencion{ color: darken($conaf-warn, 22%); &::before { content: "\f071"; } } // triángulo
+    &--riesgo  { color: darken($conaf-risk, 8%); &::before { content: "\f057"; } }  // círculo con x
+}
+
+// ─── Identidad institucional en la barra superior ───────────────────────────
+.navbar.fixed-top {
+    border-bottom: 3px solid $conaf-green;
+}
+
+// ─── Ficha de curso: los campos personalizados ──────────────────────────────
+// Los ocho campos son lo que hace filtrable el catálogo, y en la ficha del curso
+// son lo primero que la persona necesita saber: cuánto le va a tomar, qué
+// necesita antes y por cuánto tiempo vale la certificación (pantalla 03).
+.course-summary-item .customfields-container,
+.course-info-container .customfields-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem .75rem;
+    margin-top: .5rem;
+
+    .customfield {
+        background: rgba($conaf-navy, .06);
+        border-radius: $border-radius-sm;
+        padding: .15rem .55rem;
+        font-size: .875rem;
+        line-height: 1.4;
+    }
+
+    .customfieldname {
+        color: $conaf-navy;
+        font-weight: 600;
+
+        &::after {
+            content: ":";
+        }
+    }
+}
+
+// ─── El catálogo y el tablero son informes: que se puedan leer ──────────────
+// Una tabla ancha NUNCA debe hacer que la página entera se desplace de lado.
+// «Funciona en una pantalla de 320 px sin desplazamiento horizontal» es uno de
+// los siete no negociables, y es exactamente el problema que la pantalla 05
+// documenta en el contenido actual: hay que desplazar de lado para leer cada
+// línea.
+.reportbuilder-wrapper,
+.reportbuilder-report {
+    max-width: 100%;
+
+    .reportbuilder-table-container,
+    .table-responsive {
+        overflow-x: auto;
+    }
+}
+
+// ─── Que nada empuje la página hacia los lados ──────────────────────────────
+body {
+    overflow-x: hidden;
+}
+
+#page-content img,
+.course-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+// ─── Impresión de las fichas «para llevar» ──────────────────────────────────
+// Toda lección termina con algo descargable: una tarjeta, una lista de chequeo.
+// Cuando esa ficha se imprime desde el navegador en vez de descargarse en PDF,
+// esto evita que salga con la navegación de Moodle encima.
+@media print {
+    .navbar,
+    #nav-drawer,
+    .drawer,
+    .activity-navigation,
+    footer {
+        display: none !important;
+    }
+
+    #region-main {
+        width: 100% !important;
+        margin: 0 !important;
+    }
+}

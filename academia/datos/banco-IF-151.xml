@@ -1,0 +1,2371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Banco de preguntas de IF-151 · Física y comportamiento del fuego forestal.
+  GENERADO desde el Anexo A de IF-151_Diseno-de-curso_Academia-CONAF.docx.
+
+  60 ítems: 35 formativos (5 por lección), 21 de certificación (3 por lección)
+  y 4 integradoras. Opción múltiple, respuesta única, tres opciones, barajado.
+
+  LOS ÍTEMS C NO SE AGREGAN NUNCA A UN CUESTIONARIO DE LECCIÓN. Son la reserva
+  de la evaluación final: si aparecen antes, dejan de medir.
+
+  Todo el contenido técnico es PROPUESTA y requiere validación del Departamento
+  de Protección contra Incendios Forestales antes de su uso formativo.
+-->
+<quiz>
+
+  <question type="category">
+    <category><text>$course$/top/IF-151/Lección 1/Formativa</text></category>
+    <info format="html"><text></text></info>
+  </question>
+
+  <question type="multichoice">
+    <name><text>F1.1</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>En un balance de temporada se lee: «tuvimos 1.200 incendios, un 15 % menos que el año anterior». La superficie quemada, en cambio, se duplicó. ¿Qué conclusión corresponde?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>F1.1</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>El número de focos bajó, pero el indicador que importa —la superficie— empeoró. Hay que mirar qué pasó con los eventos grandes.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Las dos cifras miden cosas distintas y se mueven de forma independiente. La que describe el daño es la segunda.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Fue una buena temporada: menos incendios es menos problema.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>El 1,2 % de los eventos concentra el 84 % de la superficie quemada. Contar focos no describe el daño.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Los datos tienen que estar mal, porque menos incendios implica menos superficie.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>No hay contradicción. Una temporada con pocos focos y dos eventos que escapan produce más superficie que una con muchos focos controlados a tiempo.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>F1.2</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Te piden elegir un solo indicador para encabezar el informe anual de la Gerencia. ¿Cuál propones?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>F1.2</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Superficie quemada, acompañada del número de eventos de 200 ha o más.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Es la combinación que describe el daño y su fuente. Los dos números juntos dicen cuánto se quemó y quiénes lo produjeron.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>El número total de incendios de la temporada.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Se puede bajar ese número un 20 % y aun así tener la peor temporada en superficie. El indicador no apunta al daño.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>La superficie promedio por incendio.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Con una distribución de asimetría 147,9 el promedio no representa a casi ningún incendio: la mediana está bajo 1 ha y el promedio lo empujan unos pocos eventos.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>F1.3</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>En una reunión alguien afirma: «el 65 % de los incendios no llega a una hectárea, así que el sistema funciona bien». ¿Qué respondes?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>F1.3</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Que muchos son pequeños porque el ataque inicial funcionó, pero que la superficie del país la deciden los pocos que escapan.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Las dos cosas son ciertas a la vez. Reconocer el mérito del ataque inicial no obliga a aceptar la conclusión.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Que es correcto: ese 65 % es la tasa de éxito del sistema.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>El resultado no es lo mismo que la causa. Y queda fuera el 1,2 % restante, que produce el 84 % del daño.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Que el dato es irrelevante.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Sí es relevante: dice dónde funciona el sistema. Lo que no dice es dónde falla.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>F1.4</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Dos comunas piden refuerzo. La primera tuvo 300 incendios, ninguno sobre 5 ha. La segunda tuvo 12, dos de ellos sobre 400 ha. Solo alcanza para una.</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>F1.4</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>La segunda: concentra el tipo de evento que decide la superficie quemada, aunque tenga muchos menos focos.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Es la aplicación directa de la concentración del daño a una decisión de asignación.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>La primera: 300 incendios es veinticinco veces más carga operativa.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Es más carga de despacho, y hay que atenderla. Pero no es donde se juega la superficie de la temporada.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Se reparte mitad y mitad, porque ambas tuvieron incendios.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Repartir por igual frente a un daño tan concentrado equivale a no priorizar.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>F1.5</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Te piden fijar la meta de la Gerencia para la próxima temporada. ¿Cuál es defendible con el consolidado 2014–2024?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>F1.5</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Reducir el número de eventos que superan las 200 hectáreas.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Apunta exactamente al 1,2 % que produce el 84 % del daño.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Reducir en un 20 % el número total de incendios.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Se puede cumplir esa meta y tener la peor temporada en superficie de la década. La meta no apunta al resultado que importa.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Reducir el tiempo medio de llegada a todos los focos.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Importa, pero es un medio y no un resultado; y aplicado a todos los focos por igual reparte el esfuerzo donde no se decide el daño.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="category">
+    <category><text>$course$/top/IF-151/Lección 1/Certificación</text></category>
+    <info format="html"><text></text></info>
+  </question>
+
+  <question type="multichoice">
+    <name><text>C1.1</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Un análisis regional muestra que la superficie promedio por incendio subió de 3,2 a 9,8 ha, mientras la mediana se mantuvo en 0,4 ha. ¿Qué ocurrió?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>C1.1</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Hubo unos pocos eventos muy grandes. La mayoría de los incendios se comportó igual que siempre.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>El promedio se mueve con los extremos; la mediana, no. Que una suba y la otra no es la firma de una cola pesada.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Todos los incendios crecieron de tamaño.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Si así fuera, la mediana habría subido también.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Hubo más incendios que el año anterior.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>El número de eventos no aparece en ninguna de las dos cifras.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>C1.2</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Se propone medir el desempeño de las brigadas por «número de incendios controlados». ¿Qué distorsión introduce?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>C1.2</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Premia el volumen de focos menores y no distingue el evento que decidía la temporada.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Un indicador que trata igual un foco de 0,2 ha y uno de 300 ha no orienta ninguna decisión.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Ninguna: controlar incendios es exactamente el trabajo de una brigada.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Lo es. El problema no es el trabajo, es el indicador que se elige para describirlo.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Deja fuera la carga administrativa del personal.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Puede ser cierto, pero no es la distorsión que importa para la priorización del daño.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>C1.3</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Un análisis externo concluye: «Chile tiene un problema de ignición, no de propagación, porque el 87 % de los incendios es de origen humano». ¿Qué observación harías?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>C1.3</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Que el origen explica por qué se enciende, no por qué unos pocos eventos producen el 84 % de la superficie.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>El dato es correcto; la inferencia no. Son dos preguntas distintas y se responden con datos distintos.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Nada: el dato del 87 % es correcto y la conclusión se sigue de él.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>El dato es correcto. Lo que no se sigue es la conclusión.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Que el 87 % está mal medido.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>No hay razón para dudar del dato. El problema está en lo que se concluye de él.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="category">
+    <category><text>$course$/top/IF-151/Lección 2/Formativa</text></category>
+    <info format="html"><text></text></info>
+  </question>
+
+  <question type="multichoice">
+    <name><text>F2.1</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Una explicación que se escucha con frecuencia es que «el fuego corrió ladera arriba porque el viento lo empujó, como empuja una hoja». ¿Qué precisarías?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>F2.1</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Que el fuego no se desplaza: se vuelve a encender. El viento y la pendiente aceleran el precalentamiento del combustible de más arriba.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>La corrección no es de detalle. Quien cree que algo se mueve intenta frenarlo; quien entiende que se reenciende, ataca la cadena.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Nada: la imagen es correcta y además es fácil de entender.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Es intuitiva, pero induce error. Sugiere que basta con interponerse a algo que viaja.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Que el viento no influye en la propagación.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Influye mucho. Lo que está mal descrito es el mecanismo, no el factor.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>F2.2</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Dos parcelas con la misma carga de combustible por metro cuadrado. En una está seco; en la otra, húmedo. ¿Por qué avanza más rápido en la seca?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>F2.2</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Porque evaporar el agua consume energía que, de otro modo, iría a inflamar el combustible siguiente.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Es un balance energético, no una metáfora: el agua compite por la misma energía que sostiene el avance.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Porque el combustible húmedo pesa más y el fuego tiene que moverlo.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>El fuego no mueve el combustible: lo enciende.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Porque el combustible seco tiene mayor poder calorífico.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>El poder calorífico del material es prácticamente el mismo. Lo que cambia es cuánta energía hay que gastar antes de que arda.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>F2.3</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Hay que abrir línea de defensa y solo alcanza para un tramo. Uno tiene pasto fino y seco; el otro, troncos gruesos y húmedos, con la misma carga.</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>F2.3</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>El tramo fino y seco: necesita mucha menos energía para inflamarse, así que el frente avanza más rápido por ahí.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>La urgencia la marca la velocidad del contagio, no la cantidad de material disponible.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>El tramo de troncos gruesos: hay más material que puede arder.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Hay más masa, pero se inflama mucho más lento. El riesgo inmediato está en el otro tramo.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Da lo mismo: la carga por metro cuadrado es idéntica.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>La carga es solo uno de los términos. El otro es cuánta energía cuesta encender lo que viene por delante.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>F2.4</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>El jefe de operaciones pide «enfriar la cabeza con agua y aplicar retardante en el flanco». Está usando dos mecanismos distintos. ¿Cuáles?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>F2.4</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>El agua retira calor; el retardante interrumpe la reacción química en cadena.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Son dos vértices distintos del tetraedro. Saberlo evita usar uno donde corresponde el otro.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Los dos retiran calor; solo cambia la duración del efecto.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>El retardante no actúa principalmente enfriando: interfiere químicamente en la combustión.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>El agua retira oxígeno y el retardante, combustible.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Ninguno de los dos hace eso. El oxígeno lo retira el sofocado; el combustible, el cortafuegos.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>F2.5</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Al llegar a un incendio ves que el combustible por delante del frente ya humea, aunque las llamas están a veinte metros. ¿Qué está pasando?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>F2.5</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Está en precalentamiento y pirólisis: el calor lo está secando y liberando gases inflamables antes de que llegue la llama.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Es la fase previa a la ignición. Ver humo sin llama por delante del frente indica que la cadena ya empezó ahí.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Es humo del frente arrastrado por el viento.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Puede haber humo arrastrado, pero el material que humea localmente ya está pirolizando.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Es un foco secundario recién iniciado.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Un foco secundario ya tendría combustión. Aquí todavía no hay llama.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="category">
+    <category><text>$course$/top/IF-151/Lección 2/Certificación</text></category>
+    <info format="html"><text></text></info>
+  </question>
+
+  <question type="multichoice">
+    <name><text>C2.1</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>En una charla preguntan por qué se insiste tanto con la humedad del combustible y no con la temperatura del aire. ¿Cómo lo explicas?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>C2.1</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Que el agua del combustible hay que evaporarla antes de que arda, y esa energía sale del propio avance del fuego.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>La humedad actúa directamente sobre el balance que gobierna la velocidad de propagación.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Que la temperatura del aire no influye.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Influye, de forma indirecta: seca el combustible y lo acerca a su temperatura de ignición.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Que el agua apaga el fuego por contacto.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Eso describe la extinción con agua, no el efecto de la humedad contenida en el combustible.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>C2.2</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Dos incendios en el mismo predio y el mismo día, con combustible idéntico. Uno avanza a 0,5 m/s y el otro a 1,5 m/s. ¿Qué lo explica?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>C2.2</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Uno recibe más viento o sube pendiente: ambos aumentan la energía que el frente entrega por delante.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Son los dos factores que amplifican el primer término del balance, con el segundo constante.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>El segundo se inició con más material encendido.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>La cantidad inicial afecta el tamaño del foco, no la velocidad del frente una vez establecido.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>El segundo tuvo una ignición intencional, y por eso es más agresivo.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>El origen no cambia la física de la propagación una vez que el fuego está establecido.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>C2.3</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Te piden justificar por escrito por qué un cortafuegos funciona, en términos del tetraedro del fuego.</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>C2.3</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Porque retira el combustible: interrumpe la cadena de igniciones al no dejar material que encender.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Es la supresión de un vértice, y explica también su límite: no hace nada contra las pavesas que lo cruzan.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Porque enfría el terreno y baja la temperatura del frente.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>No enfría nada. Solo elimina material.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Porque desvía el viento y desorganiza la columna.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>No tiene efecto apreciable sobre el viento.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="category">
+    <category><text>$course$/top/IF-151/Lección 3/Formativa</text></category>
+    <info format="html"><text></text></info>
+  </question>
+
+  <question type="multichoice">
+    <name><text>F3.1</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Dos incendios el mismo día en la misma región. A: 27 °C, 35 % HR, viento 10 km/h, pendiente 8 %. B: 25 °C, 42 % HR, viento 9 km/h, pendiente 40 %. ¿Cuál tiene más probabilidad de convertirse en gran incendio?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>F3.1</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>B, por la pendiente: es la variable de mayor poder discriminante del consolidado (d de Cohen 0,87).</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Las otras tres variables son casi idénticas. La única que se separa es la que más pesa.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>A, porque está más caliente y más seco.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Son diferencias de dos grados y siete puntos de humedad. La temperatura tiene además el efecto más débil de las cuatro (d = 0,60).</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Los dos igual: las condiciones son muy parecidas.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>En tres variables sí. En la cuarta hay cinco veces más pendiente.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>F3.2</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Un plan regional propone intervenir combustible, instalar estaciones meteorológicas y «corregir la pendiente» en zonas críticas. ¿Qué observas?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>F3.2</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Que de los tres vértices solo el combustible se modifica; la meteorología se anticipa y la topografía se asume.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Es la consecuencia de gestión más importante del triángulo, y la que ordena el presupuesto de prevención.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Ninguna: los tres son intervenibles con presupuesto suficiente.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>La topografía no cambia. Lo que se hace con ella es decidir dónde no construir y dónde reforzar.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Que la meteorología es la única que importa de verdad.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>La pendiente tiene mayor poder discriminante que cualquier variable meteorológica en el consolidado chileno.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>F3.3</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Un incendio en terreno plano y con humedad alta se descontroló. ¿Contradice el triángulo?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>F3.3</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>No: falta mirar el viento, que multiplica por 1,41 las probabilidades, y el tipo de combustible.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>El triángulo describe la interacción de tres grupos de factores. Que uno atenúe no impide que otro domine.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Sí: el modelo no aplica en terreno plano.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>El modelo no es una regla de pendiente. La pendiente es uno de los factores del vértice topográfico.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Sí: con humedad alta no debería haber ardido.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>La humedad atenúa —reduce las probabilidades a 0,70— pero no las anula.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>F3.4</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Te piden explicar por qué el viento del este preocupa más que un viento de igual velocidad desde otra dirección.</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>F3.4</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Porque en el consolidado concentra la mayor proporción de grandes incendios, pese a ser poco frecuente.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>La asociación aparece con la dirección, no con la magnitud. Por eso sorprende: no llega precedido de un valor alto en el anemómetro.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Porque sopla más fuerte que los vientos de otras direcciones.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>No es cuestión de velocidad: la asociación aparece con la dirección, no con la magnitud.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Porque es el viento más frecuente en verano.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Es al revés: es poco frecuente, y esa es parte de la razón por la que sorprende.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>F3.5</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>La Gerencia quiere priorizar una sola combinación de variables para la vigilancia diaria. Con los datos chilenos, ¿cuál entrega más información?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>F3.5</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>La pendiente del terreno junto con la humedad del día: son las dos de mayor tamaño de efecto.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Pendiente (d = 0,87) y humedad (d = −0,70) son las que mejor separan un gran incendio de uno menor.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>La temperatura máxima del día.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Es la de menor tamaño de efecto de las cuatro (d = 0,60).</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>El número de igniciones del día anterior.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>No describe las condiciones ambientales que separan un gran incendio de uno menor.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="category">
+    <category><text>$course$/top/IF-151/Lección 3/Certificación</text></category>
+    <info format="html"><text></text></info>
+  </question>
+
+  <question type="multichoice">
+    <name><text>C3.1</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Un informe atribuye un gran incendio «al viento». Los registros del día: 24 °C, 46 % HR, viento 8 km/h, pendiente 55 %. ¿Qué observas?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>C3.1</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Que el viento estuvo cerca del promedio de los incendios pequeños (7,6 km/h). El factor fuera de rango es la pendiente.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>La variable que se mantuvo en valores normales difícilmente explica lo ocurrido; la que se sale de rango, sí.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Nada: 8 km/h sobre pendiente fuerte es viento suficiente.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Puede contribuir, pero no es lo que distingue este caso. Lo que se sale de rango es otra cosa.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Que faltan datos para poder afirmar algo.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Hay cuatro variables medidas y una está muy fuera de rango. Eso ya orienta la lectura.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>C3.2</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>En una reunión te preguntan qué significa, en términos operativos, que la humedad tenga una razón de momios de 0,70.</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>C3.2</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Que a mayor humedad las probabilidades de gran incendio bajan: es el vértice que atenúa.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Un valor bajo 1 indica efecto protector. Es la asociación negativa más fuerte con la superficie quemada.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Que el 70 % de los grandes incendios ocurre con humedad alta.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>La razón de momios no es un porcentaje de casos.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Que la humedad no tiene efecto, porque el valor está bajo 1.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Estar bajo 1 indica efecto protector, no ausencia de efecto.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>C3.3</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Trasladan a un profesional de una zona plana y húmeda a una precordillerana. ¿Qué conserva de su experiencia y qué no?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>C3.3</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Conserva el marco —los tres vértices y su interacción—; pierde la calibración numérica de lo que es un día peligroso.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Es la distinción central del curso: la física se transfiere, los valores típicos de cada variable no.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Lo conserva todo: la física es la misma en cualquier parte del país.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>La física sí. Los valores típicos de cada variable, no.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>No conserva nada útil: tiene que empezar de cero.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Descartar el marco junto con la calibración es tan costoso como no recalibrar.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="category">
+    <category><text>$course$/top/IF-151/Lección 4/Formativa</text></category>
+    <info format="html"><text></text></info>
+  </question>
+
+  <question type="multichoice">
+    <name><text>F4.1</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Un cortafuegos de treinta metros, despejado y sin una rama. El fuego aparece al otro lado. ¿Explicación más probable?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>F4.1</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Pavesas transportadas por el viento y la convección generaron un foco secundario.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Es el único de los cuatro mecanismos que salva distancias de esa magnitud.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>El calor se transmitió por conducción a través del suelo.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>La conducción es el mecanismo menos relevante en vegetación y actúa sobre todo dentro de un mismo combustible.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>La radiación inflamó el combustible al otro lado.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>La radiación actúa sobre el combustible inmediatamente por delante del frente. Para cruzar un cortafuegos despejado el mecanismo que corresponde es el transporte de pavesas.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>F4.2</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>El fuego sube laderas con mucha más facilidad de la que baja. ¿Qué mecanismo lo explica principalmente?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>F4.2</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>La convección: los gases calientes ascienden y precalientan el combustible situado por encima.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Es la razón física de que la pendiente sea la variable de mayor peso, y conecta esta lección con la 3.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>La conducción a través de raíces y suelo.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>La conducción actúa sobre todo dentro de un mismo combustible y es poco relevante en vegetación.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>La gravedad, que arrastra material encendido cuesta arriba.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>La gravedad arrastra material hacia abajo, no hacia arriba.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>F4.3</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Hay que proteger una vivienda a 400 metros del frente, con viento a favor. ¿Qué vigilas además del frente?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>F4.3</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>La zona intermedia y los alrededores de la vivienda, por posibles focos secundarios.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Las pavesas caen por delante del frente, y la protección de la vivienda empieza antes de que el frente llegue.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Solo el frente: 400 metros es distancia más que suficiente.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Las pavesas pueden caer a cientos de metros o kilómetros por delante del frente.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>El flanco opuesto, por si el viento rota.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Es prudente tenerlo en cuenta, pero no es el riesgo dominante con viento a favor.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>F4.4</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Un participante pregunta por qué la conducción importa tan poco en un incendio forestal, si hay contacto entre las plantas.</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>F4.4</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Porque la madera es mal conductora: el calor se transmite mal de partícula a partícula.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>El contacto existe; lo que falla es la eficiencia de la transmisión en ese material.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Porque no hay contacto real entre las plantas.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Sí lo hay. El problema es que la transmisión por contacto es ineficiente en este tipo de material.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Porque el viento la anula.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>El viento afecta la convección y el transporte de pavesas, no la conducción dentro del material.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>F4.5</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Un parte describe «múltiples focos por delante del frente, a distancias de hasta 800 m». ¿Qué implica operativamente?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>F4.5</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Que la velocidad efectiva del incendio es mayor que la del frente y que el perímetro de control se vuelve incierto.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Es la consecuencia táctica del spotting: el perímetro deja de ser una línea y pasa a ser un área.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Que hubo varias igniciones intencionales simultáneas.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Es una explicación posible pero no la primera. El patrón descrito es el clásico del transporte de pavesas.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Que el frente principal se detuvo.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Nada lo indica. Los focos secundarios se suman al frente, no lo reemplazan.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="category">
+    <category><text>$course$/top/IF-151/Lección 4/Certificación</text></category>
+    <info format="html"><text></text></info>
+  </question>
+
+  <question type="multichoice">
+    <name><text>C4.1</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Te piden ordenar los mecanismos de transferencia por su peso real en incendios de vegetación.</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>C4.1</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Radiación y convección dominan; la conducción es secundaria; y el transporte de pavesas es lo que multiplica el alcance.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Ese orden es estable y así lo declara la literatura de referencia. Es lo que hay que llevarse de la lección.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Conducción primero, porque hay contacto directo entre el combustible.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Es el mecanismo menos relevante en vegetación, precisamente porque la madera conduce mal.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Los tres pesan igual; depende del día y del combustible.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>La magnitud varía, pero el orden relativo no.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>C4.2</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Se planifica un cortafuegos como única defensa de un sector poblado. ¿Qué advertencia técnica corresponde dejar por escrito?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>C4.2</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Que un cortafuegos no detiene los focos secundarios: hay que combinarlo con reducción de combustible alrededor de las viviendas.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Es la aplicación directa del mecanismo que el cortafuegos no cubre. Dejarla por escrito es parte del trabajo profesional.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Que basta con duplicar su ancho.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Aumenta el margen frente a la radiación, pero no frente a pavesas que viajan cientos de metros.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Que el cortafuegos es innecesario en zonas pobladas.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Sigue siendo útil. El error es tratarlo como defensa única.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>C4.3</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Un vecino pregunta por qué se le quemó el techo si el fuego nunca llegó a su cerco. ¿Qué le explicas?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>C4.3</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Que las pavesas encendidas viajan por delante del frente y encienden donde caen.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Es la explicación correcta y además la que fundamenta pedirle que despeje el entorno de la vivienda.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Que el calor radiado atravesó el cerco.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>La radiación actúa sobre el combustible inmediato al frente, no a esa distancia.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Que debió haber un segundo incendio no reportado.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Los focos secundarios son parte del mismo incendio, no un evento aparte.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="category">
+    <category><text>$course$/top/IF-151/Lección 5/Formativa</text></category>
+    <info format="html"><text></text></info>
+  </question>
+
+  <question type="multichoice">
+    <name><text>F5.1</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Un parte reporta una intensidad de línea de 380 kW·m⁻¹. ¿Qué era posible ese día?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>F5.1</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Ataque directo con cuadrillas y herramienta manual.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Bajo 500 kW·m⁻¹ el ataque directo es viable según los valores de referencia.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Solo ataque indirecto, por seguridad.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Es una decisión conservadora que desaprovecha la ventana en que el ataque directo sí funciona.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>La cifra por sí sola no dice nada sobre la táctica.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>La intensidad de línea es precisamente el descriptor que mejor predice la dificultad de control.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>F5.2</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Dos partes: uno con 1.000 kW·m⁻¹ y otro con 2.000. ¿La llama del segundo mide el doble?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>F5.2</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>No: la relación es de rendimiento decreciente. Duplicar la intensidad no duplica la llama.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>La relación es potencial con exponente 0,46. Es la confusión de campo más frecuente, y opera en la dirección peligrosa: se subestima la energía.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Sí: la relación entre llama e intensidad es proporcional.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>No lo es. Una llama que se ve «un poco más alta» puede significar mucha más energía.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>No se puede saber sin conocer el tipo de combustible.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>La relación entre longitud de llama e intensidad no depende del combustible.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>F5.3</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>En terreno observas llamas de aproximadamente tres metros. ¿Qué corresponde hacer?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>F5.3</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Descartar el ataque directo en la cabeza, pedir maquinaria o medios aéreos, y vigilar focos secundarios.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Tres metros corresponden al tramo de 2.000 a 4.000 kW·m⁻¹: control difícil, con antorcheos y focos secundarios probables.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Ataque directo con cuadrilla, reforzando el número de personas.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>En ese tramo de intensidad el ataque manual directo deja de ser viable. Más personal no cambia la física.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Esperar sin actuar a que baje la intensidad.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Hay acciones posibles en los flancos y en la protección de valores. No actuar no es la lectura correcta.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>F5.4</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Un cambio de viento duplica la velocidad de propagación, con el mismo combustible. ¿Qué pasa con la intensidad de línea?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>F5.4</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Se duplica: la velocidad de propagación entra directamente en el cálculo.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Es el puente entre la lección 3 y lo que se ve en terreno: todo lo que acelera la propagación eleva la intensidad en la misma proporción.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Se mantiene: la intensidad depende del combustible.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>El combustible aporta dos de los tres términos. El tercero es la velocidad.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Aumenta poco, porque la relación no es lineal.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>La relación no lineal es entre llama e intensidad, no entre velocidad e intensidad.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>F5.5</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>En un documento de trabajo se citan los umbrales de 1,2 / 2,4 / 3,4 m como «norma chilena». ¿Qué observación corresponde?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>F5.5</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Que provienen de NWCG y no están validados con datos chilenos. Se usan como referencia internacional y hay que decirlo.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>El análisis estadístico nacional no mide longitud de llama, de modo que no puede validarlos ni desmentirlos.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Nada: son de uso universal y no requieren aclaración.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Son de uso extendido, que no es lo mismo que validados localmente.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Que los umbrales están mal y no deben usarse.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Son la mejor referencia disponible. El problema es presentarlos como validados con datos propios.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="category">
+    <category><text>$course$/top/IF-151/Lección 5/Certificación</text></category>
+    <info format="html"><text></text></info>
+  </question>
+
+  <question type="multichoice">
+    <name><text>C5.1</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Parte de incendio: 4.600 kW·m⁻¹. La jefatura pregunta por qué no se atacó la cabeza.</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>C5.1</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Porque sobre 4.000 kW·m⁻¹ el ataque directo en la cabeza es casi siempre ineficaz, y son probables el fuego de copas y el spotting.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>La respuesta técnica está en la cifra del parte, y es la que resiste una repregunta.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Porque no había personal suficiente disponible.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Puede haber sido cierto, pero no es la razón técnica y deja la decisión sin fundamento.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Porque la cifra es demasiado alta para ser real.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Es un valor plenamente posible en condiciones extremas.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>C5.2</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Te entregan un parte sin intensidad, pero con longitud de llama de 1,5 m. ¿Qué puedes deducir?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>C5.2</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Que está en el tramo de 500 a 2.000 kW·m⁻¹: demasiado intenso para ataque manual directo.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>La llama es la manifestación visible de la intensidad, y por eso se usa como indicador de campo.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Nada: sin el valor de intensidad no se puede decir.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>La relación entre ambas magnitudes es precisamente lo que permite deducirlo.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Que el ataque directo con cuadrilla era viable.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Eso corresponde a llamas bajo 1,2 metros.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>C5.3</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Te piden justificar por qué la intensidad de línea es mejor descriptor que la superficie quemada para decidir la táctica.</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>C5.3</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Porque describe la energía que el frente libera ahora y predice la dificultad de control; la superficie describe el resultado acumulado.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Alexander (1982) la señala como el descriptor más válido del comportamiento general de un incendio.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Porque la superficie quemada es difícil de medir en tiempo real.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Es medible. El problema es que informa del pasado, no de lo que se puede hacer ahora.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Porque la intensidad ya incluye la superficie en su cálculo.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>No la incluye. Son magnitudes distintas.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="category">
+    <category><text>$course$/top/IF-151/Lección 6/Formativa</text></category>
+    <info format="html"><text></text></info>
+  </question>
+
+  <question type="multichoice">
+    <name><text>F6.1</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Un mapa muestra la mayor densidad de focos en la costa. Otro, la mayor superficie quemada en la precordillera. ¿Se contradicen?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>F6.1</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>No: ocurrencia y severidad se distribuyen distinto, y la prevención tiene que decidir cuál de las dos ataca.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Ambos mapas son correctos. Miden cosas distintas, y esa diferencia es el contenido de la lección.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Sí: uno de los dos mapas está mal construido.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Los dos son correctos.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>No, porque los grandes incendios empiezan en la costa y avanzan hacia la precordillera.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>No es lo que describen los datos. Son eventos distintos, no los mismos desplazándose.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>F6.2</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Los datos del día indican fuerte pendiente, 24 °C, 44 % de humedad y viento de 7 km/h. ¿Qué régimen ambiental es y qué severidad tiene?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>F6.2</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Pendiente fuerte: el más severo de los cinco, con 8,3 % de grandes incendios.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Es el perfil exacto del régimen precordillerano, que concentra la mayor severidad pese a representar solo el 11 % de los eventos.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Cálido y seco, porque la temperatura es alta para el promedio.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Ese régimen promedia 28 °C y 35 % de humedad, y su severidad es 3,2 %. Las cifras del enunciado no corresponden.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Ventoso: siempre hay algo de viento en un incendio.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>El régimen ventoso promedia 22 km/h. Con 7 km/h no aplica.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>F6.3</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Presupuesto de prevención para una sola comuna. La primera: 300 focos, casi todos bajo 1 ha, terreno plano costero. La segunda: 25 focos, varios sobre 500 ha, precordillera.</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>F6.3</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>La segunda: es donde se produce la superficie quemada, aunque tenga muchos menos eventos.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Aplica la distinción entre ocurrencia y severidad a una decisión concreta de asignación.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>La primera: más focos significa más riesgo.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Más focos significa más carga de despacho. No es donde se decide el daño.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>La primera, porque hay más población que proteger.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>La exposición de población es un criterio válido, pero no se sigue del número de focos ni fue lo planteado.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>F6.4</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Alguien con larga trayectoria en una zona plana y de baja severidad sostiene que «la pendiente no es tan importante». ¿Cómo lo abordas?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>F6.4</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Reconociendo que en su régimen ambiental es cierto, y mostrando que ese régimen es de los de menor severidad del país.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>La conversación funciona si valida su experiencia antes de acotarla. Descalificarla la vuelve inútil.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Diciéndole que su experiencia no sirve para la nueva zona.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Sirve, y mucho, dentro de su régimen. El problema es extrapolarla.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Dándole la razón: la importancia de la pendiente varía según la zona.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Varía, pero sigue siendo la variable de mayor poder discriminante del consolidado nacional.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>F6.5</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>En una reunión te preguntan para qué sirve saber en qué régimen ambiental está una zona un día determinado.</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>F6.5</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Para anticipar el comportamiento esperado del fuego y ajustar el despliegue antes de que ocurra.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Es exactamente el uso operativo que el análisis de conglomerados habilita.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Para determinar la causa probable de las igniciones.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>El régimen describe condiciones ambientales, no origen.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Para calcular cuánta superficie se va a quemar.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Entrega probabilidades comparadas, no un pronóstico de superficie.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="category">
+    <category><text>$course$/top/IF-151/Lección 6/Certificación</text></category>
+    <info format="html"><text></text></info>
+  </question>
+
+  <question type="multichoice">
+    <name><text>C6.1</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Una autoridad pide concentrar todos los recursos donde más incendios hay. ¿Qué argumentas?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>C6.1</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Que ocurrencia y severidad no coinciden: concentrarse en ocurrencia deja sin cubrir donde se produce el 84 % de la superficie.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Es el argumento central de la lección, aplicado a una decisión de nivel directivo.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Que tiene razón: donde hay más focos hay más riesgo.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Hay más demanda de despacho. El daño se concentra en otra parte.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Que corresponde repartir por igual entre todas las comunas.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Repartir por igual frente a un daño concentrado equivale a no priorizar.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>C6.2</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Te preguntan por qué la franja precordillerana del Maule a La Araucanía concentra los grandes incendios.</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>C6.2</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Porque ahí coinciden pendiente y sequedad, las dos variables de mayor poder discriminante.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>La coincidencia de los dos factores de más peso es lo que explica el patrón geográfico.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Porque es donde ocurren más igniciones.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>La ocurrencia se concentra en la costa y la depresión intermedia.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Porque tiene menos recursos de extinción disponibles.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Puede influir, pero el patrón se explica por las condiciones ambientales que registra el consolidado.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>C6.3</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>El régimen nuboso y húmedo reúne el 13 % de los eventos y solo el 1,3 % de los grandes incendios. ¿Qué decisión soporta ese dato?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>C6.3</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Que en esas condiciones se puede liberar capacidad hacia zonas de régimen severo, sin abandonar la respuesta básica.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Es el uso operativo de los regímenes: reasignar según la severidad esperada del día, no según la ocurrencia histórica.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Que no hace falta cobertura en esas zonas.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>1,3 % no es cero, y sigue habiendo el 13 % de los eventos que atender.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Que hay que reforzar ahí, porque concentra el 13 % de los eventos.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Hay eventos, pero casi ninguno de los que deciden la superficie del país.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="category">
+    <category><text>$course$/top/IF-151/Lección 7/Formativa</text></category>
+    <info format="html"><text></text></info>
+  </question>
+
+  <question type="multichoice">
+    <name><text>F7.1</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>En una declaración pública se afirma: «fue intencional, por eso creció tanto». ¿Qué observación corresponde?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>F7.1</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Que mezcla origen con comportamiento: el origen explica la ignición, no por qué el incendio escapó a control.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Es una confusión frecuente en la comunicación pública, y ahora hay un número que permite deshacerla.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Nada, si efectivamente el incendio fue intencional.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>El hecho puede ser cierto y la inferencia falsa. Son dos preguntas distintas.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Que el porcentaje de incendios intencionales es demasiado bajo para afirmarlo.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Es 38 %, que no es bajo. El problema está en otra parte.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>F7.2</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Te piden describir qué caracteriza físicamente a un evento extremo, para una minuta técnica.</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>F7.2</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Corrientes convectivas intensas, spotting masivo y acoplamiento entre el incendio y la atmósfera.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Son los rasgos que distinguen un evento extremo de un incendio simplemente grande.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Una velocidad de propagación constante y alta durante muchas horas.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Lo característico no es la constancia, sino el acoplamiento y la generación masiva de focos.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Un único frente muy ancho y bien definido.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Al contrario: el spotting masivo hace que el perímetro deje de ser un frente único.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>F7.3</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>En una vocería preguntan «¿por qué no lo apagaron con aviones?». ¿Qué respuesta es técnicamente correcta?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>F7.3</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Que por sobre cierta intensidad ningún medio es eficaz en la cabeza, y que el trabajo se concentra en flancos y protección de valores.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Es cierta, es verificable y no compromete a la institución con una expectativa que no puede cumplir.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Que faltaron medios aéreos.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Instala una expectativa falsa que después se vuelve en contra de la propia institución.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Que los medios aéreos no sirven en incendios forestales.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Sirven, y mucho, dentro de ciertos rangos de intensidad.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>F7.4</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Dos temporadas recientes quemaron, cada una, más de 400.000 hectáreas. ¿Qué tuvieron en común?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>F7.4</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Los tres vértices del triángulo tensionados a la vez, sobre una megasequía sostenida desde 2010.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>La coincidencia simultánea, no la magnitud de un solo factor, es lo que define esas temporadas.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Un aumento del número de igniciones intencionales.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>El número de focos no es lo que define esas temporadas, y el origen no explica el comportamiento.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Que la capacidad de respuesta fue insuficiente.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>La capacidad de respuesta importa, pero por sobre cierto umbral el evento supera cualquier sistema. No es lo que distingue a esas temporadas.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>F7.5</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>En la columna de humo de un incendio severo se forma un pirocúmulo. ¿Por qué importa operativamente?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>F7.5</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Porque en los casos más severos alcanza la tropopausa y puede generar su propia tormenta, con rayos y rachas erráticas.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Deja de ser un fenómeno de observación y pasa a ser un factor que afecta la seguridad de quienes trabajan en el incendio.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>No importa: es una nube de humo sin efecto sobre el incendio.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>En los casos severos genera su propia tormenta, con efectos sobre el propio incendio.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Porque indica que el incendio es de turba.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Se asocia a una columna convectiva potente, no a un tipo de combustible en particular.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="category">
+    <category><text>$course$/top/IF-151/Lección 7/Certificación</text></category>
+    <info format="html"><text></text></info>
+  </question>
+
+  <question type="multichoice">
+    <name><text>C7.1</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>En una vocería te preguntan si el incendio se pudo evitar. ¿Qué respuesta resiste una repregunta?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>C7.1</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Que la ignición se pudo evitar —el 87 % es de origen humano— pero que el comportamiento lo explicó la coincidencia de condiciones extremas.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Separa las dos preguntas en la misma frase, que es lo único que impide que la repregunta desarme la respuesta.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Que sí, con más prevención.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Es cierto a medias y no distingue ignición de comportamiento. La repregunta obvia es «¿entonces falló la prevención?».</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Que no, porque fue un evento natural.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Solo el 0,5 % de los incendios tiene causa natural.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>C7.2</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Un informe de cierre concluye que el evento se explicó «por el viento». Las condiciones fueron extremas en las tres variables. ¿Qué observas?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>C7.2</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Que atribuirlo a una sola variable pierde lo característico del evento extremo: la coincidencia.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Cuando las tres están tensionadas, elegir una como causa es una decisión narrativa, no técnica.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Nada, si el viento registró el valor más alto de las tres.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>El valor más alto no es la causa única cuando las tres están fuera de rango.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Que corresponde repetir el análisis con más datos.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Los datos están. El problema es la lectura que se hace de ellos.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>C7.3</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Te piden distinguir, para un glosario institucional, un Extreme Wildfire Event de un gran incendio.</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>C7.3</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Que el primero supera toda capacidad de extinción disponible; el segundo es una categoría de superficie.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Son criterios de naturaleza distinta: uno describe la relación con la capacidad de respuesta, el otro un umbral de hectáreas.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Que un Extreme Wildfire Event es el que supera las 200 hectáreas.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Ese es el umbral de «gran incendio» del consolidado, que es otra cosa.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Que la diferencia es la duración del evento.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>No existe tal criterio.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="category">
+    <category><text>$course$/top/IF-151/Integradoras</text></category>
+    <info format="html"><text></text></info>
+  </question>
+
+  <question type="multichoice">
+    <name><text>I.1</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Llevas diez temporadas en una zona costera y plana, donde has visto cientos de incendios y casi ninguno grande. Te trasladan a una zona precordillerana. ¿Qué recalibras?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>I.1</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>El marco es el mismo, pero paso de un régimen de baja severidad a uno donde la pendiente multiplica por 1,70 las probabilidades de gran incendio.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>La física se transfiere; la calibración numérica no. Reconocer eso es el objetivo central del curso.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Nada: he visto más incendios que nadie.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Volumen de experiencia y representatividad no son lo mismo: son muchos eventos, pero de un solo régimen ambiental.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Todo: mi experiencia no sirve.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Esto deja fuera el marco junto con la calibración. La física es la misma en todo Chile; lo que cambia son los valores de las variables.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>I.2</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Un día de enero se registran 26 °C, 38 % de humedad relativa y viento de 12 km/h. ¿Es un día tranquilo?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>I.2</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>No necesariamente: son aproximadamente las condiciones medias en que ocurrieron los incendios extremos en Chile.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Los incendios extremos chilenos ocurrieron en promedio a 26,4 °C, 37,3 % de humedad y 12,6 km/h. La «regla del 30» marca peligro excepcional, no el umbral desde el cual preocuparse.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Sí: no se cumple ninguna de las tres condiciones de la regla del 30.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>El dato chileno apunta en la dirección contraria, y es la razón por la que la doctrina importada necesita calibración local.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Depende solo del combustible disponible.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>El combustible importa, pero la pregunta era si esas cifras tranquilizan. No lo hacen.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>I.3</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>En una entrevista te preguntan por qué un incendio arrasó 3.000 hectáreas. ¿Qué respondes?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>I.3</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Que coincidieron pendiente, sequedad y viento, y que ninguna variable aislada lo explica.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Es lo que dice la física, lo que confirman los datos, y lo único que resiste una repregunta.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Que fue intencional.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>El 38 % de las igniciones lo son, pero el origen no explica el comportamiento. Son preguntas distintas.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Que faltaron medios aéreos.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Por sobre cierta intensidad ningún medio es eficaz. Decirlo mal instala una expectativa falsa que después se vuelve en contra.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>I.4</text></name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Preparas la minuta de la temporada: 1.100 incendios, 62 % bajo 1 ha, y nueve eventos sobre 200 ha que suman el 86 % de la superficie. Uno reportó 5.200 kW·m⁻¹ en precordillera. ¿Cómo la encabezas?</p>]]></text>
+    </questiontext>
+    <generalfeedback format="html"><text></text></generalfeedback>
+    <defaultgrade>1.0000000</defaultgrade>
+    <penalty>0.0000000</penalty>
+    <hidden>0</hidden>
+    <idnumber>I.4</idnumber>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <showstandardinstruction>0</showstandardinstruction>
+    <correctfeedback format="html"><text></text></correctfeedback>
+    <partiallycorrectfeedback format="html"><text></text></partiallycorrectfeedback>
+    <incorrectfeedback format="html"><text></text></incorrectfeedback>
+    <shownumcorrect/>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Señalando que nueve eventos decidieron la temporada, y que al menos uno alcanzó intensidades donde el ataque directo en la cabeza no era viable.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Cruza las tres ideas del curso: dónde se concentra el daño, dónde ocurre y qué significaban las cifras del parte.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Destacando que el 62 % de los incendios no superó una hectárea.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>Es cierto y es una buena noticia sobre el ataque inicial, pero no describe lo que ocurrió con la superficie.</p>]]></text>
+      </feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Atribuyendo la temporada al aumento de igniciones intencionales.</p>]]></text>
+      <feedback format="html">
+        <text><![CDATA[<p>La minuta no aporta ningún dato de origen, y el origen no explicaría el comportamiento de esos nueve eventos.</p>]]></text>
+      </feedback>
+    </answer>
+  </question>
+</quiz>

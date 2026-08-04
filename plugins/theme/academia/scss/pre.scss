@@ -1,0 +1,66 @@
+// Variables de la Academia CONAF — se cargan ANTES de Bootstrap.
+//
+// Todo lo de este archivo tiene que existir aquí y no en post.scss: son
+// variables que Bootstrap usa para generar cientos de reglas. Cambiarlas
+// después obliga a pelear con !important en cada sitio.
+//
+// Fuente de los valores: prototipo pantalla 15 «Estándar de diseño y
+// pedagogía», secciones 7 y 8, y la paleta institucional que ahí se declara.
+
+// ─── Paleta institucional ────────────────────────────────────────────────────
+$conaf-navy:   #143A73;   // azul institucional
+$conaf-blue:   #1E5FA8;   // azul de acento
+$conaf-green:  #2C8A3C;   // verde CONAF
+
+// Los tres colores de ESTADO. No son decoración y no diferencian temas:
+// significan siempre correcto, atención y riesgo, y en la interfaz van
+// SIEMPRE acompañados de un ícono y una palabra.
+//
+// Eso último no es preferencia estética: es el criterio 1.4.1 de WCAG 2.2, que
+// exige que el color nunca lleve el significado solo. Es exigible a los órganos
+// del Estado por el Decreto N.º 1, la Ley 21.180 y la Ley 20.422.
+$conaf-ok:     #0CA30C;
+$conaf-warn:   #FAB219;
+$conaf-risk:   #D03B3B;
+
+$primary:      $conaf-navy;
+$secondary:    #6c757d;
+$success:      $conaf-green;
+$info:         $conaf-blue;
+$warning:      $conaf-warn;
+$danger:       $conaf-risk;
+
+// ─── Tipografía: el estándar, hecho variable ─────────────────────────────────
+// «Tamaño del texto de cuerpo: mínimo 16 px. Nunca menos.»
+// «Interlineado: mínimo 1,5. Ideal 1,6.»
+//
+// El paquete de contenido actual está medido en interlineado 1,2 — por debajo
+// del mínimo que pide la norma. Estas dos líneas hacen que ningún curso nuevo
+// pueda heredar ese problema del tema.
+$font-size-base:   1rem;      // 16 px con el html a 16 px
+$line-height-base: 1.6;
+$headings-line-height: 1.25;
+
+$font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto,
+                         "Helvetica Neue", Arial, sans-serif;
+
+// ─── Enlaces ─────────────────────────────────────────────────────────────────
+// El azul de acento, no el institucional: sobre fondo blanco el navy queda por
+// debajo del contraste que se necesita para distinguir un enlace del texto.
+$link-color: $conaf-blue;
+$link-hover-color: darken($conaf-blue, 12%);
+// Subrayado siempre. Un enlace que solo se distingue por el color vuelve a caer
+// en 1.4.1: quien no distingue ese azul no ve que hay un enlace.
+$link-decoration: underline;
+
+// ─── Foco de teclado ─────────────────────────────────────────────────────────
+// «El foco es visible: se ve claramente dónde está parado el teclado» — uno de
+// los siete no negociables de accesibilidad de la pantalla 15.
+$focus-ring-width:   3px;
+$focus-ring-opacity: 1;
+$focus-ring-color:   $conaf-blue;
+
+// ─── Radios y sombras ────────────────────────────────────────────────────────
+$border-radius:    .625rem;
+$border-radius-sm: .375rem;
+$border-radius-lg: .875rem;
