@@ -88,9 +88,25 @@ Tres cosas más que conviene no descubrir en caliente:
 - **El `CONNECTION LIMIT` es del rol, no de la base**, así que las dos instancias comparten un
   solo techo de 60. Por eso `MaxRequestWorkers` está en **6** en este repositorio y en 50 en
   producción: 50 + 6 + 2 crones = 58. Al promover v2, hay que devolverlo a 50.
-- **`filedir` se clona por hardlink**, no se copia. Son 11 GB de contenido direccionado por
-  hash e inmutable: Moodle nunca reescribe un archivo existente, solo crea o borra enlaces.
-  El clon cuesta ~1 GB en vez de 12.
+- **Del `moodledata` se clona SOLO `filedir`, y por hardlink.** Es la única parte
+  irremplazable: 11 de los 12 GB, y es el contenido de los PDF, los SCORM, las imágenes
+  incrustadas y las entregas. Al ser contenido direccionado por SHA1 —Moodle nunca reescribe
+  un archivo existente, solo crea o borra enlaces— compartir inodos es seguro y el clon cuesta
+  casi nada en disco.
+
+  Todo lo demás (`cache/`, `temp/`, `sessions/`, `trashdir/`, `lang/`) Moodle lo recrea solo, y
+  copiarlo es peor que no hacerlo: caché rancia, sesiones ajenas, y sobre todo
+  `climaintenance.html`, que si viaja en la copia deja a v2 respondiendo «under maintenance» a
+  todo, healthcheck incluido.
+
+  **Y el orden importa: primero el `pg_dump`, después el `cp -al`.** Al revés, un archivo
+  subido en el intervalo queda referenciado en la base y sin contenido en disco. El
+  procedimiento completo, con la comprobación de que no falta ningún `contenthash`, está en
+  [.env.v2.example](../.env.v2.example).
+
+  Lo que **no** hay que confundir: los cursos no están en `moodledata`. La estructura, las
+  actividades, las matrículas, las calificaciones y el banco de preguntas están en la base.
+  `filedir` solo guarda el contenido de los archivos a los que esas actividades apuntan.
 
 ---
 
