@@ -51,3 +51,6 @@ Thumbs.db
 # versiona: depende de qué cursos existan en cada instancia, y una copia vieja
 # en el repositorio haría que alguien aplique una clasificación de otro momento.
 academia/datos/cursos-clasificacion.csv
+
+# reglas de COIPO_ERRORES (rutas absolutas, personales)
+.claude/rules/errores-*.md
