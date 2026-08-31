@@ -1,0 +1,627 @@
+{
+  "repository": "target",
+  "generated_at": "2026-08-31T19:37:50.052226",
+  "analysis": {
+    "plugins/theme/boost_magnific/_editor/model/pricing-modern/editor-plugin.js": {
+      "javascript": {
+        "imports": [],
+        "exports": [],
+        "components": [],
+        "api_calls": [],
+        "routes": [],
+        "env_vars": []
+      }
+    },
+    "plugins/theme/boost_magnific/_editor/model/events/editor-plugin.js": {
+      "javascript": {
+        "imports": [],
+        "exports": [],
+        "components": [],
+        "api_calls": [],
+        "routes": [],
+        "env_vars": []
+      }
+    },
+    "plugins/theme/boost_magnific/_editor/model/testimonials-amazing/editor-plugin.js": {
+      "javascript": {
+        "imports": [],
+        "exports": [],
+        "components": [],
+        "api_calls": [],
+        "routes": [],
+        "env_vars": []
+      }
+    },
+    "plugins/theme/boost_magnific/_editor/model/testimonials-minimal/editor-plugin.js": {
+      "javascript": {
+        "imports": [],
+        "exports": [],
+        "components": [],
+        "api_calls": [],
+        "routes": [],
+        "env_vars": []
+      }
+    },
+    "plugins/theme/boost_magnific/_editor/model/pricing/editor-plugin.js": {
+      "javascript": {
+        "imports": [],
+        "exports": [],
+        "components": [],
+        "api_calls": [],
+        "routes": [],
+        "env_vars": []
+      }
+    },
+    "plugins/theme/boost_magnific/_editor/model/team-1/editor-plugin.js": {
+      "javascript": {
+        "imports": [],
+        "exports": [],
+        "components": [],
+        "api_calls": [],
+        "routes": [],
+        "env_vars": []
+      }
+    },
+    "plugins/theme/boost_magnific/_editor/model/_assets/jquery-3.7.1.js": {
+      "javascript": {
+        "imports": [
+          {
+            "value": "jquery",
+            "line": 22
+          }
+        ],
+        "exports": [],
+        "components": [
+          {
+            "value": "DOMEval",
+            "line": 99
+          },
+          {
+            "value": "Ctor",
+            "line": 349
+          },
+          {
+            "value": "Identity",
+            "line": 3340
+          },
+          {
+            "value": "Thrower",
+            "line": 3343
+          },
+          {
+            "value": "Data",
+            "line": 3921
+          },
+          {
+            "value": "Tween",
+            "line": 6959
+          },
+          {
+            "value": "Animation",
+            "line": 7343
+          }
+        ],
+        "api_calls": [],
+        "routes": [],
+        "env_vars": []
+      }
+    },
+    "plugins/theme/boost_magnific/_editor/model/_assets/owl.init.js": {
+      "javascript": {
+        "imports": [],
+        "exports": [],
+        "components": [],
+        "api_calls": [],
+        "routes": [],
+        "env_vars": []
+      }
+    },
+    "plugins/theme/boost_magnific/_editor/model/_assets/owl.carousel.js": {
+      "javascript": {
+        "imports": [],
+        "exports": [],
+        "components": [
+          {
+            "value": "Owl",
+            "line": 20
+          }
+        ],
+        "api_calls": [],
+        "routes": [
+          {
+            "path": "//img.youtube.com/vi/",
+            "line": 2377,
+            "file": "plugins/theme/boost_magnific/_editor/model/_assets/owl.carousel.js"
+          }
+        ],
+        "env_vars": []
+      }
+    },
+    "plugins/theme/boost_magnific/_editor/model/differentials/editor-plugin.js": {
+      "javascript": {
+        "imports": [],
+        "exports": [],
+        "components": [],
+        "api_calls": [],
+        "routes": [],
+        "env_vars": []
+      }
+    },
+    "plugins/theme/boost_magnific/_editor/model/differentials/editor.js": {
+      "javascript": {
+        "imports": [],
+        "exports": [],
+        "components": [],
+        "api_calls": [],
+        "routes": [],
+        "env_vars": []
+      }
+    },
+    "plugins/theme/boost_magnific/_editor/model/steps/editor-plugin.js": {
+      "javascript": {
+        "imports": [],
+        "exports": [],
+        "components": [],
+        "api_calls": [],
+        "routes": [],
+        "env_vars": []
+      }
+    },
+    "plugins/theme/boost_magnific/_editor/model/teams-minimal/editor-plugin.js": {
+      "javascript": {
+        "imports": [],
+        "exports": [],
+        "components": [],
+        "api_calls": [],
+        "routes": [],
+        "env_vars": []
+      }
+    },
+    "plugins/theme/boost_magnific/_editor/model/team-amazing/editor-plugin.js": {
+      "javascript": {
+        "imports": [],
+        "exports": [],
+        "components": [],
+        "api_calls": [],
+        "routes": [],
+        "env_vars": []
+      }
+    },
+    "plugins/theme/boost_magnific/_editor/model/testimonials/editor-plugin.js": {
+      "javascript": {
+        "imports": [],
+        "exports": [],
+        "components": [],
+        "api_calls": [],
+        "routes": [],
+        "env_vars": []
+      }
+    },
+    "plugins/theme/boost_magnific/_editor/model/featured/editor-plugin.js": {
+      "javascript": {
+        "imports": [],
+        "exports": [],
+        "components": [],
+        "api_calls": [],
+        "routes": [],
+        "env_vars": []
+      }
+    },
+    "plugins/theme/boost_magnific/amd/src/acctoolbar.js": {
+      "javascript": {
+        "imports": [],
+        "exports": [],
+        "components": [],
+        "api_calls": [],
+        "routes": [],
+        "env_vars": []
+      }
+    },
+    "plugins/theme/boost_magnific/amd/src/minicolors.js": {
+      "javascript": {
+        "imports": [
+          {
+            "value": "jquery",
+            "line": 14
+          }
+        ],
+        "exports": [],
+        "components": [],
+        "api_calls": [],
+        "routes": [],
+        "env_vars": []
+      }
+    },
+    "plugins/theme/boost_magnific/amd/src/blocks.js": {
+      "javascript": {
+        "imports": [],
+        "exports": [],
+        "components": [],
+        "api_calls": [],
+        "routes": [],
+        "env_vars": []
+      }
+    },
+    "plugins/theme/boost_magnific/amd/src/frontpage.js": {
+      "javascript": {
+        "imports": [],
+        "exports": [],
+        "components": [
+          {
+            "value": "Modal",
+            "line": 13
+          }
+        ],
+        "api_calls": [
+          {
+            "method": "FETCH",
+            "target": "${M.cfg.wwwroot}/theme/boost_magnific/_editor/model/?lang=${frontpage.lang}",
+            "line": 55,
+            "file": "plugins/theme/boost_magnific/amd/src/frontpage.js"
+          }
+        ],
+        "routes": [],
+        "env_vars": []
+      }
+    },
+    "plugins/theme/boost_magnific/amd/src/settings.js": {
+      "javascript": {
+        "imports": [],
+        "exports": [],
+        "components": [],
+        "api_calls": [],
+        "routes": [],
+        "env_vars": []
+      }
+    },
+    "plugins/theme/boost_magnific/quickstart/script.js": {
+      "javascript": {
+        "imports": [],
+        "exports": [],
+        "components": [],
+        "api_calls": [],
+        "routes": [],
+        "env_vars": []
+      }
+    },
+    "plugins/theme/academi/amd/src/theme.js": {
+      "javascript": {
+        "imports": [],
+        "exports": [],
+        "components": [],
+        "api_calls": [],
+        "routes": [],
+        "env_vars": []
+      }
+    },
+    "plugins/theme/academi/amd/src/slick.js": {
+      "javascript": {
+        "imports": [
+          {
+            "value": "jquery",
+            "line": 23
+          }
+        ],
+        "exports": [],
+        "components": [
+          {
+            "value": "Slick",
+            "line": 36
+          }
+        ],
+        "api_calls": [],
+        "routes": [],
+        "env_vars": []
+      }
+    },
+    "plugins/theme/academi/amd/src/homeslider.js": {
+      "javascript": {
+        "imports": [],
+        "exports": [],
+        "components": [],
+        "api_calls": [],
+        "routes": [],
+        "env_vars": []
+      }
+    },
+    "plugins/theme/academi/amd/src/frontpage.js": {
+      "javascript": {
+        "imports": [],
+        "exports": [],
+        "components": [],
+        "api_calls": [],
+        "routes": [],
+        "env_vars": []
+      }
+    },
+    "plugins/theme/academi/amd/src/jquery.sudoSlider.js": {
+      "javascript": {
+        "imports": [
+          {
+            "value": "jquery",
+            "line": 28
+          }
+        ],
+        "exports": [],
+        "components": [
+          {
+            "value": "URLChange",
+            "line": 441
+          }
+        ],
+        "api_calls": [],
+        "routes": [],
+        "env_vars": []
+      }
+    },
+    "plugins/blocks/configurable_reports/amd/src/sql.js": {
+      "javascript": {
+        "imports": [
+          {
+            "value": "../../lib/codemirror",
+            "line": 7
+          }
+        ],
+        "exports": [
+          {
+            "value": "extended",
+            "line": 407
+          },
+          {
+            "value": "extended",
+            "line": 455
+          }
+        ],
+        "components": [],
+        "api_calls": [],
+        "routes": [],
+        "env_vars": []
+      }
+    },
+    "plugins/blocks/configurable_reports/amd/src/jquery.tablesorter.js": {
+      "javascript": {
+        "imports": [
+          {
+            "value": "jquery",
+            "line": 6
+          }
+        ],
+        "exports": [],
+        "components": [],
+        "api_calls": [],
+        "routes": [],
+        "env_vars": []
+      }
+    },
+    "plugins/blocks/configurable_reports/amd/src/codemirror.js": {
+      "javascript": {
+        "imports": [],
+        "exports": [],
+        "components": [
+          {
+            "value": "BidiSpan",
+            "line": 404
+          },
+          {
+            "value": "Pos",
+            "line": 991
+          },
+          {
+            "value": "MarkedSpan",
+            "line": 1318
+          },
+          {
+            "value": "LineView",
+            "line": 2016
+          },
+          {
+            "value": "PosWithInfo",
+            "line": 2722
+          },
+          {
+            "value": "Display",
+            "line": 4388
+          },
+          {
+            "value": "History",
+            "line": 4878
+          },
+          {
+            "value": "LeafChunk",
+            "line": 5646
+          },
+          {
+            "value": "BranchChunk",
+            "line": 5691
+          },
+          {
+            "value": "CodeMirror",
+            "line": 7916
+          }
+        ],
+        "api_calls": [],
+        "routes": [],
+        "env_vars": []
+      }
+    },
+    "plugins/blocks/configurable_reports/amd/src/jquery.dataTables.js": {
+      "javascript": {
+        "imports": [
+          {
+            "value": "jquery",
+            "line": 39
+          }
+        ],
+        "exports": [],
+        "components": [
+          {
+            "value": "DataTables",
+            "line": 4997
+          }
+        ],
+        "api_calls": [],
+        "routes": [],
+        "env_vars": []
+      }
+    },
+    "plugins/blocks/configurable_reports/amd/src/main.js": {
+      "javascript": {
+        "imports": [],
+        "exports": [],
+        "components": [],
+        "api_calls": [],
+        "routes": [],
+        "env_vars": []
+      }
+    },
+    "plugins/blocks/configurable_reports/js/configurable_reports.js": {
+      "javascript": {
+        "imports": [],
+        "exports": [],
+        "components": [],
+        "api_calls": [],
+        "routes": [],
+        "env_vars": []
+      }
+    },
+    "plugins/mod/customcert/amd/src/rearrange-area.js": {
+      "javascript": {
+        "imports": [],
+        "exports": [],
+        "components": [],
+        "api_calls": [],
+        "routes": [],
+        "env_vars": []
+      }
+    },
+    "plugins/mod/customcert/amd/src/dialogue.js": {
+      "javascript": {
+        "imports": [],
+        "exports": [],
+        "components": [],
+        "api_calls": [],
+        "routes": [],
+        "env_vars": []
+      }
+    },
+    "plugins/mod/customcert/yui/src/rearrange/js/rearrange.js": {
+      "javascript": {
+        "imports": [],
+        "exports": [],
+        "components": [],
+        "api_calls": [],
+        "routes": [],
+        "env_vars": []
+      }
+    },
+    "academia/herramientas/convertir-banco-IF-151.py": {
+      "python": {
+        "imports": [
+          {
+            "value": "re",
+            "line": 36
+          },
+          {
+            "value": "sys",
+            "line": 37
+          },
+          {
+            "value": "html",
+            "line": 38
+          },
+          {
+            "value": "pathlib",
+            "line": 39
+          }
+        ],
+        "functions": [
+          {
+            "name": "esc",
+            "line": 183
+          },
+          {
+            "name": "bloque_categoria",
+            "line": 187
+          },
+          {
+            "name": "bloque_pregunta",
+            "line": 196
+          }
+        ],
+        "classes": [],
+        "routes": [],
+        "env_vars": []
+      }
+    },
+    "db/setup_bd_v2.sql": {
+      "sql": {
+        "tables": [
+          {
+            "value": "pg_roles",
+            "file": "db/setup_bd_v2.sql",
+            "line": 11
+          },
+          {
+            "value": "PUBLIC",
+            "file": "db/setup_bd_v2.sql",
+            "line": 36
+          },
+          {
+            "value": "information_schema.tables",
+            "file": "db/setup_bd_v2.sql",
+            "line": 59
+          },
+          {
+            "value": "mdl_user",
+            "file": "db/setup_bd_v2.sql",
+            "line": 61
+          },
+          {
+            "value": "mdl_course",
+            "file": "db/setup_bd_v2.sql",
+            "line": 62
+          },
+          {
+            "value": "mdl_files",
+            "file": "db/setup_bd_v2.sql",
+            "line": 63
+          },
+          {
+            "value": "pg_sequences",
+            "file": "db/setup_bd_v2.sql",
+            "line": 69
+          }
+        ],
+        "operations": {
+          "SELECT": 7,
+          "INSERT": 1,
+          "UPDATE": 0,
+          "DELETE": 0,
+          "CREATE": 1,
+          "ALTER": 2,
+          "DROP": 1
+        }
+      }
+    },
+    "db/setup_bd.sql": {
+      "sql": {
+        "tables": [
+          {
+            "value": "PUBLIC",
+            "file": "db/setup_bd.sql",
+            "line": 35
+          }
+        ],
+        "operations": {
+          "SELECT": 0,
+          "INSERT": 0,
+          "UPDATE": 0,
+          "DELETE": 0,
+          "CREATE": 2,
+          "ALTER": 0,
+          "DROP": 0
+        }
+      }
+    }
+  }
+}
