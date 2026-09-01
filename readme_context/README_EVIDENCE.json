@@ -1,0 +1,5392 @@
+{
+  "metadata": {
+    "repository": "target",
+    "generated_at": "2026-09-01T18:40:41.014778",
+    "analyzer": "readme3",
+    "version": "2.0-evidence-first",
+    "file_count": 471
+  },
+  "policy": {
+    "purpose": "Repository evidence extraction for documentation generation.",
+    "important_rule": "Signals do not automatically represent confirmed product capabilities."
+  },
+  "files": [
+    {
+      "path": "CLAUDE.md",
+      "name": "CLAUDE.md",
+      "ext": ".md",
+      "language": "Markdown",
+      "size": 43789,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": ".gitignore",
+      "name": ".gitignore",
+      "ext": "",
+      "language": "Other",
+      "size": 2178,
+      "text": false,
+      "important": false
+    },
+    {
+      "path": ".gitattributes",
+      "name": ".gitattributes",
+      "ext": "",
+      "language": "Other",
+      "size": 66,
+      "text": false,
+      "important": false
+    },
+    {
+      "path": "docker-compose.yml",
+      "name": "docker-compose.yml",
+      "ext": ".yml",
+      "language": "YAML",
+      "size": 3086,
+      "text": true,
+      "important": true
+    },
+    {
+      "path": ".env.migracion.example",
+      "name": ".env.migracion.example",
+      "ext": ".example",
+      "language": "Other",
+      "size": 1557,
+      "text": false,
+      "important": false
+    },
+    {
+      "path": "docker-compose.migracion.yml",
+      "name": "docker-compose.migracion.yml",
+      "ext": ".yml",
+      "language": "YAML",
+      "size": 3183,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "README.md",
+      "name": "README.md",
+      "ext": ".md",
+      "language": "Markdown",
+      "size": 3500,
+      "text": true,
+      "important": true
+    },
+    {
+      "path": ".env.v2.example",
+      "name": ".env.v2.example",
+      "ext": ".example",
+      "language": "Other",
+      "size": 18004,
+      "text": false,
+      "important": false
+    },
+    {
+      "path": ".env.example",
+      "name": ".env.example",
+      "ext": ".example",
+      "language": "Other",
+      "size": 6799,
+      "text": false,
+      "important": true
+    },
+    {
+      "path": ".dockerignore",
+      "name": ".dockerignore",
+      "ext": "",
+      "language": "Other",
+      "size": 987,
+      "text": false,
+      "important": false
+    },
+    {
+      "path": "Dockerfile",
+      "name": "Dockerfile",
+      "ext": "",
+      "language": "Other",
+      "size": 11988,
+      "text": false,
+      "important": true
+    },
+    {
+      "path": "plugins/theme/academia/settings.php",
+      "name": "settings.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1707,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/theme/academia/config.php",
+      "name": "config.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1610,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/theme/academia/lib.php",
+      "name": "lib.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 2051,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/theme/academia/version.php",
+      "name": "version.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1023,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/theme/academia/lang/en/theme_academia.php",
+      "name": "theme_academia.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1009,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/theme/academia/lang/es/theme_academia.php",
+      "name": "theme_academia.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 872,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/theme/academia/scss/pre.scss",
+      "name": "pre.scss",
+      "ext": ".scss",
+      "language": "SCSS",
+      "size": 3492,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/theme/academia/scss/post.scss",
+      "name": "post.scss",
+      "ext": ".scss",
+      "language": "SCSS",
+      "size": 6860,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/verify_certificate.php",
+      "name": "verify_certificate.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 5770,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/edit_element.php",
+      "name": "edit_element.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 7345,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/.gitignore",
+      "name": ".gitignore",
+      "ext": "",
+      "language": "Other",
+      "size": 13,
+      "text": false,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/export_template.php",
+      "name": "export_template.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1835,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/upload_image.php",
+      "name": "upload_image.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1908,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/manage_templates.php",
+      "name": "manage_templates.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 4949,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/mod_form.php",
+      "name": "mod_form.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 11383,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/rearrange.php",
+      "name": "rearrange.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 6560,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/load_template.php",
+      "name": "load_template.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 3366,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/ajax.php",
+      "name": "ajax.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 2574,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/settings.php",
+      "name": "settings.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 7101,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/LICENSE.md",
+      "name": "LICENSE.md",
+      "ext": ".md",
+      "language": "Markdown",
+      "size": 35147,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/composer.json",
+      "name": "composer.json",
+      "ext": ".json",
+      "language": "JSON",
+      "size": 483,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/report.php",
+      "name": "report.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1358,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/styles.css",
+      "name": "styles.css",
+      "ext": ".css",
+      "language": "CSS",
+      "size": 2101,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/lib.php",
+      "name": "lib.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 17113,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/CHANGES.md",
+      "name": "CHANGES.md",
+      "ext": ".md",
+      "language": "Markdown",
+      "size": 42576,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/README.md",
+      "name": "README.md",
+      "ext": ".md",
+      "language": "Markdown",
+      "size": 2276,
+      "text": true,
+      "important": true
+    },
+    {
+      "path": "plugins/mod/customcert/download_all_certificates.php",
+      "name": "download_all_certificates.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1327,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/edit.php",
+      "name": "edit.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 11604,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/view.php",
+      "name": "view.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 10368,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/my_certificates.php",
+      "name": "my_certificates.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 3863,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/version.php",
+      "name": "version.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1395,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/import_template.php",
+      "name": "import_template.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 3765,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/index.php",
+      "name": "index.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 4066,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/lang/en/customcert.php",
+      "name": "customcert.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 19420,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/backup/moodle2/restore_customcert_stepslib.php",
+      "name": "restore_customcert_stepslib.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 9252,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/backup/moodle2/backup_customcert_stepslib.php",
+      "name": "backup_customcert_stepslib.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 4366,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/backup/moodle2/backup_customcert_activity_task.class.php",
+      "name": "backup_customcert_activity_task.class.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 2711,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/backup/moodle2/restore_customcert_activity_task.class.php",
+      "name": "restore_customcert_activity_task.class.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 7837,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/amd/src/rearrange-area.js",
+      "name": "rearrange-area.js",
+      "ext": ".js",
+      "language": "JavaScript",
+      "size": 8465,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/amd/src/dialogue.js",
+      "name": "dialogue.js",
+      "ext": ".js",
+      "language": "JavaScript",
+      "size": 3450,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/yui/src/rearrange/build.json",
+      "name": "build.json",
+      "ext": ".json",
+      "language": "JSON",
+      "size": 164,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/yui/src/rearrange/js/rearrange.js",
+      "name": "rearrange.js",
+      "ext": ".js",
+      "language": "JavaScript",
+      "size": 9132,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/yui/src/rearrange/meta/rearrange.json",
+      "name": "rearrange.json",
+      "ext": ".json",
+      "language": "JSON",
+      "size": 132,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/templates/email_certificate_html.mustache",
+      "name": "email_certificate_html.mustache",
+      "ext": ".mustache",
+      "language": "Other",
+      "size": 1395,
+      "text": false,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/templates/verify_certificate_result.mustache",
+      "name": "verify_certificate_result.mustache",
+      "ext": ".mustache",
+      "language": "Other",
+      "size": 2225,
+      "text": false,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/templates/mobile_view_activity_page_latest.mustache",
+      "name": "mobile_view_activity_page_latest.mustache",
+      "ext": ".mustache",
+      "language": "Other",
+      "size": 6847,
+      "text": false,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/templates/email_certificate_text.mustache",
+      "name": "email_certificate_text.mustache",
+      "ext": ".mustache",
+      "language": "Other",
+      "size": 1466,
+      "text": false,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/templates/mobile_view_activity_page_ionic5.mustache",
+      "name": "mobile_view_activity_page_ionic5.mustache",
+      "ext": ".mustache",
+      "language": "Other",
+      "size": 6816,
+      "text": false,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/templates/verify_certificate_results.mustache",
+      "name": "verify_certificate_results.mustache",
+      "ext": ".mustache",
+      "language": "Other",
+      "size": 1235,
+      "text": false,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/coursefield/version.php",
+      "name": "version.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1269,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/coursefield/lang/en/customcertelement_coursefield.php",
+      "name": "customcertelement_coursefield.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1242,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/coursefield/tests/element_test.php",
+      "name": "element_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 13853,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/coursefield/classes/exporter.php",
+      "name": "exporter.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 2366,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/coursefield/classes/element.php",
+      "name": "element.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 7306,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/coursefield/classes/privacy/provider.php",
+      "name": "provider.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1534,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/teachername/version.php",
+      "name": "version.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1261,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/teachername/lang/en/customcertelement_teachername.php",
+      "name": "customcertelement_teachername.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1210,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/teachername/tests/element_test.php",
+      "name": "element_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 6410,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/teachername/classes/exporter.php",
+      "name": "exporter.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1460,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/teachername/classes/element.php",
+      "name": "element.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 6263,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/teachername/classes/privacy/provider.php",
+      "name": "provider.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1545,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/code/version.php",
+      "name": "version.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1240,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/code/lang/en/customcertelement_code.php",
+      "name": "customcertelement_code.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1070,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/code/tests/element_test.php",
+      "name": "element_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 5572,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/code/classes/exporter.php",
+      "name": "exporter.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1124,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/code/classes/element.php",
+      "name": "element.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 4927,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/code/classes/privacy/provider.php",
+      "name": "provider.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1517,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/userpicture/version.php",
+      "name": "version.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1261,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/userpicture/lang/en/customcertelement_userpicture.php",
+      "name": "customcertelement_userpicture.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1100,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/userpicture/tests/element_test.php",
+      "name": "element_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 6607,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/userpicture/classes/exporter.php",
+      "name": "exporter.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1520,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/userpicture/classes/element.php",
+      "name": "element.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 7278,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/userpicture/classes/privacy/provider.php",
+      "name": "provider.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1545,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/date/version.php",
+      "name": "version.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1240,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/date/lang/en/customcertelement_date.php",
+      "name": "customcertelement_date.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1746,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/date/tests/element_test.php",
+      "name": "element_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 16062,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/date/classes/constants.php",
+      "name": "constants.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1579,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/date/classes/exporter.php",
+      "name": "exporter.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 2759,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/date/classes/element.php",
+      "name": "element.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 14501,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/date/classes/privacy/provider.php",
+      "name": "provider.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1517,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/studentname/version.php",
+      "name": "version.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1261,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/studentname/lang/en/customcertelement_studentname.php",
+      "name": "customcertelement_studentname.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1100,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/studentname/tests/element_test.php",
+      "name": "element_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 6058,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/studentname/classes/exporter.php",
+      "name": "exporter.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1138,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/studentname/classes/element.php",
+      "name": "element.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 4093,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/studentname/classes/privacy/provider.php",
+      "name": "provider.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1545,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/groupname/version.php",
+      "name": "version.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1257,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/groupname/lang/en/customcertelement_groupname.php",
+      "name": "customcertelement_groupname.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1139,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/groupname/tests/element_test.php",
+      "name": "element_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 11305,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/groupname/classes/exporter.php",
+      "name": "exporter.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1100,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/groupname/classes/element.php",
+      "name": "element.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 5069,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/groupname/classes/privacy/provider.php",
+      "name": "provider.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1586,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/expiry/version.php",
+      "name": "version.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1256,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/expiry/lang/en/customcertelement_expiry.php",
+      "name": "customcertelement_expiry.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 2536,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/expiry/templates/date.mustache",
+      "name": "date.mustache",
+      "ext": ".mustache",
+      "language": "Other",
+      "size": 1370,
+      "text": false,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/expiry/tests/element_test.php",
+      "name": "element_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 11357,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/expiry/classes/exporter.php",
+      "name": "exporter.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 2317,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/expiry/classes/element.php",
+      "name": "element.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 17151,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/expiry/classes/privacy/provider.php",
+      "name": "provider.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1549,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/categoryname/version.php",
+      "name": "version.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1264,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/categoryname/lang/en/customcertelement_categoryname.php",
+      "name": "customcertelement_categoryname.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1104,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/categoryname/tests/element_test.php",
+      "name": "element_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 6583,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/categoryname/classes/exporter.php",
+      "name": "exporter.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1140,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/categoryname/classes/element.php",
+      "name": "element.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 4879,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/categoryname/classes/privacy/provider.php",
+      "name": "provider.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1549,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/gradeitemname/version.php",
+      "name": "version.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1267,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/gradeitemname/lang/en/customcertelement_gradeitemname.php",
+      "name": "customcertelement_gradeitemname.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1238,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/gradeitemname/tests/element_test.php",
+      "name": "element_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 6441,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/gradeitemname/classes/exporter.php",
+      "name": "exporter.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1530,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/gradeitemname/classes/element.php",
+      "name": "element.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 8148,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/gradeitemname/classes/privacy/provider.php",
+      "name": "provider.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1553,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/image/version.php",
+      "name": "version.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1243,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/image/lang/en/customcertelement_image.php",
+      "name": "customcertelement_image.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1401,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/image/tests/element_test.php",
+      "name": "element_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 9369,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/image/classes/exporter.php",
+      "name": "exporter.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1591,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/image/classes/element.php",
+      "name": "element.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 19852,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/image/classes/privacy/provider.php",
+      "name": "provider.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1521,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/image/db/upgrade.php",
+      "name": "upgrade.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 2634,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/userfield/version.php",
+      "name": "version.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1255,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/userfield/lang/en/customcertelement_userfield.php",
+      "name": "customcertelement_userfield.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1218,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/userfield/tests/element_test.php",
+      "name": "element_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 8269,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/userfield/classes/exporter.php",
+      "name": "exporter.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 2514,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/userfield/classes/element.php",
+      "name": "element.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 8126,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/userfield/classes/privacy/provider.php",
+      "name": "provider.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1537,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/bgimage/version.php",
+      "name": "version.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1258,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/bgimage/lang/en/customcertelement_bgimage.php",
+      "name": "customcertelement_bgimage.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1100,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/bgimage/tests/element_test.php",
+      "name": "element_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 5478,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/bgimage/classes/exporter.php",
+      "name": "exporter.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1606,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/bgimage/classes/element.php",
+      "name": "element.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 9154,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/bgimage/classes/privacy/provider.php",
+      "name": "provider.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1529,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/bgimage/db/upgrade.php",
+      "name": "upgrade.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 2664,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/qrcode/version.php",
+      "name": "version.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1247,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/qrcode/lang/en/customcertelement_qrcode.php",
+      "name": "customcertelement_qrcode.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1080,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/qrcode/tests/element_test.php",
+      "name": "element_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 6700,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/qrcode/classes/exporter.php",
+      "name": "exporter.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1505,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/qrcode/classes/element.php",
+      "name": "element.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 8698,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/qrcode/classes/privacy/provider.php",
+      "name": "provider.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1525,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/text/version.php",
+      "name": "version.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1240,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/text/lang/en/customcertelement_text.php",
+      "name": "customcertelement_text.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1169,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/text/tests/element_test.php",
+      "name": "element_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 8548,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/text/classes/exporter.php",
+      "name": "exporter.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1498,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/text/classes/element.php",
+      "name": "element.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 5510,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/text/classes/privacy/provider.php",
+      "name": "provider.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1517,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/digitalsignature/version.php",
+      "name": "version.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1277,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/digitalsignature/lang/en/customcertelement_digitalsignature.php",
+      "name": "customcertelement_digitalsignature.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1536,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/digitalsignature/tests/element_test.php",
+      "name": "element_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 5951,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/digitalsignature/classes/exporter.php",
+      "name": "exporter.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1960,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/digitalsignature/classes/element.php",
+      "name": "element.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 17141,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/digitalsignature/classes/privacy/provider.php",
+      "name": "provider.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1565,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/coursename/version.php",
+      "name": "version.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1258,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/coursename/lang/en/customcertelement_coursename.php",
+      "name": "customcertelement_coursename.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1302,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/coursename/tests/element_test.php",
+      "name": "element_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 9156,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/coursename/classes/exporter.php",
+      "name": "exporter.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1617,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/coursename/classes/element.php",
+      "name": "element.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 7109,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/coursename/classes/privacy/provider.php",
+      "name": "provider.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1541,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/grade/version.php",
+      "name": "version.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1243,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/grade/lang/en/customcertelement_grade.php",
+      "name": "customcertelement_grade.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1513,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/grade/tests/element_test.php",
+      "name": "element_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 13265,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/grade/classes/exporter.php",
+      "name": "exporter.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1675,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/grade/classes/element.php",
+      "name": "element.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 10281,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/grade/classes/privacy/provider.php",
+      "name": "provider.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1521,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/border/version.php",
+      "name": "version.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1246,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/border/lang/en/customcertelement_border.php",
+      "name": "customcertelement_border.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1078,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/border/tests/element_test.php",
+      "name": "element_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 5249,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/border/classes/exporter.php",
+      "name": "exporter.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1460,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/border/classes/element.php",
+      "name": "element.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 4875,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/element/border/classes/privacy/provider.php",
+      "name": "provider.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1525,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/export_template_appendix_manager_test.php",
+      "name": "export_template_appendix_manager_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 13634,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/element_layout_test.php",
+      "name": "element_layout_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 3907,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/template_repository_test.php",
+      "name": "template_repository_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 6386,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/preview_renderer_with_text_test.php",
+      "name": "preview_renderer_with_text_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 3366,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/element_factory_migration_test.php",
+      "name": "element_factory_migration_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 5736,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/element_repository_events_test.php",
+      "name": "element_repository_events_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 8345,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/form_handling_test.php",
+      "name": "form_handling_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 3214,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/element_helper_test.php",
+      "name": "element_helper_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 18990,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/element_bootstrap_discovery_test.php",
+      "name": "element_bootstrap_discovery_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 3005,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/element_bootstrap_memoization_test.php",
+      "name": "element_bootstrap_memoization_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 3288,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/save_element_changes_test.php",
+      "name": "save_element_changes_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 16885,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/certificate_time_service_test.php",
+      "name": "certificate_time_service_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 5533,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/edit_element_test.php",
+      "name": "edit_element_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 6058,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/template_authorisation_test.php",
+      "name": "template_authorisation_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 6805,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/export_template_logger_test.php",
+      "name": "export_template_logger_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 3255,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/export_template_test.php",
+      "name": "export_template_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 5422,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/pdf_generation_service_test.php",
+      "name": "pdf_generation_service_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 10542,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/preview_renderer_test.php",
+      "name": "preview_renderer_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 4569,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/export_datatype_fields_test.php",
+      "name": "export_datatype_fields_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 6925,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/unknown_element_handling_test.php",
+      "name": "unknown_element_handling_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 3609,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/upgrade_visuals_migration_test.php",
+      "name": "upgrade_visuals_migration_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 16879,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/element_registry_test.php",
+      "name": "element_registry_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 4496,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/validation_service_test.php",
+      "name": "validation_service_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 7231,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/template_deprecated_shims_test.php",
+      "name": "template_deprecated_shims_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 7594,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/certificate_download_service_test.php",
+      "name": "certificate_download_service_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 6091,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/restore_v1_fixture_test.php",
+      "name": "restore_v1_fixture_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 11933,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/template_duplication_service_test.php",
+      "name": "template_duplication_service_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 4505,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/persistence_helper_test.php",
+      "name": "persistence_helper_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 5472,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/template_service_test.php",
+      "name": "template_service_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 14473,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/page_repository_test.php",
+      "name": "page_repository_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 9636,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/unknown_element_placeholder_test.php",
+      "name": "unknown_element_placeholder_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 3793,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/privacy_provider_test.php",
+      "name": "privacy_provider_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 13462,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/export_subplugin_exportable_test.php",
+      "name": "export_subplugin_exportable_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 6955,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/element_factory_shim_test.php",
+      "name": "element_factory_shim_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 3388,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/export_remaining_fields_test.php",
+      "name": "export_remaining_fields_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 6221,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/element_bc_get_data_test.php",
+      "name": "element_bc_get_data_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 12145,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/export_template_file_manager_test.php",
+      "name": "export_template_file_manager_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 25367,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/restore_hooks_json_test.php",
+      "name": "restore_hooks_json_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 12211,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/repository_test.php",
+      "name": "repository_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 20323,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/email_certificate_task_test.php",
+      "name": "email_certificate_task_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 86712,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/template_load_service_test.php",
+      "name": "template_load_service_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 8740,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/certificate_issue_service_test.php",
+      "name": "certificate_issue_service_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 4378,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/persistence_json_test.php",
+      "name": "persistence_json_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 6144,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/export_element_test.php",
+      "name": "export_element_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 5138,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/legacy_element_adapter_test.php",
+      "name": "legacy_element_adapter_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 27204,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/form_service_test.php",
+      "name": "form_service_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 6850,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/template_filename_test.php",
+      "name": "template_filename_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 4372,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/ownership_invariant_test.php",
+      "name": "ownership_invariant_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 14272,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/element_repository_test.php",
+      "name": "element_repository_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 17778,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/page_test.php",
+      "name": "page_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 3640,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/export_page_test.php",
+      "name": "export_page_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 5591,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/lib_test.php",
+      "name": "lib_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 12802,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/external_test.php",
+      "name": "external_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 25208,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/event/events_test.php",
+      "name": "events_test.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 23459,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/generator/lib.php",
+      "name": "lib.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 2015,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/behat/behat_mod_customcert.php",
+      "name": "behat_mod_customcert.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 7022,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/behat/managing_pages.feature",
+      "name": "managing_pages.feature",
+      "ext": ".feature",
+      "language": "Other",
+      "size": 1938,
+      "text": false,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/behat/managing_elements.feature",
+      "name": "managing_elements.feature",
+      "ext": ".feature",
+      "language": "Other",
+      "size": 24456,
+      "text": false,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/behat/managing_templates.feature",
+      "name": "managing_templates.feature",
+      "ext": ".feature",
+      "language": "Other",
+      "size": 4691,
+      "text": false,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/behat/show_position_x_y.feature",
+      "name": "show_position_x_y.feature",
+      "ext": ".feature",
+      "language": "Other",
+      "size": 2435,
+      "text": false,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/behat/verify_certificates.feature",
+      "name": "verify_certificates.feature",
+      "ext": ".feature",
+      "language": "Other",
+      "size": 5297,
+      "text": false,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/behat/my_certificates.feature",
+      "name": "my_certificates.feature",
+      "ext": ".feature",
+      "language": "Other",
+      "size": 2252,
+      "text": false,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/behat/view_issued_certificates.feature",
+      "name": "view_issued_certificates.feature",
+      "ext": ".feature",
+      "language": "Other",
+      "size": 3167,
+      "text": false,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/behat/required_minutes.feature",
+      "name": "required_minutes.feature",
+      "ext": ".feature",
+      "language": "Other",
+      "size": 1862,
+      "text": false,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/behat/activity_options.feature",
+      "name": "activity_options.feature",
+      "ext": ".feature",
+      "language": "Other",
+      "size": 5449,
+      "text": false,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/behat/verify_certificate_with_expiry_element.feature",
+      "name": "verify_certificate_with_expiry_element.feature",
+      "ext": ".feature",
+      "language": "Other",
+      "size": 2698,
+      "text": false,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/fixtures/fake_element_fixture.php",
+      "name": "fake_element_fixture.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1862,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/fixtures/form_element_test_element.php",
+      "name": "form_element_test_element.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 2589,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/fixtures/simple_plugin_provider.php",
+      "name": "simple_plugin_provider.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1514,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/fixtures/minimal_persistable_element.php",
+      "name": "minimal_persistable_element.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1558,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/fixtures/dummy_element_interface_element.php",
+      "name": "dummy_element_interface_element.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 2442,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/fixtures/stub_sql_internal_reader.php",
+      "name": "stub_sql_internal_reader.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 3546,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/fixtures/minimal_test_element.php",
+      "name": "minimal_test_element.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 2209,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/fixtures/legacy_plain_string_element.php",
+      "name": "legacy_plain_string_element.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 2301,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/fixtures/backup-moodle2-elements-v1-20260214-1413.mbz",
+      "name": "backup-moodle2-elements-v1-20260214-1413.mbz",
+      "ext": ".mbz",
+      "language": "Other",
+      "size": 594441,
+      "text": false,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/fixtures/dummy_validatable_element.php",
+      "name": "dummy_validatable_element.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 3231,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/fixtures/legacy_definition_after_data_element.php",
+      "name": "legacy_definition_after_data_element.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 2195,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/fixtures/counting_plugin_provider.php",
+      "name": "counting_plugin_provider.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 2046,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/fixtures/legacy_validate_form_elements_element.php",
+      "name": "legacy_validate_form_elements_element.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 2190,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/fixtures/legacy_get_data_element.php",
+      "name": "legacy_get_data_element.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 2250,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/fixtures/test2.png",
+      "name": "test2.png",
+      "ext": ".png",
+      "language": "Other",
+      "size": 835956,
+      "text": false,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/fixtures/test.crt",
+      "name": "test.crt",
+      "ext": ".crt",
+      "language": "Other",
+      "size": 7418,
+      "text": false,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/fixtures/legacy_save_unique_data_element.php",
+      "name": "legacy_save_unique_data_element.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 2031,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/fixtures/legacy_old_signature_element.php",
+      "name": "legacy_old_signature_element.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 2956,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/fixtures/minimal_subplugin_exportable.php",
+      "name": "minimal_subplugin_exportable.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 2403,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/fixtures/legacy_only_test_element.php",
+      "name": "legacy_only_test_element.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1953,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/fixtures/legacy_void_copy_element.php",
+      "name": "legacy_void_copy_element.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 2443,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/fixtures/spy_element_renderer.php",
+      "name": "spy_element_renderer.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 2595,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/fixtures/stub_log_manager.php",
+      "name": "stub_log_manager.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1414,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/fixtures/legacy_after_restore_element.php",
+      "name": "legacy_after_restore_element.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 2128,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/fixtures/new_restorable_element.php",
+      "name": "new_restorable_element.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 2503,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/fixtures/minimal_restore_task.php",
+      "name": "minimal_restore_task.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 3728,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/fixtures/legacy_invokable_test_element.php",
+      "name": "legacy_invokable_test_element.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1495,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tests/fixtures/test1.jpg",
+      "name": "test1.jpg",
+      "ext": ".jpg",
+      "language": "Other",
+      "size": 975373,
+      "text": false,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/.github/FUNDING.yml",
+      "name": "FUNDING.yml",
+      "ext": ".yml",
+      "language": "YAML",
+      "size": 73,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/.github/workflows/moodle-ci.yml",
+      "name": "moodle-ci.yml",
+      "ext": ".yml",
+      "language": "YAML",
+      "size": 5697,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/pix/icon.svg",
+      "name": "icon.svg",
+      "ext": ".svg",
+      "language": "Other",
+      "size": 4060,
+      "text": false,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/pix/icon.gif",
+      "name": "icon.gif",
+      "ext": ".gif",
+      "language": "Other",
+      "size": 239,
+      "text": false,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/pix/download.png",
+      "name": "download.png",
+      "ext": ".png",
+      "language": "Other",
+      "size": 207,
+      "text": false,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/pix/target.gif",
+      "name": "target.gif",
+      "ext": ".gif",
+      "language": "Other",
+      "size": 56,
+      "text": false,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/pix/icon.png",
+      "name": "icon.png",
+      "ext": ".png",
+      "language": "Other",
+      "size": 729,
+      "text": false,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/pix/download.svg",
+      "name": "download.svg",
+      "ext": ".svg",
+      "language": "Other",
+      "size": 616,
+      "text": false,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/pix/monologo.svg",
+      "name": "monologo.svg",
+      "ext": ".svg",
+      "language": "Other",
+      "size": 1626,
+      "text": false,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/tools/check_element_ownership_lookups.php",
+      "name": "check_element_ownership_lookups.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 6412,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/edit_form.php",
+      "name": "edit_form.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 15298,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/edit_element_form.php",
+      "name": "edit_element_form.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 6408,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/external.php",
+      "name": "external.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 18058,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/verify_certificate_form.php",
+      "name": "verify_certificate_form.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 2062,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/grade_information.php",
+      "name": "grade_information.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 2706,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/upload_image_form.php",
+      "name": "upload_image_form.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 2622,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/my_certificates_table.php",
+      "name": "my_certificates_table.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 5790,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/certificate.php",
+      "name": "certificate.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 11368,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/element_helper.php",
+      "name": "element_helper.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 36297,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/report_table.php",
+      "name": "report_table.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 7480,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/template.php",
+      "name": "template.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 11256,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/helper.php",
+      "name": "helper.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1925,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/admin_setting_link.php",
+      "name": "admin_setting_link.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 2870,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/element.php",
+      "name": "element.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 25511,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/element_factory.php",
+      "name": "element_factory.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 3262,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/load_template_form.php",
+      "name": "load_template_form.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 3166,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/page_helper.php",
+      "name": "page_helper.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 2236,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/manage_templates_table.php",
+      "name": "manage_templates_table.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 6984,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/service/certificate_download_service.php",
+      "name": "certificate_download_service.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 6329,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/service/page_repository.php",
+      "name": "page_repository.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 7461,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/service/element_registry.php",
+      "name": "element_registry.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 3041,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/service/certificate_issue_service.php",
+      "name": "certificate_issue_service.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 4642,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/service/pdf_renderer.php",
+      "name": "pdf_renderer.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 3064,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/service/certificate_time_service.php",
+      "name": "certificate_time_service.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 4691,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/service/issue_repository.php",
+      "name": "issue_repository.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 10213,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/service/template_service.php",
+      "name": "template_service.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 18548,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/service/page_update.php",
+      "name": "page_update.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 2320,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/service/item_move_service.php",
+      "name": "item_move_service.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 4325,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/service/issue_email_repository.php",
+      "name": "issue_email_repository.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 2578,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/service/persistence_helper.php",
+      "name": "persistence_helper.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 4882,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/service/element_renderer.php",
+      "name": "element_renderer.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 2696,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/service/certificate_repository.php",
+      "name": "certificate_repository.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 6773,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/service/certificate_issuer_service.php",
+      "name": "certificate_issuer_service.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 12500,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/service/validation_service.php",
+      "name": "validation_service.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 4951,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/service/template_repository.php",
+      "name": "template_repository.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 7504,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/service/pdf_generation_service.php",
+      "name": "pdf_generation_service.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 9311,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/service/element_factory.php",
+      "name": "element_factory.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 6516,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/service/element_repository.php",
+      "name": "element_repository.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 15320,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/service/html_renderer.php",
+      "name": "html_renderer.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 2873,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/service/certificate_email_service.php",
+      "name": "certificate_email_service.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 9626,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/service/template_load_service.php",
+      "name": "template_load_service.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 5030,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/service/template_duplication_service.php",
+      "name": "template_duplication_service.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 4802,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/service/element_layout.php",
+      "name": "element_layout.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 2842,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/service/form_service.php",
+      "name": "form_service.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 5716,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/local/preview_renderer.php",
+      "name": "preview_renderer.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 4695,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/local/ordering.php",
+      "name": "ordering.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 3027,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/local/hook_callbacks.php",
+      "name": "hook_callbacks.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 3759,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/local/paging.php",
+      "name": "paging.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1977,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/local/pagination.php",
+      "name": "pagination.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1285,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/local/upgrade/row_migrator.php",
+      "name": "row_migrator.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 12623,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/event/page_created.php",
+      "name": "page_created.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 3599,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/event/template_updated.php",
+      "name": "template_updated.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 3602,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/event/issue_deleted.php",
+      "name": "issue_deleted.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 2346,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/event/template_deleted.php",
+      "name": "template_deleted.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 3488,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/event/page_deleted.php",
+      "name": "page_deleted.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 3599,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/event/course_module_viewed.php",
+      "name": "course_module_viewed.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1743,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/event/page_updated.php",
+      "name": "page_updated.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 3599,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/event/element_deleted.php",
+      "name": "element_deleted.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 3885,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/event/course_module_instance_list_viewed.php",
+      "name": "course_module_instance_list_viewed.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1265,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/event/element_updated.php",
+      "name": "element_updated.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 4417,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/event/element_created.php",
+      "name": "element_created.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 3885,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/event/issue_created.php",
+      "name": "issue_created.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 2408,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/event/template_created.php",
+      "name": "template_created.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 3577,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/event/template_duplicated.php",
+      "name": "template_duplicated.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 3151,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/privacy/provider.php",
+      "name": "provider.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 11556,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/search/activity.php",
+      "name": "activity.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1244,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/plugininfo/customcertelement.php",
+      "name": "customcertelement.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 2678,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/element/element_interface.php",
+      "name": "element_interface.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1942,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/element/legacy_element_adapter.php",
+      "name": "legacy_element_adapter.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 11704,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/element/preparable_form_interface.php",
+      "name": "preparable_form_interface.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1528,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/element/layout_element_interface.php",
+      "name": "layout_element_interface.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 2269,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/element/stylable_element_interface.php",
+      "name": "stylable_element_interface.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1785,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/element/renderable_element_interface.php",
+      "name": "renderable_element_interface.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 2173,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/element/persistable_element_interface.php",
+      "name": "persistable_element_interface.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1534,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/element/restorable_element_interface.php",
+      "name": "restorable_element_interface.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1848,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/element/validatable_element_interface.php",
+      "name": "validatable_element_interface.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1678,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/element/unknown_element.php",
+      "name": "unknown_element.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 3064,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/element/copyable_element_interface.php",
+      "name": "copyable_element_interface.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1693,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/element/element_bootstrap.php",
+      "name": "element_bootstrap.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 6342,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/element/form_element_interface.php",
+      "name": "form_element_interface.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 2488,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/element/provider/core_plugin_provider.php",
+      "name": "core_plugin_provider.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1235,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/element/provider/plugin_provider.php",
+      "name": "plugin_provider.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1370,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/export/page.php",
+      "name": "page.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 4519,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/export/import_form.php",
+      "name": "import_form.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 2179,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/export/template_import_logger_interface.php",
+      "name": "template_import_logger_interface.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1709,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/export/subplugin_text_exportable.php",
+      "name": "subplugin_text_exportable.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1760,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/export/template_file_manager.php",
+      "name": "template_file_manager.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 10965,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/export/template.php",
+      "name": "template.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 4248,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/export/template_file_manager_interface.php",
+      "name": "template_file_manager_interface.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1849,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/export/template_appendix_manager_interface.php",
+      "name": "template_appendix_manager_interface.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 2985,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/export/import_exception.php",
+      "name": "import_exception.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1104,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/export/element_null_exporter.php",
+      "name": "element_null_exporter.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 2364,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/export/table_exporter.php",
+      "name": "table_exporter.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1971,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/export/element.php",
+      "name": "element.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 7471,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/export/template_logger.php",
+      "name": "template_logger.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 2572,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/export/template_appendix_manager.php",
+      "name": "template_appendix_manager.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 15334,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/export/subplugin_exportable.php",
+      "name": "subplugin_exportable.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 7471,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/export/datatypes/format_error.php",
+      "name": "format_error.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1318,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/export/datatypes/unimported_field.php",
+      "name": "unimported_field.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1955,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/export/datatypes/float_field.php",
+      "name": "float_field.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 3537,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/export/datatypes/string_field.php",
+      "name": "string_field.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 2918,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/export/datatypes/field_interface.php",
+      "name": "field_interface.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 2111,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/export/datatypes/user_field.php",
+      "name": "user_field.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 3541,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/export/datatypes/format_exception.php",
+      "name": "format_exception.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1334,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/export/datatypes/enum_field.php",
+      "name": "enum_field.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 3098,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/export/datatypes/file_field.php",
+      "name": "file_field.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 4256,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/export/datatypes/file_field_interface.php",
+      "name": "file_field_interface.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1390,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/export/datatypes/int_field.php",
+      "name": "int_field.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1841,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/output/verify_certificate_result.php",
+      "name": "verify_certificate_result.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 3834,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/output/renderer.php",
+      "name": "renderer.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 2065,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/output/email_certificate.php",
+      "name": "email_certificate.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 4534,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/output/verify_certificate_results.php",
+      "name": "verify_certificate_results.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 2732,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/output/mobile.php",
+      "name": "mobile.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 8567,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/output/email/renderer.php",
+      "name": "renderer.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1422,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/output/email/renderer_textemail.php",
+      "name": "renderer_textemail.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1432,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/task/email_certificate_task.php",
+      "name": "email_certificate_task.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1902,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/classes/task/issue_certificates_task.php",
+      "name": "issue_certificates_task.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1781,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/includes/colourpicker.php",
+      "name": "colourpicker.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 3203,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/db/hooks.php",
+      "name": "hooks.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1188,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/db/log.php",
+      "name": "log.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1353,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/db/subplugins.json",
+      "name": "subplugins.json",
+      "ext": ".json",
+      "language": "JSON",
+      "size": 156,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/db/services.php",
+      "name": "services.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 2251,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/db/tasks.php",
+      "name": "tasks.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1198,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/db/install.xml",
+      "name": "install.xml",
+      "ext": ".xml",
+      "language": "Other",
+      "size": 7155,
+      "text": false,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/db/upgrade.php",
+      "name": "upgrade.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 16422,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/db/access.php",
+      "name": "access.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 5138,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/db/mobile.php",
+      "name": "mobile.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 2206,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/cli/export_template.php",
+      "name": "export_template.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 2670,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/cli/pathlib.php",
+      "name": "pathlib.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 2310,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/cli/import_template.php",
+      "name": "import_template.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 3404,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/mobile/styles.css",
+      "name": "styles.css",
+      "ext": ".css",
+      "language": "CSS",
+      "size": 39,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "plugins/mod/customcert/mobile/pluginfile.php",
+      "name": "pluginfile.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 3860,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "docker/apache-moodle.conf",
+      "name": "apache-moodle.conf",
+      "ext": ".conf",
+      "language": "Other",
+      "size": 9821,
+      "text": false,
+      "important": false
+    },
+    {
+      "path": "docker/health.php",
+      "name": "health.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 4762,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "docker/moodle-crontab",
+      "name": "moodle-crontab",
+      "ext": "",
+      "language": "Other",
+      "size": 947,
+      "text": false,
+      "important": false
+    },
+    {
+      "path": "docker/config.php",
+      "name": "config.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 6072,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "docker/php.ini",
+      "name": "php.ini",
+      "ext": ".ini",
+      "language": "INI",
+      "size": 3139,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": ".github/workflows/readme.yml",
+      "name": "readme.yml",
+      "ext": ".yml",
+      "language": "YAML",
+      "size": 223,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": ".github/workflows/deploy-prod.yml",
+      "name": "deploy-prod.yml",
+      "ext": ".yml",
+      "language": "YAML",
+      "size": 205,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "manuales/01-manager.md",
+      "name": "01-manager.md",
+      "ext": ".md",
+      "language": "Markdown",
+      "size": 34082,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "manuales/05-student.md",
+      "name": "05-student.md",
+      "ext": ".md",
+      "language": "Markdown",
+      "size": 31782,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "manuales/06-guest.md",
+      "name": "06-guest.md",
+      "ext": ".md",
+      "language": "Markdown",
+      "size": 30328,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "manuales/README.md",
+      "name": "README.md",
+      "ext": ".md",
+      "language": "Markdown",
+      "size": 13255,
+      "text": true,
+      "important": true
+    },
+    {
+      "path": "manuales/04-non-editing-teacher.md",
+      "name": "04-non-editing-teacher.md",
+      "ext": ".md",
+      "language": "Markdown",
+      "size": 29690,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "manuales/02-course-creator.md",
+      "name": "02-course-creator.md",
+      "ext": ".md",
+      "language": "Markdown",
+      "size": 33805,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "manuales/08-authenticated-user-frontpage.md",
+      "name": "08-authenticated-user-frontpage.md",
+      "ext": ".md",
+      "language": "Markdown",
+      "size": 28683,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "manuales/03-teacher.md",
+      "name": "03-teacher.md",
+      "ext": ".md",
+      "language": "Markdown",
+      "size": 45913,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "manuales/07-authenticated-user.md",
+      "name": "07-authenticated-user.md",
+      "ext": ".md",
+      "language": "Markdown",
+      "size": 33182,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "INSUMO_MEJORA/IF-151_Diseno-de-curso_Academia-CONAF.docx",
+      "name": "IF-151_Diseno-de-curso_Academia-CONAF.docx",
+      "ext": ".docx",
+      "language": "Other",
+      "size": 68957,
+      "text": false,
+      "important": false
+    },
+    {
+      "path": "INSUMO_MEJORA/prototipo-academia-conaf.html",
+      "name": "prototipo-academia-conaf.html",
+      "ext": ".html",
+      "language": "HTML",
+      "size": 267568,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "INSUMO_MEJORA/Academia-CONAF_Propuesta-Institucional.docx",
+      "name": "Academia-CONAF_Propuesta-Institucional.docx",
+      "ext": ".docx",
+      "language": "Other",
+      "size": 47345,
+      "text": false,
+      "important": false
+    },
+    {
+      "path": "academia/README.md",
+      "name": "README.md",
+      "ext": ".md",
+      "language": "Markdown",
+      "size": 12701,
+      "text": true,
+      "important": true
+    },
+    {
+      "path": "academia/pruebas/compilar-tema.php",
+      "name": "compilar-tema.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 5840,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "academia/pruebas/propuesta-clasificacion.php",
+      "name": "propuesta-clasificacion.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 7040,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "academia/datos/cohortes.csv",
+      "name": "cohortes.csv",
+      "ext": ".csv",
+      "language": "Other",
+      "size": 7316,
+      "text": false,
+      "important": false
+    },
+    {
+      "path": "academia/datos/categorias.csv",
+      "name": "categorias.csv",
+      "ext": ".csv",
+      "language": "Other",
+      "size": 4705,
+      "text": false,
+      "important": false
+    },
+    {
+      "path": "academia/datos/competencias.csv",
+      "name": "competencias.csv",
+      "ext": ".csv",
+      "language": "Other",
+      "size": 7019,
+      "text": false,
+      "important": false
+    },
+    {
+      "path": "academia/datos/banco-IF-151.xml",
+      "name": "banco-IF-151.xml",
+      "ext": ".xml",
+      "language": "Other",
+      "size": 120019,
+      "text": false,
+      "important": false
+    },
+    {
+      "path": "academia/datos/campos-curso.csv",
+      "name": "campos-curso.csv",
+      "ext": ".csv",
+      "language": "Other",
+      "size": 4810,
+      "text": false,
+      "important": false
+    },
+    {
+      "path": "academia/herramientas/convertir-banco-IF-151.py",
+      "name": "convertir-banco-IF-151.py",
+      "ext": ".py",
+      "language": "Python",
+      "size": 9677,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "academia/cli/99_verificar.php",
+      "name": "99_verificar.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 18453,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "academia/cli/10_categorias.php",
+      "name": "10_categorias.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 4996,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "academia/cli/60_clasificar_cursos.php",
+      "name": "60_clasificar_cursos.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 17658,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "academia/cli/bootstrap.php",
+      "name": "bootstrap.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 1869,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "academia/cli/80_plantilla_maestra.php",
+      "name": "80_plantilla_maestra.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 18502,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "academia/cli/lib_cursos.php",
+      "name": "lib_cursos.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 14534,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "academia/cli/30_cohortes.php",
+      "name": "30_cohortes.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 3993,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "academia/cli/95_ajustes_sitio.php",
+      "name": "95_ajustes_sitio.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 17186,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "academia/cli/40_competencias.php",
+      "name": "40_competencias.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 9330,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "academia/cli/lib.php",
+      "name": "lib.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 10868,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "academia/cli/90_cursos_esqueleto.php",
+      "name": "90_cursos_esqueleto.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 43018,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "academia/cli/70_informes.php",
+      "name": "70_informes.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 11171,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "academia/cli/lib_quiz.php",
+      "name": "lib_quiz.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 7717,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "academia/cli/20_campos_curso.php",
+      "name": "20_campos_curso.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 8711,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "academia/cli/50_rol_gestor.php",
+      "name": "50_rol_gestor.php",
+      "ext": ".php",
+      "language": "PHP",
+      "size": 11327,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "docs/nginx-academia2.conf",
+      "name": "nginx-academia2.conf",
+      "ext": ".conf",
+      "language": "Other",
+      "size": 7758,
+      "text": false,
+      "important": false
+    },
+    {
+      "path": "docs/TRASLADO.md",
+      "name": "TRASLADO.md",
+      "ext": ".md",
+      "language": "Markdown",
+      "size": 9088,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "docs/nginx-academia.conf",
+      "name": "nginx-academia.conf",
+      "ext": ".conf",
+      "language": "Other",
+      "size": 4581,
+      "text": false,
+      "important": false
+    },
+    {
+      "path": "docs/TLS-HTTPS.md",
+      "name": "TLS-HTTPS.md",
+      "ext": ".md",
+      "language": "Markdown",
+      "size": 12336,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "docs/entrevista-avance.md",
+      "name": "entrevista-avance.md",
+      "ext": ".md",
+      "language": "Markdown",
+      "size": 3264,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "docs/GUIA-OPERATIVA.md",
+      "name": "GUIA-OPERATIVA.md",
+      "ext": ".md",
+      "language": "Markdown",
+      "size": 17758,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "docs/V2-ACADEMIA.md",
+      "name": "V2-ACADEMIA.md",
+      "ext": ".md",
+      "language": "Markdown",
+      "size": 24483,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "docs/MIGRACION.md",
+      "name": "MIGRACION.md",
+      "ext": ".md",
+      "language": "Markdown",
+      "size": 26814,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "INSUMO/guia-8-prompt-checklist-pre-deploy.md",
+      "name": "guia-8-prompt-checklist-pre-deploy.md",
+      "ext": ".md",
+      "language": "Markdown",
+      "size": 8058,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "INSUMO/DOCKER.md",
+      "name": "DOCKER.md",
+      "ext": ".md",
+      "language": "Markdown",
+      "size": 9668,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "INSUMO/fastapi-postgresql-conexion.md",
+      "name": "fastapi-postgresql-conexion.md",
+      "ext": ".md",
+      "language": "Markdown",
+      "size": 6054,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "INSUMO/guia-6-github-actions-por-repo.md",
+      "name": "guia-6-github-actions-por-repo.md",
+      "ext": ".md",
+      "language": "Markdown",
+      "size": 4606,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "db/setup_bd_v2.sql",
+      "name": "setup_bd_v2.sql",
+      "ext": ".sql",
+      "language": "SQL",
+      "size": 11985,
+      "text": true,
+      "important": false
+    },
+    {
+      "path": "db/setup_bd.sql",
+      "name": "setup_bd.sql",
+      "ext": ".sql",
+      "language": "SQL",
+      "size": 2394,
+      "text": true,
+      "important": false
+    }
+  ],
+  "structure": {
+    "CLAUDE.md": 1,
+    ".gitignore": 1,
+    ".gitattributes": 1,
+    "docker-compose.yml": 1,
+    ".env.migracion.example": 1,
+    "docker-compose.migracion.yml": 1,
+    "README.md": 1,
+    ".env.v2.example": 1,
+    ".env.example": 1,
+    ".dockerignore": 1,
+    "Dockerfile": 1,
+    "plugins": 403,
+    "docker": 5,
+    ".github": 2,
+    "manuales": 9,
+    "INSUMO_MEJORA": 3,
+    "academia": 24,
+    "docs": 8,
+    "INSUMO": 4,
+    "db": 2
+  },
+  "important_files": [
+    "Dockerfile",
+    "docker-compose.yml",
+    ".env.example",
+    "README.md",
+    "academia/README.md",
+    "manuales/README.md",
+    "plugins/mod/customcert/README.md",
+    ".github/workflows/deploy-prod.yml",
+    "docker-compose.migracion.yml",
+    "docker/config.php",
+    "plugins/mod/customcert/db/services.php",
+    ".dockerignore",
+    ".github/workflows/readme.yml",
+    "INSUMO/DOCKER.md",
+    "INSUMO/fastapi-postgresql-conexion.md",
+    "INSUMO/guia-8-prompt-checklist-pre-deploy.md",
+    "db/setup_bd.sql",
+    "db/setup_bd_v2.sql",
+    "docker/apache-moodle.conf",
+    "docker/health.php",
+    "docker/moodle-crontab",
+    "docker/php.ini",
+    "manuales/07-authenticated-user.md",
+    "manuales/08-authenticated-user-frontpage.md",
+    "plugins/mod/customcert/.github/workflows/moodle-ci.yml",
+    "plugins/mod/customcert/classes/service/certificate_download_service.php",
+    "plugins/mod/customcert/classes/service/certificate_email_service.php",
+    "plugins/mod/customcert/classes/service/certificate_issue_service.php",
+    "plugins/mod/customcert/classes/service/certificate_issuer_service.php",
+    "plugins/mod/customcert/classes/service/certificate_repository.php",
+    "plugins/mod/customcert/classes/service/certificate_time_service.php",
+    "plugins/mod/customcert/classes/service/element_factory.php",
+    "plugins/mod/customcert/classes/service/element_layout.php",
+    "plugins/mod/customcert/classes/service/element_registry.php",
+    "plugins/mod/customcert/classes/service/element_renderer.php",
+    "plugins/mod/customcert/classes/service/element_repository.php",
+    "plugins/mod/customcert/classes/service/form_service.php",
+    "plugins/mod/customcert/classes/service/html_renderer.php",
+    "plugins/mod/customcert/classes/service/issue_email_repository.php",
+    "plugins/mod/customcert/classes/service/issue_repository.php",
+    "plugins/mod/customcert/classes/service/item_move_service.php",
+    "plugins/mod/customcert/classes/service/page_repository.php",
+    "plugins/mod/customcert/classes/service/page_update.php",
+    "plugins/mod/customcert/classes/service/pdf_generation_service.php",
+    "plugins/mod/customcert/classes/service/pdf_renderer.php",
+    "plugins/mod/customcert/classes/service/persistence_helper.php",
+    "plugins/mod/customcert/classes/service/template_duplication_service.php",
+    "plugins/mod/customcert/classes/service/template_load_service.php",
+    "plugins/mod/customcert/classes/service/template_repository.php",
+    "plugins/mod/customcert/classes/service/template_service.php",
+    "plugins/mod/customcert/classes/service/validation_service.php",
+    "plugins/mod/customcert/db/access.php",
+    "plugins/mod/customcert/db/hooks.php",
+    "plugins/mod/customcert/db/install.xml",
+    "plugins/mod/customcert/db/log.php",
+    "plugins/mod/customcert/db/mobile.php",
+    "plugins/mod/customcert/db/subplugins.json",
+    "plugins/mod/customcert/db/tasks.php",
+    "plugins/mod/customcert/db/upgrade.php",
+    "plugins/mod/customcert/element/bgimage/db/upgrade.php",
+    "plugins/mod/customcert/element/image/db/upgrade.php",
+    "plugins/mod/customcert/settings.php",
+    "plugins/mod/customcert/tests/certificate_download_service_test.php",
+    "plugins/mod/customcert/tests/certificate_issue_service_test.php",
+    "plugins/mod/customcert/tests/certificate_time_service_test.php",
+    "plugins/mod/customcert/tests/form_service_test.php",
+    "plugins/mod/customcert/tests/pdf_generation_service_test.php",
+    "plugins/mod/customcert/tests/template_authorisation_test.php",
+    "plugins/mod/customcert/tests/template_duplication_service_test.php",
+    "plugins/mod/customcert/tests/template_load_service_test.php",
+    "plugins/mod/customcert/tests/template_service_test.php",
+    "plugins/mod/customcert/tests/validation_service_test.php",
+    "plugins/theme/academia/config.php",
+    "plugins/theme/academia/settings.php"
+  ],
+  "technologies": {
+    "React": {
+      "confidence": "low",
+      "evidence": [
+        {
+          "file": "docs/entrevista-avance.md",
+          "line": 41,
+          "weight": 1,
+          "pattern": "\\breact\\b"
+        },
+        {
+          "file": "INSUMO/DOCKER.md",
+          "line": 14,
+          "weight": 1,
+          "pattern": "\\breact\\b"
+        }
+      ]
+    },
+    "FastAPI": {
+      "confidence": "medium",
+      "evidence": [
+        {
+          "file": "docs/entrevista-avance.md",
+          "line": 41,
+          "weight": 1,
+          "pattern": "\\bfastapi\\b"
+        },
+        {
+          "file": "INSUMO/DOCKER.md",
+          "line": 22,
+          "weight": 1,
+          "pattern": "\\bfastapi\\b"
+        },
+        {
+          "file": "INSUMO/fastapi-postgresql-conexion.md",
+          "line": 1,
+          "weight": 1,
+          "pattern": "\\bfastapi\\b"
+        }
+      ]
+    },
+    "Express": {
+      "confidence": "low",
+      "evidence": [
+        {
+          "file": "plugins/mod/customcert/LICENSE.md",
+          "line": 492,
+          "weight": 1,
+          "pattern": "\\bexpress\\b"
+        }
+      ]
+    },
+    "Node.js": {
+      "confidence": "medium",
+      "evidence": [
+        {
+          "file": "plugins/mod/customcert/lib.php",
+          "line": 370,
+          "weight": 1,
+          "pattern": "\\bnode\\b"
+        },
+        {
+          "file": "plugins/mod/customcert/yui/src/rearrange/js/rearrange.js",
+          "line": 178,
+          "weight": 1,
+          "pattern": "\\bnode\\b"
+        },
+        {
+          "file": "INSUMO/DOCKER.md",
+          "line": 27,
+          "weight": 1,
+          "pattern": "\\bnode\\b"
+        }
+      ]
+    },
+    "PostgreSQL": {
+      "confidence": "high",
+      "evidence": [
+        {
+          "file": "CLAUDE.md",
+          "line": 58,
+          "weight": 1,
+          "pattern": "\\bpostgresql\\b"
+        },
+        {
+          "file": "docker-compose.yml",
+          "line": 1,
+          "weight": 10,
+          "pattern": "\\bpostgresql\\b"
+        },
+        {
+          "file": "docker-compose.migracion.yml",
+          "line": 4,
+          "weight": 1,
+          "pattern": "\\bpostgresql\\b"
+        },
+        {
+          "file": "README.md",
+          "line": 4,
+          "weight": 1,
+          "pattern": "\\bpostgresql\\b"
+        },
+        {
+          "file": "docker/health.php",
+          "line": 61,
+          "weight": 1,
+          "pattern": "\\bpostgresql\\b"
+        },
+        {
+          "file": "docker/config.php",
+          "line": 6,
+          "weight": 1,
+          "pattern": "\\bpostgresql\\b"
+        },
+        {
+          "file": "INSUMO_MEJORA/prototipo-academia-conaf.html",
+          "line": 1363,
+          "weight": 1,
+          "pattern": "\\bpostgresql\\b"
+        },
+        {
+          "file": "academia/cli/99_verificar.php",
+          "line": 315,
+          "weight": 1,
+          "pattern": "\\bpostgresql\\b"
+        },
+        {
+          "file": "academia/cli/70_informes.php",
+          "line": 17,
+          "weight": 1,
+          "pattern": "\\bpostgresql\\b"
+        },
+        {
+          "file": "docs/TRASLADO.md",
+          "line": 222,
+          "weight": 1,
+          "pattern": "\\bpostgresql\\b"
+        },
+        {
+          "file": "docs/entrevista-avance.md",
+          "line": 36,
+          "weight": 1,
+          "pattern": "\\bpostgresql\\b"
+        },
+        {
+          "file": "docs/V2-ACADEMIA.md",
+          "line": 6,
+          "weight": 1,
+          "pattern": "\\bpostgresql\\b"
+        },
+        {
+          "file": "docs/MIGRACION.md",
+          "line": 1,
+          "weight": 1,
+          "pattern": "\\bpostgresql\\b"
+        },
+        {
+          "file": "INSUMO/DOCKER.md",
+          "line": 31,
+          "weight": 1,
+          "pattern": "\\bpostgresql\\b"
+        },
+        {
+          "file": "INSUMO/fastapi-postgresql-conexion.md",
+          "line": 1,
+          "weight": 1,
+          "pattern": "\\bpostgresql\\b"
+        },
+        {
+          "file": "db/setup_bd_v2.sql",
+          "line": 1,
+          "weight": 1,
+          "pattern": "\\bpostgresql\\b"
+        },
+        {
+          "file": "db/setup_bd.sql",
+          "line": 1,
+          "weight": 1,
+          "pattern": "\\bpostgresql\\b"
+        }
+      ]
+    },
+    "MySQL": {
+      "confidence": "medium",
+      "evidence": [
+        {
+          "file": "docker-compose.migracion.yml",
+          "line": 24,
+          "weight": 1,
+          "pattern": "\\bmysql\\b"
+        },
+        {
+          "file": "docker/config.php",
+          "line": 50,
+          "weight": 1,
+          "pattern": "\\bmysql\\b"
+        },
+        {
+          "file": "docs/entrevista-avance.md",
+          "line": 42,
+          "weight": 1,
+          "pattern": "\\bmysql\\b"
+        },
+        {
+          "file": "docs/MIGRACION.md",
+          "line": 561,
+          "weight": 1,
+          "pattern": "\\bmysql\\b"
+        }
+      ]
+    },
+    "Redis": {
+      "confidence": "low",
+      "evidence": [
+        {
+          "file": "INSUMO_MEJORA/prototipo-academia-conaf.html",
+          "line": 2510,
+          "weight": 1,
+          "pattern": "\\bredis\\b"
+        }
+      ]
+    },
+    "Docker": {
+      "confidence": "high",
+      "evidence": [
+        {
+          "file": "CLAUDE.md",
+          "line": 58,
+          "weight": 1,
+          "pattern": "\\bdocker\\b"
+        },
+        {
+          "file": "docker-compose.yml",
+          "line": 7,
+          "weight": 10,
+          "pattern": "\\bdocker\\b"
+        },
+        {
+          "file": "docker-compose.migracion.yml",
+          "line": 9,
+          "weight": 1,
+          "pattern": "\\bdocker\\b"
+        },
+        {
+          "file": "README.md",
+          "line": 49,
+          "weight": 1,
+          "pattern": "\\bdocker\\b"
+        },
+        {
+          "file": "docker/health.php",
+          "line": 18,
+          "weight": 1,
+          "pattern": "\\bdocker\\b"
+        },
+        {
+          "file": "docker/config.php",
+          "line": 67,
+          "weight": 1,
+          "pattern": "\\bdocker\\b"
+        },
+        {
+          "file": "docker/php.ini",
+          "line": 17,
+          "weight": 1,
+          "pattern": "\\bdocker\\b"
+        },
+        {
+          "file": ".github/workflows/deploy-prod.yml",
+          "line": 9,
+          "weight": 1,
+          "pattern": "\\bdocker\\b"
+        },
+        {
+          "file": "academia/README.md",
+          "line": 30,
+          "weight": 1,
+          "pattern": "\\bdocker\\b"
+        },
+        {
+          "file": "academia/pruebas/compilar-tema.php",
+          "line": 21,
+          "weight": 1,
+          "pattern": "\\bdocker\\b"
+        },
+        {
+          "file": "academia/cli/99_verificar.php",
+          "line": 11,
+          "weight": 1,
+          "pattern": "\\bdocker\\b"
+        },
+        {
+          "file": "academia/cli/10_categorias.php",
+          "line": 9,
+          "weight": 1,
+          "pattern": "\\bdocker\\b"
+        },
+        {
+          "file": "academia/cli/80_plantilla_maestra.php",
+          "line": 16,
+          "weight": 1,
+          "pattern": "\\bdocker\\b"
+        },
+        {
+          "file": "academia/cli/30_cohortes.php",
+          "line": 12,
+          "weight": 1,
+          "pattern": "\\bdocker\\b"
+        },
+        {
+          "file": "academia/cli/95_ajustes_sitio.php",
+          "line": 20,
+          "weight": 1,
+          "pattern": "\\bdocker\\b"
+        },
+        {
+          "file": "academia/cli/40_competencias.php",
+          "line": 8,
+          "weight": 1,
+          "pattern": "\\bdocker\\b"
+        },
+        {
+          "file": "academia/cli/lib.php",
+          "line": 27,
+          "weight": 1,
+          "pattern": "\\bdocker\\b"
+        },
+        {
+          "file": "academia/cli/90_cursos_esqueleto.php",
+          "line": 20,
+          "weight": 1,
+          "pattern": "\\bdocker\\b"
+        },
+        {
+          "file": "academia/cli/70_informes.php",
+          "line": 20,
+          "weight": 1,
+          "pattern": "\\bdocker\\b"
+        },
+        {
+          "file": "academia/cli/20_campos_curso.php",
+          "line": 17,
+          "weight": 1,
+          "pattern": "\\bdocker\\b"
+        }
+      ]
+    },
+    "SQLAlchemy": {
+      "confidence": "low",
+      "evidence": [
+        {
+          "file": "INSUMO/fastapi-postgresql-conexion.md",
+          "line": 26,
+          "weight": 1,
+          "pattern": "\\bsqlalchemy\\b"
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "npm": [],
+    "python": []
+  },
+  "environment_variables": [],
+  "api": [],
+  "database_tables": [
+    {
+      "value": "pg_roles",
+      "file": "db/setup_bd_v2.sql",
+      "line": 39
+    },
+    {
+      "value": "PUBLIC",
+      "file": "db/setup_bd_v2.sql",
+      "line": 81
+    },
+    {
+      "value": "information_schema.tables",
+      "file": "db/setup_bd_v2.sql",
+      "line": 166
+    },
+    {
+      "value": "mdl_user",
+      "file": "db/setup_bd_v2.sql",
+      "line": 168
+    },
+    {
+      "value": "mdl_course",
+      "file": "db/setup_bd_v2.sql",
+      "line": 169
+    },
+    {
+      "value": "mdl_course_categories",
+      "file": "db/setup_bd_v2.sql",
+      "line": 170
+    },
+    {
+      "value": "pg_sequences",
+      "file": "db/setup_bd_v2.sql",
+      "line": 194
+    },
+    {
+      "value": "PUBLIC",
+      "file": "db/setup_bd.sql",
+      "line": 42
+    }
+  ],
+  "capability_signals": {
+    "Autenticación": {
+      "confidence": "medium",
+      "signals": [
+        {
+          "keyword": "login",
+          "file": "CLAUDE.md",
+          "line": 270
+        },
+        {
+          "keyword": "auth",
+          "file": "CLAUDE.md",
+          "line": 335
+        },
+        {
+          "keyword": "authenticate",
+          "file": "CLAUDE.md",
+          "line": 335
+        },
+        {
+          "keyword": "login",
+          "file": "plugins/mod/customcert/verify_certificate.php",
+          "line": 25
+        },
+        {
+          "keyword": "login",
+          "file": "plugins/mod/customcert/edit_element.php",
+          "line": 55
+        },
+        {
+          "keyword": "login",
+          "file": "plugins/mod/customcert/export_template.php",
+          "line": 37
+        },
+        {
+          "keyword": "auth",
+          "file": "plugins/mod/customcert/export_template.php",
+          "line": 26
+        },
+        {
+          "keyword": "login",
+          "file": "plugins/mod/customcert/upload_image.php",
+          "line": 31
+        },
+        {
+          "keyword": "login",
+          "file": "plugins/mod/customcert/manage_templates.php",
+          "line": 52
+        },
+        {
+          "keyword": "login",
+          "file": "plugins/mod/customcert/rearrange.php",
+          "line": 56
+        },
+        {
+          "keyword": "login",
+          "file": "plugins/mod/customcert/load_template.php",
+          "line": 42
+        },
+        {
+          "keyword": "login",
+          "file": "plugins/mod/customcert/ajax.php",
+          "line": 46
+        },
+        {
+          "keyword": "auth",
+          "file": "plugins/mod/customcert/ajax.php",
+          "line": 60
+        },
+        {
+          "keyword": "auth",
+          "file": "plugins/mod/customcert/LICENSE.md",
+          "line": 19
+        },
+        {
+          "keyword": "login",
+          "file": "plugins/mod/customcert/report.php",
+          "line": 34
+        },
+        {
+          "keyword": "login",
+          "file": "plugins/mod/customcert/lib.php",
+          "line": 242
+        },
+        {
+          "keyword": "auth",
+          "file": "plugins/mod/customcert/lib.php",
+          "line": 332
+        },
+        {
+          "keyword": "auth",
+          "file": "plugins/mod/customcert/CHANGES.md",
+          "line": 11
+        },
+        {
+          "keyword": "login",
+          "file": "plugins/mod/customcert/download_all_certificates.php",
+          "line": 30
+        },
+        {
+          "keyword": "login",
+          "file": "plugins/mod/customcert/edit.php",
+          "line": 70
+        }
+      ]
+    },
+    "Mapas / cartografía": {
+      "confidence": "low",
+      "signals": [
+        {
+          "keyword": "mapa",
+          "file": "CLAUDE.md",
+          "line": 51
+        },
+        {
+          "keyword": "mapa",
+          "file": "INSUMO_MEJORA/prototipo-academia-conaf.html",
+          "line": 2579
+        }
+      ]
+    },
+    "Exportación": {
+      "confidence": "medium",
+      "signals": [
+        {
+          "keyword": "csv",
+          "file": "CLAUDE.md",
+          "line": 363
+        },
+        {
+          "keyword": "csv",
+          "file": "README.md",
+          "line": 17
+        },
+        {
+          "keyword": "export",
+          "file": "plugins/mod/customcert/export_template.php",
+          "line": 18
+        },
+        {
+          "keyword": "export",
+          "file": "plugins/mod/customcert/CHANGES.md",
+          "line": 85
+        },
+        {
+          "keyword": "export",
+          "file": "plugins/mod/customcert/import_template.php",
+          "line": 34
+        },
+        {
+          "keyword": "export",
+          "file": "plugins/mod/customcert/lang/en/customcert.php",
+          "line": 131
+        },
+        {
+          "keyword": "export",
+          "file": "plugins/mod/customcert/element/coursefield/classes/exporter.php",
+          "line": 22
+        },
+        {
+          "keyword": "export",
+          "file": "plugins/mod/customcert/element/coursefield/classes/element.php",
+          "line": 190
+        },
+        {
+          "keyword": "export",
+          "file": "plugins/mod/customcert/element/teachername/classes/exporter.php",
+          "line": 21
+        },
+        {
+          "keyword": "export",
+          "file": "plugins/mod/customcert/element/code/classes/exporter.php",
+          "line": 21
+        },
+        {
+          "keyword": "export",
+          "file": "plugins/mod/customcert/element/userpicture/classes/exporter.php",
+          "line": 21
+        },
+        {
+          "keyword": "export",
+          "file": "plugins/mod/customcert/element/date/classes/exporter.php",
+          "line": 18
+        },
+        {
+          "keyword": "export",
+          "file": "plugins/mod/customcert/element/studentname/classes/exporter.php",
+          "line": 21
+        },
+        {
+          "keyword": "export",
+          "file": "plugins/mod/customcert/element/groupname/classes/exporter.php",
+          "line": 21
+        },
+        {
+          "keyword": "export",
+          "file": "plugins/mod/customcert/element/expiry/classes/exporter.php",
+          "line": 21
+        },
+        {
+          "keyword": "export",
+          "file": "plugins/mod/customcert/element/categoryname/classes/exporter.php",
+          "line": 21
+        },
+        {
+          "keyword": "export",
+          "file": "plugins/mod/customcert/element/gradeitemname/classes/exporter.php",
+          "line": 21
+        },
+        {
+          "keyword": "export",
+          "file": "plugins/mod/customcert/element/image/classes/exporter.php",
+          "line": 21
+        },
+        {
+          "keyword": "export",
+          "file": "plugins/mod/customcert/element/userfield/classes/exporter.php",
+          "line": 22
+        },
+        {
+          "keyword": "export",
+          "file": "plugins/mod/customcert/element/bgimage/classes/exporter.php",
+          "line": 21
+        }
+      ]
+    },
+    "Carga de archivos": {
+      "confidence": "medium",
+      "signals": [
+        {
+          "keyword": "archivo",
+          "file": "CLAUDE.md",
+          "line": 7
+        },
+        {
+          "keyword": "file",
+          "file": "CLAUDE.md",
+          "line": 57
+        },
+        {
+          "keyword": "document",
+          "file": "CLAUDE.md",
+          "line": 22
+        },
+        {
+          "keyword": "archivo",
+          "file": "docker-compose.yml",
+          "line": 6
+        },
+        {
+          "keyword": "file",
+          "file": "docker-compose.yml",
+          "line": 14
+        },
+        {
+          "keyword": "document",
+          "file": "docker-compose.yml",
+          "line": 17
+        },
+        {
+          "keyword": "archivo",
+          "file": "docker-compose.migracion.yml",
+          "line": 37
+        },
+        {
+          "keyword": "file",
+          "file": "docker-compose.migracion.yml",
+          "line": 10
+        },
+        {
+          "keyword": "archivo",
+          "file": "README.md",
+          "line": 7
+        },
+        {
+          "keyword": "document",
+          "file": "README.md",
+          "line": 37
+        },
+        {
+          "keyword": "file",
+          "file": "plugins/theme/academia/lib.php",
+          "line": 30
+        },
+        {
+          "keyword": "file",
+          "file": "plugins/theme/academia/version.php",
+          "line": 21
+        },
+        {
+          "keyword": "archivo",
+          "file": "plugins/theme/academia/scss/pre.scss",
+          "line": 3
+        },
+        {
+          "keyword": "archivo",
+          "file": "plugins/theme/academia/scss/post.scss",
+          "line": 7
+        },
+        {
+          "keyword": "document",
+          "file": "plugins/theme/academia/scss/post.scss",
+          "line": 139
+        },
+        {
+          "keyword": "file",
+          "file": "plugins/mod/customcert/verify_certificate.php",
+          "line": 2
+        },
+        {
+          "keyword": "upload",
+          "file": "plugins/mod/customcert/edit_element.php",
+          "line": 125
+        },
+        {
+          "keyword": "file",
+          "file": "plugins/mod/customcert/edit_element.php",
+          "line": 2
+        },
+        {
+          "keyword": "file",
+          "file": "plugins/mod/customcert/export_template.php",
+          "line": 2
+        },
+        {
+          "keyword": "upload",
+          "file": "plugins/mod/customcert/upload_image.php",
+          "line": 18
+        }
+      ]
+    },
+    "Reportes / analítica": {
+      "confidence": "medium",
+      "signals": [
+        {
+          "keyword": "report",
+          "file": "CLAUDE.md",
+          "line": 135
+        },
+        {
+          "keyword": "report",
+          "file": "plugins/theme/academia/scss/post.scss",
+          "line": 141
+        },
+        {
+          "keyword": "report",
+          "file": "plugins/mod/customcert/report.php",
+          "line": 18
+        },
+        {
+          "keyword": "report",
+          "file": "plugins/mod/customcert/styles.css",
+          "line": 14
+        },
+        {
+          "keyword": "report",
+          "file": "plugins/mod/customcert/lib.php",
+          "line": 181
+        },
+        {
+          "keyword": "report",
+          "file": "plugins/mod/customcert/CHANGES.md",
+          "line": 449
+        },
+        {
+          "keyword": "report",
+          "file": "plugins/mod/customcert/view.php",
+          "line": 28
+        },
+        {
+          "keyword": "report",
+          "file": "plugins/mod/customcert/lang/en/customcert.php",
+          "line": 64
+        },
+        {
+          "keyword": "report",
+          "file": "plugins/mod/customcert/backup/moodle2/restore_customcert_activity_task.class.php",
+          "line": 110
+        },
+        {
+          "keyword": "report",
+          "file": "plugins/mod/customcert/element/expiry/classes/element.php",
+          "line": 372
+        },
+        {
+          "keyword": "report",
+          "file": "plugins/mod/customcert/tests/certificate_issue_service_test.php",
+          "line": 108
+        },
+        {
+          "keyword": "report",
+          "file": "plugins/mod/customcert/tools/check_element_ownership_lookups.php",
+          "line": 83
+        },
+        {
+          "keyword": "report",
+          "file": "plugins/mod/customcert/classes/my_certificates_table.php",
+          "line": 18
+        },
+        {
+          "keyword": "report",
+          "file": "plugins/mod/customcert/classes/certificate.php",
+          "line": 83
+        },
+        {
+          "keyword": "report",
+          "file": "plugins/mod/customcert/classes/report_table.php",
+          "line": 18
+        },
+        {
+          "keyword": "report",
+          "file": "plugins/mod/customcert/classes/local/pagination.php",
+          "line": 34
+        },
+        {
+          "keyword": "report",
+          "file": "plugins/mod/customcert/classes/export/subplugin_exportable.php",
+          "line": 43
+        },
+        {
+          "keyword": "report",
+          "file": "plugins/mod/customcert/classes/output/mobile.php",
+          "line": 102
+        },
+        {
+          "keyword": "report",
+          "file": "plugins/mod/customcert/db/access.php",
+          "line": 70
+        },
+        {
+          "keyword": "report",
+          "file": "plugins/mod/customcert/mobile/pluginfile.php",
+          "line": 73
+        }
+      ]
+    },
+    "Procesamiento de datos": {
+      "confidence": "low",
+      "signals": [
+        {
+          "keyword": "etl",
+          "file": "plugins/mod/customcert/element/border/classes/element.php",
+          "line": 93
+        },
+        {
+          "keyword": "etl",
+          "file": "plugins/mod/customcert/includes/colourpicker.php",
+          "line": 62
+        }
+      ]
+    }
+  },
+  "analysis": {
+    "plugins/mod/customcert/amd/src/rearrange-area.js": {
+      "javascript": {
+        "imports": [],
+        "exports": [],
+        "components": [],
+        "api_calls": [],
+        "routes": [],
+        "env_vars": []
+      }
+    },
+    "plugins/mod/customcert/amd/src/dialogue.js": {
+      "javascript": {
+        "imports": [],
+        "exports": [],
+        "components": [],
+        "api_calls": [],
+        "routes": [],
+        "env_vars": []
+      }
+    },
+    "plugins/mod/customcert/yui/src/rearrange/js/rearrange.js": {
+      "javascript": {
+        "imports": [],
+        "exports": [],
+        "components": [],
+        "api_calls": [],
+        "routes": [],
+        "env_vars": []
+      }
+    },
+    "academia/herramientas/convertir-banco-IF-151.py": {
+      "python": {
+        "imports": [
+          {
+            "value": "re",
+            "line": 36
+          },
+          {
+            "value": "sys",
+            "line": 37
+          },
+          {
+            "value": "html",
+            "line": 38
+          },
+          {
+            "value": "pathlib",
+            "line": 39
+          }
+        ],
+        "functions": [
+          {
+            "name": "esc",
+            "line": 183
+          },
+          {
+            "name": "bloque_categoria",
+            "line": 187
+          },
+          {
+            "name": "bloque_pregunta",
+            "line": 196
+          }
+        ],
+        "classes": [],
+        "routes": [],
+        "env_vars": []
+      }
+    },
+    "db/setup_bd_v2.sql": {
+      "sql": {
+        "tables": [
+          {
+            "value": "pg_roles",
+            "file": "db/setup_bd_v2.sql",
+            "line": 39
+          },
+          {
+            "value": "PUBLIC",
+            "file": "db/setup_bd_v2.sql",
+            "line": 81
+          },
+          {
+            "value": "information_schema.tables",
+            "file": "db/setup_bd_v2.sql",
+            "line": 166
+          },
+          {
+            "value": "mdl_user",
+            "file": "db/setup_bd_v2.sql",
+            "line": 168
+          },
+          {
+            "value": "mdl_course",
+            "file": "db/setup_bd_v2.sql",
+            "line": 169
+          },
+          {
+            "value": "mdl_course_categories",
+            "file": "db/setup_bd_v2.sql",
+            "line": 170
+          },
+          {
+            "value": "pg_sequences",
+            "file": "db/setup_bd_v2.sql",
+            "line": 194
+          }
+        ],
+        "operations": {
+          "SELECT": 7,
+          "INSERT": 0,
+          "UPDATE": 0,
+          "DELETE": 0,
+          "CREATE": 2,
+          "ALTER": 2,
+          "DROP": 2
+        }
+      }
+    },
+    "db/setup_bd.sql": {
+      "sql": {
+        "tables": [
+          {
+            "value": "PUBLIC",
+            "file": "db/setup_bd.sql",
+            "line": 42
+          }
+        ],
+        "operations": {
+          "SELECT": 0,
+          "INSERT": 0,
+          "UPDATE": 0,
+          "DELETE": 0,
+          "CREATE": 2,
+          "ALTER": 0,
+          "DROP": 0
+        }
+      }
+    }
+  },
+  "existing_readme": {
+    "exists": true,
+    "summary": [
+      "# coipo_academia — Academia CONAF v2",
+      "La Academia CONAF. `coipo_moodle` resolvió la **infraestructura** —sacar la plataforma del",
+      "proveedor externo y dejarla en servidor propio sobre PostgreSQL 17—. Este repositorio resuelve",
+      "la **arquitectura de información**, y desde el 31-08-2026 lo hace en un sitio nuevo: Moodle",
+      "5.2.1 instalado de cero, sin heredar los usuarios ni los cursos del campus de incendios, que",
+      "sigue respondiendo en el 8115 como archivo histórico.",
+      "El diagnóstico de `INSUMO_MEJORA` lo resume en una línea: *la plataforma no es el problema, la",
+      "arquitectura de información sí lo es.* Hoy hay 9 categorías planas que mezclan cinco criterios,",
+      "**1** campo de clasificación, **0** cohortes, **0** roles delegados y las competencias apagadas.",
+      "## Qué hay acá",
+      "| | |",
+      "|---|---|",
+      "| [academia/](academia/README.md) | Los scripts que aplican el modelo de datos, los CSV con las decisiones, el banco de preguntas y las pruebas |",
+      "| [plugins/theme/academia/](plugins/theme/academia/) | El tema: hijo de Boost, con la identidad institucional y las reglas del estándar |",
+      "| [docs/V2-ACADEMIA.md](docs/V2-ACADEMIA.md) | **Empezar por acá.** Qué se construyó, por qué, y qué queda abierto |",
+      "| [db/setup_bd_v2.sql](db/setup_bd_v2.sql) · [.env.v2.example](.env.v2.example) | Cómo se levanta la instancia v2 |",
+      "| `INSUMO_MEJORA/` | Los tres insumos: propuesta institucional, diseño del curso IF-151 y el prototipo de 22 pantallas |",
+      "## Corre en paralelo con el campus actual, y no hereda nada de él",
+      "```",
+      "172.31.2.41",
+      "├── coipo_moodle    8115   academia_prod   Moodle 4.5.10 · PHP 8.3   archivo, NO SE TOCA",
+      "└── coipo_academia  8116   academia_v2     Moodle 5.2.1  · PHP 8.4   esta, instalada de cero",
+      "```",
+      "No es un clon del campus ni su evolución: es una instalación limpia de 5.2.1, sin usuarios ni",
+      "cursos heredados. Va en 5.2 porque es la rama estable y soportada de hoy, y porque esperar a",
+      "5.3 LTS habría congelado dos meses de construcción a cambio de nada. En **octubre de 2026 se",
+      "sube a 5.3 LTS**, y ese sí será un upgrade de verdad. El detalle, y qué se decidió el",
+      "31-08-2026 y el 01-09-2026, está en [docs/V2-ACADEMIA.md](docs/V2-ACADEMIA.md).",
+      "**Moodle 5.2 movió la raíz web a `public/`.** El `DocumentRoot` apunta a",
+      "`/var/www/html/public`, `config.php` se queda en la raíz y los scripts CLI también. Si el",
+      "sitio responde `rootdirpublic`, es eso.",
+      "Los scripts se **niegan a correr** si el `config.php` apunta a `academia_prod`.",
+      "## Lo mínimo para empezar",
+      "```bash",
+      "cd /opt/apps/coipo_academia"
+    ]
+  }
+}
