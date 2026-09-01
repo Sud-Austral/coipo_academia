@@ -1,0 +1,145 @@
+{
+  "repository": "target",
+  "generated_at": "2026-09-01T18:40:41.021821",
+  "analysis": {
+    "plugins/mod/customcert/amd/src/rearrange-area.js": {
+      "javascript": {
+        "imports": [],
+        "exports": [],
+        "components": [],
+        "api_calls": [],
+        "routes": [],
+        "env_vars": []
+      }
+    },
+    "plugins/mod/customcert/amd/src/dialogue.js": {
+      "javascript": {
+        "imports": [],
+        "exports": [],
+        "components": [],
+        "api_calls": [],
+        "routes": [],
+        "env_vars": []
+      }
+    },
+    "plugins/mod/customcert/yui/src/rearrange/js/rearrange.js": {
+      "javascript": {
+        "imports": [],
+        "exports": [],
+        "components": [],
+        "api_calls": [],
+        "routes": [],
+        "env_vars": []
+      }
+    },
+    "academia/herramientas/convertir-banco-IF-151.py": {
+      "python": {
+        "imports": [
+          {
+            "value": "re",
+            "line": 36
+          },
+          {
+            "value": "sys",
+            "line": 37
+          },
+          {
+            "value": "html",
+            "line": 38
+          },
+          {
+            "value": "pathlib",
+            "line": 39
+          }
+        ],
+        "functions": [
+          {
+            "name": "esc",
+            "line": 183
+          },
+          {
+            "name": "bloque_categoria",
+            "line": 187
+          },
+          {
+            "name": "bloque_pregunta",
+            "line": 196
+          }
+        ],
+        "classes": [],
+        "routes": [],
+        "env_vars": []
+      }
+    },
+    "db/setup_bd_v2.sql": {
+      "sql": {
+        "tables": [
+          {
+            "value": "pg_roles",
+            "file": "db/setup_bd_v2.sql",
+            "line": 39
+          },
+          {
+            "value": "PUBLIC",
+            "file": "db/setup_bd_v2.sql",
+            "line": 81
+          },
+          {
+            "value": "information_schema.tables",
+            "file": "db/setup_bd_v2.sql",
+            "line": 166
+          },
+          {
+            "value": "mdl_user",
+            "file": "db/setup_bd_v2.sql",
+            "line": 168
+          },
+          {
+            "value": "mdl_course",
+            "file": "db/setup_bd_v2.sql",
+            "line": 169
+          },
+          {
+            "value": "mdl_course_categories",
+            "file": "db/setup_bd_v2.sql",
+            "line": 170
+          },
+          {
+            "value": "pg_sequences",
+            "file": "db/setup_bd_v2.sql",
+            "line": 194
+          }
+        ],
+        "operations": {
+          "SELECT": 7,
+          "INSERT": 0,
+          "UPDATE": 0,
+          "DELETE": 0,
+          "CREATE": 2,
+          "ALTER": 2,
+          "DROP": 2
+        }
+      }
+    },
+    "db/setup_bd.sql": {
+      "sql": {
+        "tables": [
+          {
+            "value": "PUBLIC",
+            "file": "db/setup_bd.sql",
+            "line": 42
+          }
+        ],
+        "operations": {
+          "SELECT": 0,
+          "INSERT": 0,
+          "UPDATE": 0,
+          "DELETE": 0,
+          "CREATE": 2,
+          "ALTER": 0,
+          "DROP": 0
+        }
+      }
+    }
+  }
+}
