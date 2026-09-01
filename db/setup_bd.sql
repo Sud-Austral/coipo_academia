@@ -19,6 +19,13 @@ CREATE ROLE academia LOGIN
   -- holgura para ~2.800 usuarios sin acaparar el PostgreSQL compartido. Subirlo
   -- solo ante errores de "too many connections", revisando antes el
   -- max_connections global del servidor.
+  --
+  -- Y desde el 31-08-2026 estos 60 no los usa un sitio: los usan DOS. El límite
+  -- es del ROL, no de la base, así que el campus del 8115 y la Academia del 8116
+  -- se lo reparten. Cómo se reparte, y en qué orden se cambian los dos
+  -- MaxRequestWorkers para no dejar al campus sin conexiones, está en
+  -- docker/apache-moodle.conf. En esa misma fecha se decidió no volver a pedir
+  -- ampliación: 60 es todo lo que va a haber.
   CONNECTION LIMIT 60;
 
 COMMENT ON ROLE academia IS 'Rol de aplicación Moodle — ver /opt/apps/coipo_moodle/.env en 172.31.2.41';

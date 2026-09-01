@@ -55,13 +55,13 @@ práctica. Lo que usted haga ahí no afecta a ningún curso real.
 |---|---|
 | Dirección de la plataforma | https://academia.conaf.cl |
 | Nombre de usuario | `manual.profesorne` |
-| Contraseña | `Teacher-campus26.` |
+| Contraseña | Se la pide al administrador de la plataforma. No está escrita en este manual, a propósito |
 | Curso donde tiene el rol | Curso de practica - Manuales de usuario |
 | Dirección directa del curso | https://academia.conaf.cl/course/view.php?id=41 |
 
-La contraseña se escribe **exactamente así**: con la **T** mayúscula al principio, con el
-guion en el medio y **con el punto final**. El punto es parte de la contraseña. La
-plataforma distingue mayúsculas de minúsculas: `Teacher` y `teacher` no son lo mismo.
+La contraseña se escribe **exactamente así** como se la hayan entregado: con las mismas
+mayúsculas, los mismos signos y el signo del final si lo tiene. La plataforma distingue
+mayúsculas de minúsculas: una letra grande y la misma letra chica no son lo mismo.
 
 Si usted va a corregir un curso de verdad, el administrador le dará **otro** nombre de
 usuario y **otra** contraseña. Los pasos de este manual son exactamente los mismos.
@@ -138,14 +138,14 @@ escriba `academia.conaf.cl/login/index.php` y apriete Enter. Llega a la misma pa
 3. Escriba: `manual.profesorne`
 4. Busque la casilla de abajo, que dice **Contraseña**.
 5. Haga un clic dentro de esa casilla.
-6. Escriba: `Teacher-campus26.` Al escribir la contraseña verá puntos o asteriscos en vez
+6. Escriba la contraseña que le entregó el administrador. Al escribirla verá puntos o asteriscos en vez
    de letras: es normal, es para que nadie la lea por encima del hombro.
 7. Haga clic en el botón **Acceder**.
 
 **Lo que debería ver:** la pantalla cambia y aparece su página personal, con su nombre
 arriba a la derecha. Si aparece un aviso rojo diciendo que los datos son incorrectos,
-escriba la contraseña de nuevo con calma: el error más frecuente es la mayúscula del
-principio o el punto del final.
+escriba la contraseña de nuevo con calma: los errores más frecuentes son dejar afuera una
+mayúscula o un signo del final.
 
 ### 3.5 Entrar a su curso
 
@@ -490,7 +490,7 @@ Nota: **ninguno** de los roles de estos manuales puede configurar el servidor.
 
 | Qué ve usted | Qué pasó | Qué hacer |
 |---|---|---|
-| "Datos incorrectos" al entrar | Escribió mal el usuario o la contraseña | Escriba de nuevo con cuidado. Revise la mayúscula inicial y el punto final. Revise que no esté activada la tecla Bloq Mayús |
+| "Datos incorrectos" al entrar | Escribió mal el usuario o la contraseña | Escriba de nuevo con cuidado. Revise las mayúsculas y los signos. Revise que no esté activada la tecla Bloq Mayús |
 | No llega el correo para recuperar la contraseña | El envío de correos está desactivado en el sitio | Pídale una contraseña nueva al administrador. Por correo no va a llegar nunca |
 | No aparece el interruptor "Modo de edición" | Es normal en su rol | Lea la sección 6.1. No es una falla |
 | No veo su curso en "Mis cursos" | Aún no lo han asignado a ese curso, o el curso está oculto | Pida al Manager que revise su matrícula en ese curso |

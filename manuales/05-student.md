@@ -48,11 +48,11 @@ Sus cursos reales están en **su propia cuenta**, no en esta.
 |---|---|
 | Dirección de la plataforma | https://academia.conaf.cl |
 | Nombre de usuario | `manual.estudiante` |
-| Contraseña | `Student-campus26.` |
+| Contraseña | Se la pide al administrador de la plataforma. No está escrita en este manual, a propósito |
 | Curso de práctica | Curso de practica - Manuales de usuario |
 
-La contraseña se escribe **tal cual**: con la **S** mayúscula al principio y con el **punto
-final**. Si falta el punto, no entra.
+La contraseña se escribe **tal cual** se la entregaron: con las mismas mayúsculas y con los
+signos que lleve. Si falta uno, no entra.
 
 ### 2.2 Aviso importante sobre su contraseña
 
@@ -128,14 +128,14 @@ grande que dice **Acceder**.
 2. Escriba su nombre de usuario. Todo junto, sin espacios, en minúsculas. Si está
    practicando con la cuenta de prueba, escriba: `manual.estudiante`
 3. Haga clic dentro de la casilla **Contraseña**, la de abajo.
-4. Escriba su contraseña. Si está practicando, escriba: `Student-campus26.`
+4. Escriba su contraseña. La de la cuenta de práctica se la entrega el administrador de la plataforma.
 5. **No va a ver las letras**: aparecen puntitos negros. Eso es a propósito, para que nadie
    la lea por encima de su hombro.
 6. Haga clic en el botón **Acceder**.
 
 **Cuidado con estas tres cosas:**
 
-- La contraseña distingue mayúsculas de minúsculas. `Student` no es lo mismo que `student`.
+- La contraseña distingue mayúsculas de minúsculas. Una letra grande y la misma letra chica no son lo mismo.
 - Si tiene activada la tecla **Bloq Mayús** (Caps Lock), todo se escribe en mayúsculas y la
   contraseña saldrá mala. Se apaga apretando esa misma tecla, arriba a la izquierda del teclado.
 - No deje espacios al principio ni al final.

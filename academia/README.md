@@ -1,7 +1,7 @@
 # Provisión de la Academia CONAF v2
 
-Sobre **Moodle 5.2.1 y PHP 8.4**. Todo lo que convierte el campus de incendios en la Academia
-se aplica desde acá, con scripts, y no por la interfaz de administración.
+Sobre **Moodle 5.2.1 y PHP 8.4**. Todo lo que convierte un Moodle recién instalado en la
+Academia se aplica desde acá, con scripts, y no por la interfaz de administración.
 
 **Por qué scripts y no la web.** Es la misma razón que `CLAUDE.md` ya tiene escrita para los
 plugins: lo que se hace por la interfaz vive solo en la base de datos de una instancia. No
@@ -14,35 +14,57 @@ corrida no imprime ni un solo `creado`. Todos aceptan `--dry-run` y `--help`.
 
 ---
 
-## Paso 0 — el upgrade de Moodle, antes que todo lo demás
+## Paso 0 — instalar Moodle en una base vacía
 
-Esto es nuevo y no se puede saltar. La base `academia_v2` se clona de `academia_prod`, que
-está en **Moodle 4.5.10**; la imagen de este repositorio trae **Moodle 5.2.1**. El contenedor
-arranca igual, pero el sitio responde «actualización pendiente» hasta que alguien la ejecute:
+Sigue siendo el paso que no se puede saltar, pero ya no es un upgrade. **La Academia no se
+clona de producción**: se instala de cero sobre `academia_v2` vacía y un `moodledata` vacío.
+Decidido el 31-08-2026, y cambia el punto de partida del repositorio entero: el campus actual
+—los 2.869 usuarios y los 37 cursos que siguen respondiendo en el 8115— queda como archivo
+histórico, no como semilla.
+
+El `config.php` ya existe: lo escribe la imagen desde las variables del `.env`. Lo único que
+falta es crear las tablas.
 
 ```bash
 cd /opt/apps/coipo_academia
-docker compose exec -u www-data app php /var/www/html/admin/cli/upgrade.php --non-interactive
+docker compose exec -u www-data app php /var/www/html/admin/cli/install_database.php \
+  --lang=es --agree-license \
+  --fullname='Academia CONAF' --shortname='Academia' \
+  --adminuser=admin.academia --adminpass='...' --adminemail=alguien@conaf.cl
 docker compose exec -u www-data app php /var/www/html/admin/cli/check_database_schema.php
 ```
 
-Son cuatro versiones de salto — 4.5 → 5.0 → 5.1 → 5.2 — y Moodle las encadena solo. Dos cosas
-que conviene mirar mientras corre:
+Cinco cosas que conviene saber antes de escribir ese comando:
 
 - **`admin/cli/` está en la raíz, sin `public/`.** No es un descuido: en Moodle 5.2 la raíz web
   se movió a `public/`, pero los scripts de línea de comandos se quedaron arriba.
+- **Si la base tiene una sola tabla, el script aborta** con `clitablesexist` y no escribe nada.
+  Es una red, no un estorbo: si aborta, alguien ya escribió ahí y hay que averiguar quién
+  antes de insistir.
+- **`--lang=es` descarga el paquete de idioma desde download.moodle.org**, y si el servidor no
+  tiene salida a internet **el script no falla**: avisa con `remotedownloaderror`, sigue
+  adelante y el sitio queda instalado en inglés. Hay que leer esa salida, no el código de
+  retorno.
+- **La contraseña del administrador viaja en la línea de comandos**, así que queda en el
+  historial del shell y visible en un `ps` mientras corre. Anotarla donde corresponda y
+  limpiar el historial. Si se pierde, la única salida es `admin/cli/reset_password.php`: con
+  `MOODLE_NOEMAILEVER=true`, «¿Olvidó su contraseña?» no envía nada.
 - El segundo comando tiene que decir `Database structure is ok.` Si no, no seguir.
 
-Y contar antes y después, que es la única forma de saber que el upgrade no se comió nada:
+Y contar, que es lo único que distingue «se instaló» de «se instaló lo que yo creo»:
 
 ```sql
-SELECT (SELECT count(*) FROM mdl_user)   AS usuarios,   -- 2873
-       (SELECT count(*) FROM mdl_course) AS cursos,     -- 37
-       (SELECT count(*) FROM mdl_files)  AS archivos;   -- 179147
+SELECT (SELECT count(*) FROM mdl_user)   AS usuarios,  -- 2: guest y el administrador
+       (SELECT count(*) FROM mdl_course) AS cursos;    -- 1: solo la portada
 ```
 
-El número de **tablas** sí va a subir: la rama 5.x agrega varias. Los usuarios, cursos y
-archivos, no.
+Esos dos números no son una estimación: `lib/db/install.php` crea el curso «sitio» y después
+las cuentas `guest` (id 1) y administrador (id 2), en ese orden. Si sale cualquier otra cosa,
+no es una instalación limpia — y este repositorio ya no trabaja con clones.
+
+Las cuentas nominadas de CONAF que van a construir y probar se crean después, a mano o por
+CSV. Los 2.869 funcionarios **no se migran ahora**: es una decisión pendiente y este documento
+no la resuelve.
 
 ---
 
@@ -70,12 +92,12 @@ resultado a medias que parece correcto.
 | # | Script | Qué hace | Depende de |
 |---|---|---|---|
 | 95 | `95_ajustes_sitio.php` | Enciende finalización, restricciones, competencias, app móvil, accesibilidad | — |
-| 10 | `10_categorias.php` | Las 7 áreas temáticas y 2 subcategorías, **vacías y ocultas** | — |
+| 10 | `10_categorias.php` | Las 7 áreas temáticas y 2 subcategorías, **vacías pero visibles** — ocultarlas ocultaría también los cursos de dentro | — |
 | 20 | `20_campos_curso.php` | Los 8 campos de clasificación | — |
 | 30 | `30_cohortes.php` | Las 28 cohortes, vacías | — |
 | 40 | `40_competencias.php` | La escala de logro y los 2 marcos | 95 |
 | 50 | `50_rol_gestor.php` | El rol Gestor de Área Temática | 10 |
-| 60 | `60_clasificar_cursos.php` | Completa los campos de los cursos existentes | 20 |
+| 60 | `60_clasificar_cursos.php` | Completa los 8 campos de los cursos que existan. En un sitio recién instalado no hay ninguno: se corre después de crear los primeros | 20 |
 | 70 | `70_informes.php` | Catálogo filtrable y tablero | 20, 50, 60 |
 | 80 | `80_plantilla_maestra.php` | El curso GC-000 | 10, 20, 95 |
 | 90 | `90_cursos_esqueleto.php` | IF-151 y TR-104 | 10, 20, 30, 40, 95 |
@@ -95,10 +117,13 @@ for s in 95_ajustes_sitio 10_categorias 20_campos_curso 30_cohortes \
 done
 ```
 
-### El paso 60 es distinto: son dos
+### El paso 60 es distinto: son dos, y va después de que existan cursos
 
-La clasificación de los 36 cursos reales no se puede escribir desde un documento — el Anexo A
-trae los nombres, no los nombres cortos con que están en la base. Por eso:
+Con la Academia recién instalada este paso no hace nada, porque no hay un solo curso que
+clasificar. Sigue acá porque la clasificación no se puede escribir a ciegas desde un
+documento: cuando alguien cree un curso sobre GC-000 va a completar los campos a mano o se le
+van a quedar vacíos, y un curso con los campos vacíos queda invisible en el catálogo y ausente
+de todo informe. El flujo de exportar, revisar y aplicar es el que atrapa ese olvido:
 
 ```bash
 # 1. Exportar lo que hay, con una propuesta ya rellenada
@@ -114,9 +139,10 @@ $E/60_clasificar_cursos.php
 ```
 
 La propuesta automática deduce área, nivel y financiamiento del nombre del curso y de su
-categoría actual. Lo que ningún dato del sistema puede responder —perfil, duración y
-vigencia— lo deja en blanco. Las reglas están probadas contra los 35 cursos del Anexo A:
-`academia/pruebas/propuesta-clasificacion.php`.
+categoría. Lo que ningún dato del sistema puede responder —perfil, duración y vigencia— lo
+deja en blanco. Las reglas siguen probadas contra los 35 cursos del Anexo A
+(`academia/pruebas/propuesta-clasificacion.php`), que ahora es lo que son: un banco de casos
+de prueba, no el inventario que había que clasificar.
 
 ---
 
@@ -186,20 +212,27 @@ de poblar las cohortes.
 
 ## Lo que estos scripts NO hacen, a propósito
 
-- **No mueven ni un curso** al árbol nuevo. Es el método de árbol paralelo: la estructura
-  nueva convive vacía con las 9 categorías actuales, y el traslado es la Etapa 4, en octubre,
-  junto con el salto a la próxima versión de largo soporte. Las categorías antiguas se
-  ocultan, no se borran, hasta cerrar la trazabilidad de las certificaciones ya emitidas.
+- **No traen ni un curso del campus actual.** Ya no existe el método de árbol paralelo, y no
+  porque haya fallado: existía para poder construir la estructura nueva sin mover 37 cursos de
+  un sitio vivo. Desde el 31-08-2026 no hay nada que mover — la Academia parte sin cursos y el
+  contenido nuevo se crea sobre GC-000—, así que las 7 áreas no conviven con nada: son el
+  árbol, no un árbol paralelo. Los 37 cursos y las 9 categorías se quedan en el 8115, que
+  sigue vivo como archivo mientras nadie decida otra cosa.
 - **No producen contenido H5P.** IF-151 y TR-104 quedan con la estructura, las evaluaciones,
   el banco y el certificado; el contenido lo escribe el autor y, en IF-151, lo firma un
   especialista. En un dominio con riesgo vital, el contenido técnico no se genera.
 - **No pueblan las cohortes.** Se crean vacías. La pertenencia se carga por CSV mientras la
   identidad sea manual, y se sincroniza con el directorio institucional cuando la UIA
   construya esa integración.
-- **No activan respaldos ni correo saliente.** Son los dos hallazgos críticos del Anexo B,
-  pero son de producción: los respaldos de un clon desechable no protegen nada, y el correo
-  está frenado por `MOODLE_NOEMAILEVER` porque detrás hay 2.869 direcciones institucionales
-  reales. Van en `coipo_moodle`.
+- **No activan correo saliente**, y el freno sigue siendo `MOODLE_NOEMAILEVER`. Cambió la
+  razón: acá ya no están los 2.869 buzones del campus, pero las cuentas nominadas que arman la
+  Academia son direcciones institucionales reales y un sitio a medio construir manda avisos de
+  matrícula, de foro y de contraseña a destajo. Se apaga cuando haya SMTP decidido y usuarios
+  de verdad, no antes.
+- **Tampoco activan respaldos, y eso dejó de ser problema de otro.** Mientras esto era un clon
+  desechable, respaldarlo no protegía nada. Desde el 31-08-2026 la base y el `moodledata` de la
+  Academia van a ser el **único ejemplar** del contenido que se cree acá: un clon perdido se
+  rehace, esto no. Está anotado como pendiente en `CLAUDE.md`.
 - **No encienden el antivirus.** ClamAV no está en la imagen. Encenderlo sin el demonio hace
   que *toda* subida de archivo falle: se pasa de «archivos sin revisar» a «nadie puede subir
   nada». `95_ajustes_sitio.php` lo comprueba y lo informa en vez de encenderlo.

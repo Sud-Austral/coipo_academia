@@ -79,8 +79,10 @@ function academia_crear_curso(array $spec): array {
         'summaryformat'    => FORMAT_HTML,
         'format'           => 'topics',
         'numsections'      => $spec['numsections'] ?? 1,
-        // Oculto SIEMPRE al crearse. Un curso en construcción visible para
-        // 2.869 personas es un curso que alguien va a empezar a hacer a medias.
+        // Oculto SIEMPRE al crearse. Hoy no hay nadie mirando —la Academia parte
+        // vacía de gente— y justamente por eso conviene dejarlo escrito ahora: el
+        // día que entren las personas, un curso a medio construir y visible es un
+        // curso que alguien va a empezar a hacer a medias.
         'visible'          => 0,
         'enablecompletion' => 1,
         'showgrades'       => 1,

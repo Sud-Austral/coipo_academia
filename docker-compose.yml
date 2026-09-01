@@ -11,12 +11,18 @@ services:
     build:
       context: .
       args:
-        MOODLE_VERSION: ${MOODLE_VERSION:-v4.5.10}
+        # Tiene que decir lo mismo que el ARG del Dockerfile, y no es redundante:
+        # lo que pone el compose GANA sobre el valor por defecto del ARG. Con un
+        # v4.5.10 acá, un .env sin MOODLE_VERSION construye un Moodle 4.5 con el
+        # DocumentRoot apuntado a public/ —que en 4.5 no existe— y el sitio no
+        # levanta sin que nada diga por qué. El .env manda sobre los dos; esto
+        # es solo la red por si falta.
+        MOODLE_VERSION: ${MOODLE_VERSION:-v5.2.1}
     env_file: .env
     volumes:
       # moodledata FUERA del contenedor: lectura y escritura directa sobre el
       # disco del host. La carpeta debe pertenecer al UID 33 (www-data).
-      - ${MOODLEDATA_HOST_PATH:-/opt/moodledata/coipo_moodle}:/var/moodledata
+      - ${MOODLEDATA_HOST_PATH:?falta MOODLEDATA_HOST_PATH en .env — sin ella se montaria el moodledata de PRODUCCION}:/var/moodledata
       # Caché local del nodo: volumen de Docker, no bind mount. Son miles de
       # archivos chicos y Moodle los regenera solo.
       - localcache_app:/var/localcache
@@ -38,14 +44,17 @@ services:
     build:
       context: .
       args:
-        MOODLE_VERSION: ${MOODLE_VERSION:-v4.5.10}
+        # La misma versión que app, obligatoriamente: son la misma imagen. Si
+        # las dos difieren, el cron corre código de otra rama contra la misma
+        # base y el desastre aparece tarde y en otra parte.
+        MOODLE_VERSION: ${MOODLE_VERSION:-v5.2.1}
     # Explícito, y no es un detalle: si el cron corriera como root, todo lo que
     # escriba en moodledata quedaría con dueño root y Apache (UID 33) dejaría de
     # poder escribir ahí. Es la causa número uno de "andaba y se cayó solo".
     user: "33:33"
     env_file: .env
     volumes:
-      - ${MOODLEDATA_HOST_PATH:-/opt/moodledata/coipo_moodle}:/var/moodledata
+      - ${MOODLEDATA_HOST_PATH:?falta MOODLEDATA_HOST_PATH en .env — sin ella se montaria el moodledata de PRODUCCION}:/var/moodledata
       - localcache_cron:/var/localcache
     # Sin puerto: no es un servicio web. El horario viaja dentro de la imagen
     # (docker/moodle-crontab), no depende del cron de la máquina.

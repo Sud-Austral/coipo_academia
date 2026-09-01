@@ -1,27 +1,72 @@
 -- Base de la instancia v2 de la Academia — PostgreSQL 17, servidor 172.31.2.40.
 -- Ejecutar en vm1 (172.31.2.40):  sudo -u postgres psql -f setup_bd_v2.sql
 --
+-- La Academia NACE VACÍA. El 31-08-2026 se decidió que no es un clon de
+-- producción sino una instalación limpia de Moodle 5.2.1: sin los 37 cursos y
+-- sin los 2.869 funcionarios. Solo un puñado de cuentas nominadas de CONAF para
+-- construirla y probarla; qué se hace con los usuarios reales se decide después.
+-- El campus actual (coipo_moodle / academia.conaf.cl) queda como archivo
+-- histórico mientras siga vivo.
+--
+-- Eso es lo que reescribió este archivo entero: ya no hay pg_dump, ni
+-- restauración, ni upgrade de esquema. Lo que puebla la base está más abajo y es
+-- admin/cli/install_database.php.
+--
 -- NO crea rol. Reutiliza el rol `academia` que ya existe (lo creó db/setup_bd.sql
 -- para academia_prod). Es deliberado: una tercera contraseña sería una tercera
 -- contraseña que rotar, y la lista de pendientes de CLAUDE.md ya trae dos.
 --
 -- Consecuencia que hay que tener presente, y que muerde en caliente:
 --
---   el CONNECTION LIMIT es del ROL, no de la base. Está en 20 (verificado con
---   SELECT rolconnlimit FROM pg_roles) y ahora lo comparten DOS instancias:
---   coipo_moodle (prod, puerto 8115) y coipo_academia (v2, puerto 8116).
+--   el CONNECTION LIMIT es del ROL, no de la base, así que lo comparten DOS
+--   instancias: coipo_moodle (prod, puerto 8115) y coipo_academia (v2, 8116).
+--   Que la Academia nazca vacía no cambia nada de esto: el techo es del rol y no
+--   sabe cuántos datos hay adentro.
 --
---   Por eso el .env.v2.example deja MaxRequestWorkers en 6, no en 16. Con dos
---   instancias a 16 cada una, la conexión 21 recibe "FATAL: too many
---   connections" y el usuario ve un error 500 sin ninguna pista de por qué.
+--   docker/apache-moodle.conf documenta que el 31-07-2026 el administrador de
+--   172.31.2.40 lo amplió de 20 a 60, y ahí está también el reparto vigente
+--   entre las dos instancias: 50 (campus del 8115) + 6 (esta) + 2 crones + 2 de
+--   margen = 60. El 31-08-2026 se decidió que 60 SE QUEDA: no se pide otra
+--   ampliación al administrador y no se crea un rol de PostgreSQL nuevo para la
+--   Academia. Es decir, 60 es todo lo que hay y lo que tome un sitio se lo
+--   quita al otro. El pendiente 5 de CLAUDE.md quedó consolidado con eso, y las
+--   dos entradas que se contradecían —la que decía 20 y la que decía 60— ya no
+--   están.
 --
---   Cuando el administrador de 172.31.2.40 ejecute la línea de abajo, se puede
---   subir prod a 16 y v2 a 16, y todavía queda margen para el cron de ambas:
+--   Comprobarlo igual antes de levantar la instancia. Cuesta dos segundos y es
+--   el único número del que depende todo lo demás:
 --
---       ALTER ROLE academia CONNECTION LIMIT 60;
+--       SELECT rolconnlimit FROM pg_roles WHERE rolname='academia';
 --
---   El rol NO puede hacerlo solo: no tiene CREATEROLE y responde
---   "permission denied to alter role".
+--   Si saliera algo distinto de 60, lo que se ajusta es MaxRequestWorkers —vive
+--   en docker/apache-moodle.conf, no en el .env—, NO este archivo. Y no se le
+--   agrega un ALTER ROLE acá por dos razones: CREATE DATABASE no lleva
+--   CONNECTION LIMIT porque el límite es del rol, y el rol `academia` no puede
+--   modificarse a sí mismo (no tiene CREATEROLE: responde "permission denied to
+--   alter role"), así que el script moriría a la mitad con la base ya creada.
+--
+--   Si el reparto queda mal sumado, la conexión sobrante recibe "FATAL: too
+--   many connections" y el usuario ve un error 500 sin ninguna pista de por
+--   qué. Y ojo con a quién le toca ese 500: no necesariamente a la Academia,
+--   sino a quien pida la conexión número 61, que puede perfectamente ser el
+--   campus con sus 2.869 personas adentro.
+--
+--   La instalación de más abajo no entra en esa cuenta: es un proceso CLI con
+--   una sola conexión. El techo aprieta después, cuando entre gente.
+
+-- Ni una letra de esto cambia porque la base nazca vacía, pero dos piezas pasan
+-- a pesar más que antes y conviene que esté dicho:
+--
+--   OWNER academia no es cosmético. Desde PostgreSQL 15 el esquema `public` ya
+--   no deja crear objetos a cualquiera: quien puede es el dueño de la base. Y
+--   acá el que crea las ~500 tablas es Moodle conectado como `academia`, no un
+--   superusuario restaurando un volcado. Sin ese OWNER, la instalación se cae al
+--   crear la primera tabla.
+--
+--   es_CL.UTF-8 pone la ñ y los acentos donde un chileno los busca, que es lo
+--   que se ve en los listados de cursos y de personas. TEMPLATE template0 es
+--   obligatorio para poder pedir una configuración regional distinta de la que
+--   trae template1; no es adorno.
 
 CREATE DATABASE academia_v2
   OWNER academia
@@ -31,46 +76,141 @@ CREATE DATABASE academia_v2
   TEMPLATE template0;
 
 COMMENT ON DATABASE academia_v2 IS
-  'Academia CONAF v2 — clon de academia_prod para construir el modelo de datos nuevo. NO es producción.';
+  'Academia CONAF v2 — instalación limpia de Moodle 5.2.1, sin ningún dato de academia_prod. La puebla admin/cli/install_database.php. NO es producción.';
 
 REVOKE CONNECT ON DATABASE academia_v2 FROM PUBLIC;
 
 \l
 
--- ─── Cómo se puebla ─────────────────────────────────────────────────────────
+-- ─── Cómo se puebla: instalación limpia, no un clon ─────────────────────────
 --
--- Desde el servidor de aplicaciones (172.31.2.41), con la clave del rol en
--- PGPASSWORD para que no quede en el historial ni en `ps`:
+-- Nada de pg_dump. La base se queda vacía hasta que la llena el propio Moodle:
+-- admin/cli/install_database.php crea las ~500 tablas desde install.xml, ya con
+-- el esquema de 5.2.1. Por eso tampoco hay upgrade — no hay nada que actualizar
+-- cuando se instala directo en la versión de destino.
 --
---   export PGPASSWORD='...'          # la misma de DATABASE_PASSWORD del .env
---   pg_dump  -h 172.31.2.40 -U academia -d academia_prod --no-owner --no-acl \
---     | psql -h 172.31.2.40 -U academia -d academia_v2
---   unset PGPASSWORD
+-- Y por eso esto va DESPUÉS de levantar el contenedor, no antes: el que instala
+-- es el Moodle de adentro, no psql.
 --
--- Y verificar ANTES de seguir — contar, no suponer. Las cifras tienen que
--- coincidir con las de academia_prod al 30-07-2026.
+-- Tres condiciones previas, las tres obligatorias:
 --
--- Esto se hace ANTES de levantar el contenedor: el clon sale con el esquema de
--- Moodle 4.5.10, y es la primera arrancada de la imagen 5.2.1 la que dispara el
--- upgrade 4.5 -> 5.0 -> 5.1 -> 5.2. Contar después del upgrade da otros números
--- (la 5.x agrega tablas), así que la foto de referencia se toma acá:
+--   1. Esta base recién creada y VACÍA. El script llama a $DB->get_tables()
+--      antes que nada y aborta con "Database tables already present; CLI
+--      installation cannot continue." si encuentra una sola tabla. Una corrida
+--      a medias deja tablas: en ese caso se hace DROP DATABASE y se empieza de
+--      nuevo. No existe «continuar».
+--   2. El .env de /opt/apps/coipo_academia con DATABASE_NAME=academia_v2 y la
+--      clave del rol. docker/config.php no trae nada dentro: todo llega por
+--      entorno, y sin .env el script no sabe a qué base conectarse.
+--   3. Un moodledata VACÍO en /opt/moodledata/coipo_academia, con dueño 33:33.
+--      Ya no se clona el filedir de producción por hardlink: no hay archivos que
+--      heredar porque no hay cursos que heredar.
+--
+--   cd /opt/apps/coipo_academia
+--   docker compose exec -u www-data app \
+--     php /var/www/html/admin/cli/install_database.php \
+--       --agree-license \
+--       --lang=es \
+--       --fullname="Academia CONAF" \
+--       --shortname="Academia" \
+--       --summary="Plataforma de formación de la Corporación Nacional Forestal" \
+--       --adminuser=<cuenta nominada de CONAF> \
+--       --adminpass='<openssl rand -base64 18>' \
+--       --adminemail=<el correo @conaf.cl de esa cuenta>
+--
+-- Los parámetros de arriba están leídos del install_database.php de la rama 4.5,
+-- que es el árbol que hay a mano; no se contrastaron contra el de 5.2.1. Es un
+-- script que casi no cambia, pero un --help antes de pegar el comando cuesta dos
+-- segundos y evita una corrida a medias:
+--
+--   docker compose exec -u www-data app \
+--     php /var/www/html/admin/cli/install_database.php --help
+--
+-- Cuatro cosas de ese comando que no se ven y que muerden:
+--
+-- · `admin/cli/` está en la RAÍZ, sin public/. Moodle 5.2 movió la raíz web a
+--   public/, pero los scripts CLI se quedaron arriba:
+--   /var/www/html/public/admin/cli/install_database.php NO existe.
+--
+-- · SIEMPRE con -u www-data. Como root, todo lo que Moodle escriba en moodledata
+--   queda con dueño root y el sitio deja de poder escribir. Es el error más
+--   común de este proyecto y el más confuso, porque el síntoma aparece días
+--   después.
+--
+-- · --adminpass viaja en la línea de comandos: queda en el historial del shell y
+--   se ve en `ps` mientras el script corre. El script no la lee por stdin y no
+--   hay opción para eso. Se instala con una clave desechable y se cambia
+--   enseguida con admin/cli/reset_password.php, que SÍ la pide por teclado si no
+--   se le pasa --password.
+--
+-- · MOODLE_NOEMAILEVER sigue en true, pero ya no es lo que era. Antes frenaba
+--   los correos a 2.869 buzones institucionales de un clon; acá no hay ninguno
+--   que proteger. Lo que hace ahora es al revés: con el correo cortado,
+--   «¿Olvidó su contraseña?» no funciona, así que la clave del administrador es
+--   la ÚNICA puerta de entrada. Perderla significa reset_password.php desde el
+--   contenedor.
+--
+-- --lang=es baja el paquete de idioma desde download.moodle.org durante la
+-- instalación. Si el contenedor no tiene salida a internet eso NO aborta: el
+-- script avisa "remotedownloaderror", sigue igual y el sitio queda en inglés. Se
+-- arregla después desde Administración del sitio ▸ Idioma ▸ Paquetes de idioma;
+-- no hay script CLI que instale paquetes de idioma.
+--
+-- ─── Contar, que es la única forma de saber que quedó ───────────────────────
+--
+-- Las cifras de producción —2.873 usuarios, 37 cursos, 179.147 archivos— ya no
+-- son la referencia de nada acá. Un sitio recién instalado tiene números propios,
+-- chicos y exactos:
 --
 --   psql -h 172.31.2.40 -U academia -d academia_v2 -c \
 --     "SELECT (SELECT count(*) FROM information_schema.tables
---                WHERE table_schema='public')          AS tablas,      -- 503
---             (SELECT count(*) FROM mdl_user)          AS usuarios,    -- 2873
---             (SELECT count(*) FROM mdl_course)        AS cursos,      -- 37
---             (SELECT count(*) FROM mdl_files)         AS archivos;"   -- 179147
+--                WHERE table_schema='public')              AS tablas,
+--             (SELECT count(*) FROM mdl_user)              AS usuarios,
+--             (SELECT count(*) FROM mdl_course)            AS cursos,
+--             (SELECT count(*) FROM mdl_course_categories) AS categorias;"
 --
--- Si `tablas` sale bien pero las secuencias quedaron en 1, el primer INSERT de
--- Moodle revienta. pg_dump las trae con su valor real; un pgloader o una
--- conversión a mano, no. Comprobación rápida:
+--   usuarios = 2    guest (id 1) y el administrador (id 2), en ese orden y con
+--                   esos ids. Los crea lib/db/install.php y el propio Moodle
+--                   avisa si no salieran consecutivos.
+--   cursos = 1      el curso «sitio» (format='site'). No es un curso: es la
+--                   portada, donde viven sus bloques.
+--   categorias = 1  la categoría por defecto que Moodle crea solo. Las 7 áreas
+--                   temáticas las agrega después 10_categorias.php.
 --
---   SELECT count(*) FROM pg_sequences WHERE last_value IS NULL;   -- debe ser 0
+-- mdl_files sale de la lista: sin cursos no hay archivos que contar, y cuánto
+-- deja exactamente la instalación no está medido.
+--
+-- `tablas` tampoco lleva número esperado, a propósito: el de un 5.2.1 recién
+-- instalado no se ha medido en este proyecto y poner uno inventado es peor que
+-- no poner ninguno. La primera corrida ESTABLECE la cifra — anotarla acá y en
+-- academia/README.md, y desde entonces sí sirve para comparar.
+--
+-- Lo que dejó de aplicar: la comprobación de secuencias en 1. Era un riesgo de
+-- pgloader y de las conversiones a mano de un volcado; una instalación limpia no
+-- puede caer en él, porque las secuencias las crea Moodle junto con sus tablas y
+-- nacen coherentes con lo que él mismo escribe. Y si se dejara puesta sería peor
+-- que inútil: en un sitio recién instalado la mayoría de las tablas están vacías
+-- y su secuencia no se ha usado nunca, así que
+-- `SELECT count(*) FROM pg_sequences WHERE last_value IS NULL` devuelve un
+-- número grande que no significa nada malo. Un rojo falso.
+--
+-- Si algún día se decide importar los 2.869 funcionarios desde producción, ese
+-- riesgo vuelve y la comprobación hay que volver a escribirla.
 --
 -- ─── Rollback ───────────────────────────────────────────────────────────────
 --
--- Esta base es desechable por diseño. Si el modelo de datos queda mal, se borra
--- entera y se vuelve a clonar; academia_prod no se toca en ningún momento:
+-- Esta base es desechable por diseño, y ahora más que antes: si el modelo de
+-- datos queda mal, se borra entera y se vuelve a instalar. Es una instalación
+-- limpia, no un pg_dump de 34 MB. academia_prod no se toca en ningún momento:
 --
 --   DROP DATABASE academia_v2;
+--
+-- Y volver a crearla con este mismo archivo. Dos cosas antes de reinstalar:
+--
+--   · vaciar también /opt/moodledata/coipo_academia. install_database.php no lo
+--     mira, así que la instalación nueva hereda las cachés de la anterior (muc/,
+--     cache/, localcache/, sessions/) y —lo peor— un climaintenance.html
+--     olvidado deja el sitio respondiendo «under maintenance» a TODO, incluido
+--     el healthcheck. Ya pasó en este proyecto.
+--   · dejar la carpeta con dueño 33:33 después de vaciarla, o Apache no puede
+--     escribir y la instalación falla sin decir por qué.

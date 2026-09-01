@@ -40,7 +40,7 @@ Para practicar sin miedo existe un curso de prueba. Ahí usted puede equivocarse
 |---|---|
 | Dirección del sitio | `https://academia.conaf.cl` |
 | Usuario de práctica | `manual.profesor` |
-| Contraseña de práctica | `Editingteacher-campus26.` |
+| Contraseña de práctica | Se la pide al administrador de la plataforma. No está escrita en este manual, a propósito |
 | Curso donde usted es profesor | Curso de practica - Manuales de usuario |
 | Dirección directa del curso | `https://academia.conaf.cl/course/view.php?id=41` |
 
@@ -106,13 +106,13 @@ Si no encuentra el botón, hay un atajo: vuelva a la barra de direcciones de arr
 1. Haga un clic dentro de la **primera casilla**, la de más arriba. Dice *Nombre de usuario*.
 2. Escriba su usuario. Para practicar: `manual.profesor`
 3. Haga un clic dentro de la **segunda casilla**. Dice *Contraseña*.
-4. Escriba la contraseña. Para practicar: `Editingteacher-campus26.`
+4. Escriba la contraseña. La de la cuenta de práctica se la entrega el administrador de la plataforma.
 
 **Ojo con estos tres detalles**, son la causa del 90 % de los problemas para entrar:
 
-- La contraseña **distingue mayúsculas de minúsculas**. `Editingteacher` no es lo mismo que `editingteacher`.
+- La contraseña **distingue mayúsculas de minúsculas**. Escríbala tal cual se la dictaron, letra por letra: una letra grande y la misma chica no son lo mismo.
 - Al escribir la contraseña usted verá puntitos negros en lugar de letras. Es normal, es para que nadie la lea por encima del hombro.
-- El punto final `.` es **parte de la contraseña**. No lo omita.
+- Si la contraseña termina en un punto o en otro signo, ese signo es **parte de la contraseña**. No lo omita.
 
 5. Haga clic en el botón **Acceder**.
 
@@ -715,7 +715,7 @@ Busque en la primera columna lo que ve en pantalla.
 
 | Qué ve | Qué pasó | Qué hacer |
 |---|---|---|
-| *Datos incorrectos, por favor intente de nuevo* al entrar | El usuario o la contraseña están mal escritos | Escríbalos de nuevo despacio. Revise que no esté activada la tecla de bloqueo de mayúsculas (**Bloq Mayús**). Recuerde el punto final de la contraseña |
+| *Datos incorrectos, por favor intente de nuevo* al entrar | El usuario o la contraseña están mal escritos | Escríbalos de nuevo despacio. Revise que no esté activada la tecla de bloqueo de mayúsculas (**Bloq Mayús**). Recuerde que los signos del final también son parte de la contraseña |
 | Olvidó la contraseña | El correo está desactivado, no llegará ningún mensaje de recuperación | **Pídale al administrador de la plataforma que se la restablezca.** No espere un correo |
 | No aparece el interruptor **Modo de edición** | No está dentro de un curso, o está en un curso donde no es profesor | Vuelva a **Mis cursos** y entre a su curso. Si aun así no aparece, avise al administrador |
 | No aparece **Añadir una actividad o un recurso** | El modo de edición está apagado | Enciéndalo con el interruptor de la esquina superior derecha |

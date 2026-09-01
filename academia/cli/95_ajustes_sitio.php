@@ -1,21 +1,21 @@
 <?php
-// Los hallazgos del Anexo B que son configuración, aplicados.
+// La línea base de configuración del sitio de la Academia.
 //
-// «Ninguno de estos puntos es un error de quien hizo la migración: son la lista
-// normal de cierre de un traslado de plataforma. Lo que sí revelan es que nadie
-// tiene asignada formalmente esa lista.»
+// Nació como «los hallazgos del Anexo B, aplicados» —la auditoría del campus
+// viejo— y esa lista sigue siendo la correcta, pero ya no por el traslado: son
+// los subsistemas sin los cuales la Academia no funciona. Sobre una instalación
+// limpia el script es rápido y aburrido, y la mitad va a decir «ya está». Así
+// debe ser.
 //
-// LO QUE ESTE SCRIPT NO TOCA, Y POR QUÉ. Dos hallazgos del Anexo B están
-// marcados como CRÍTICOS y aun así quedan fuera:
+// LO QUE ESTE SCRIPT NO TOCA, Y POR QUÉ:
 //
-//   · Copias de seguridad automáticas
-//   · Correo saliente (SMTP)
-//
-// Son críticos EN PRODUCCIÓN, y esta es la instancia v2: un clon con los 2.869
-// correos institucionales reales. Encender los respaldos acá duplica el consumo
-// de disco de algo que no hace falta respaldar, y encender el correo es
-// exactamente lo que MOODLE_NOEMAILEVER está impidiendo. Los dos van en
-// coipo_moodle, no acá.
+//   · Correo saliente (SMTP). Es justamente lo que MOODLE_NOEMAILEVER impide, y
+//     soltar ese freno es una decisión, no un ajuste.
+//   · Copias de seguridad automáticas. OJO: acá decía antes que los respaldos de
+//     un clon desechable no protegen nada. Ya no hay clon. Lo que esta instancia
+//     va a tener adentro —los cursos que se escriban sobre GC-000— no existe en
+//     ninguna otra parte. No se enciende acá porque falta decidir dónde y cuánto
+//     se retiene, no porque no haga falta.
 //
 //   docker compose exec -u www-data app php /opt/academia/cli/95_ajustes_sitio.php --dry-run
 //   docker compose exec -u www-data app php /opt/academia/cli/95_ajustes_sitio.php
@@ -118,8 +118,10 @@ if (!$reporte->es_simulacion()) {
         'los tres pasos que la casilla dispara por debajo');
 }
 
-// El SCORM en ventana emergente es lo que hace el contenido actual inutilizable
-// en teléfono: los navegadores móviles bloquean esas ventanas.
+// El SCORM en ventana emergente es lo que vuelve un contenido inutilizable en
+// teléfono: los navegadores móviles bloquean esas ventanas. El sitio parte sin
+// ningún SCORM, así que la corrección de los existentes no va a encontrar nada;
+// el que importa es el valor por defecto, que es el que heredarán los que suban.
 $fijar('popup', 0, 'los SCORM nuevos se abren en la misma ventana', 'scorm');
 
 $encolarpopup = $DB->count_records('scorm', ['popup' => 1]);
@@ -157,7 +159,27 @@ $fijar('enableaccessibilitytools', 1,
 // ─── Idioma ─────────────────────────────────────────────────────────────────
 cli_writeln('');
 cli_writeln('── Idioma ─────────────────────────────────────────────────────────');
-$fijar('lang', 'es', 'el sitio respondía en inglés a los visitantes no autenticados');
+$fijar('lang', 'es', 'que el sitio no responda en inglés al visitante no autenticado');
+
+// ─── Identidad visual ──────────────────────────────────────────────────
+// EL TEMA NO SE ACTIVA SOLO. Moodle instala con `boost` y ahí se queda: mientras
+// nadie fije este valor, theme_academia está copiado en disco por el Dockerfile
+// pero no lo usa nadie, y 99_verificar.php falla en «tema activo» sin que se vea
+// nada roto —el sitio funciona igual, solo que sin la identidad ni las reglas del
+// estándar—.
+//
+// Antes esta línea no hacía falta y por eso no estaba: la base se clonaba de
+// producción y el tema activo venía puesto dentro del volcado. Con la instalación
+// limpia el paso aparece, y es de los que se pierden con más facilidad
+// justamente porque el sitio «se ve bien» sin él.
+//
+// theme_academia es HIJO DE BOOST (su config.php: $THEME->parents = ['boost']),
+// así que no arrastra nada del campus viejo: no depende de boost_magnific ni de
+// academi, que ya no se copian a la imagen.
+cli_writeln('');
+cli_writeln('── Identidad visual ───────────────────────────────────────────');
+$fijar('theme', 'academia',
+    'el tema propio de la Academia; sin esto el sitio se queda en el Boost por defecto');
 
 // ─── Avisos de versión ──────────────────────────────────────────────────────
 // «Un sitio público que no se entera de las liberaciones de seguridad es un
@@ -210,9 +232,9 @@ cli_writeln('  antiviruses actual: ' . ($antivirus === '' ? '(ninguno)' : $antiv
 cli_writeln('  clamdscan en la imagen: ' . ($rutaclam !== '' ? $rutaclam : 'NO ESTÁ'));
 if ($rutaclam === '') {
     cli_writeln('  El Dockerfile no instala ClamAV. Encender el antivirus sin el demonio');
-    cli_writeln('  hace que toda subida de archivo falle: se pasa de «2.875 usuarios pueden');
-    cli_writeln('  subir sin revisión» a «nadie puede subir nada». Primero agregar clamav-daemon');
-    cli_writeln('  al Dockerfile, verificar que el socket responde, y recién ahí encenderlo.');
+    cli_writeln('  hace que toda subida de archivo falle: se pasa de «los archivos entran sin');
+    cli_writeln('  revisión» a «nadie puede subir nada». Primero agregar clamav-daemon al');
+    cli_writeln('  Dockerfile, verificar que el socket responde, y recién ahí encenderlo.');
 } else {
     cli_writeln('  Está disponible: se puede encender con antiviruses=clamav.');
 }
@@ -238,8 +260,10 @@ cli_writeln('  Si se observan 4 minutos con el crontab en 1, la causa está en e
 cli_writeln('  no en la programación: revisar `docker compose logs cron`.');
 
 // ─── Tareas adhoc fallando ──────────────────────────────────────────────────
-// CLAUDE.md ya lo trae anotado: 11 tareas assignfeedback_editpdf en bucle, con
-// faildelay acumulado. El sospechoso es que falte ghostscript en la imagen.
+// Las 11 tareas assignfeedback_editpdf en bucle que anota CLAUDE.md son del sitio
+// viejo y no viajan a una instalación limpia. Lo que sí viaja es la causa: el
+// Dockerfile sigue sin instalar ghostscript, así que la primera vez que alguien
+// anote un PDF en la tarea de TR-104 el problema reaparece acá igual.
 $fallando = $DB->get_records_sql("
     SELECT classname, COUNT(*) AS n, MAX(faildelay) AS peor
       FROM {task_adhoc}
@@ -263,11 +287,24 @@ if (!$fallando) {
 // ─── Respaldos y correo: de producción, no de acá ───────────────────────────
 cli_writeln('');
 cli_writeln('RESPALDOS Y CORREO SALIENTE  — los dos hallazgos CRÍTICOS del Anexo B.');
-cli_writeln('  No se tocan en v2 a propósito:');
-cli_writeln('    · los respaldos de un clon desechable no protegen nada;');
-cli_writeln('    · el correo está frenado por MOODLE_NOEMAILEVER, y detrás hay 2.869');
-cli_writeln('      direcciones institucionales reales.');
-cli_writeln('  Los dos hay que cerrarlos en coipo_moodle, que es el que atiende a la gente.');
+cli_writeln('  No se tocan acá, y por motivos distintos: ninguno de los dos es «no hace falta».');
+cli_writeln('    · RESPALDOS: esto ya no es un clon. Los cursos que se escriban acá no');
+cli_writeln('      existen en ninguna otra parte y hoy no hay ninguna política. Es el');
+cli_writeln('      pendiente más grande que este script deja sin resolver.');
+cli_writeln('    · CORREO: sigue frenado por MOODLE_NOEMAILEVER. Ya no protege 2.869 buzones');
+cli_writeln('      reales —acá hay un puñado de cuentas de construcción—: protege de que un');
+cli_writeln('      sitio a medio armar empiece a mandar avisos.');
+
+// ─── Lo que hay que hacer DESPUÉS de este script ───────────────────────
+cli_writeln('');
+cli_writeln('AHORA, DOS COMANDOS — y en este orden:');
+cli_writeln('  docker compose exec -u www-data app php admin/cli/purge_caches.php');
+cli_writeln('  docker compose exec -u www-data app php admin/cli/build_theme_css.php');
+cli_writeln('');
+cli_writeln('  Cambiar el tema sin purgar deja el sitio con el CSS anterior y parece que');
+cli_writeln('  la línea de arriba no hizo nada. Y purgar SIN recompilar obliga a rehacer');
+cli_writeln('  1,7 MB de SCSS en la primera visita: es el origen de los episodios de');
+cli_writeln('  «se congeló». Los dos, siempre, y siempre con -u www-data.');
 
 cli_separator();
 

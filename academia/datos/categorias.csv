@@ -2,15 +2,22 @@
 # Fuente: prototipo pantalla 13 «El modelo de datos», sección 1, y Parte 2.2 de
 # la Propuesta Institucional.
 #
-# EL ÁRBOL SE CREA VACÍO Y OCULTO. Es el método de árbol paralelo de la Parte
-# 3.4: la estructura nueva convive con las 9 categorías actuales, no se mueve ni
-# un curso, y las viejas se ocultan —no se borran— recién en la Etapa 4, junto
-# con el salto a la próxima versión de largo soporte.
+# EL ÁRBOL SE CREA VISIBLE, PORQUE ES EL ÁRBOL DEL SITIO. La Academia se instala
+# de cero: no hay 9 categorías viejas al lado, no hay 37 cursos que mover y no
+# hay método de árbol paralelo — ese método existía porque no se podían mover
+# cursos de un sitio vivo, y acá no hay ninguno. Estas 7 áreas y sus dos
+# subcategorías son la única estructura que existe.
 #
-# Por eso visible=0 en todas las áreas. Dejarlas visibles y vacías le muestra al
-# funcionario 7 categorías sin nada dentro al lado de las 9 que sí tienen cursos.
-# La excepción es 99 Gestión del Campus, que sí recibe contenido de inmediato
-# (la plantilla maestra) pero es material de gestión, no de catálogo.
+# Por eso visible=1 en todas. Con visible=0 el error es silencioso: una categoría
+# oculta oculta también los cursos que viven dentro, así que GC-000, IF-151 y
+# TR-104 —lo único que este repositorio construye, y los tres van a categorías de
+# este archivo— quedarían invisibles para cualquiera que no sea administrador,
+# sin ningún mensaje y sin nada roto a la vista.
+#
+# Lo que mantiene el sitio cerrado mientras se construye es que todavía no hay a
+# quién mostrárselo: un puñado de cuentas nominadas de CONAF, nadie más. Esa es
+# la puerta, y conviene que haya una sola. Con dos —sitio cerrado y árbol
+# oculto— alguien abre una, cree que abrió las dos, y el catálogo aparece vacío.
 #
 # La columna `padre` es el idnumber de la categoría madre. Vacío = primer nivel.
 # Las filas se procesan en orden: una madre siempre va antes que sus hijas.
@@ -25,20 +32,20 @@
 # Máximo 3 niveles de profundidad.
 
 idnumber,nombre,padre,visible,descripcion
-01,Incendios Forestales,,0,"Primera ola. Ya existe: se reordena y se mejora, no se rehace. Se mantiene íntegro en SERNAFOR."
-02,Fiscalización y Legislación Forestal,,0,"Segunda ola. Función que se refuerza con la conversión a servicio público."
-03,"Fomento, Bosque Nativo y Restauración",,0,"Segunda ola. Núcleo del quehacer forestal permanente."
-04,Desarrollo Institucional y Personas,,0,"Primera ola. Inducción a SERNAFOR, probidad, transparencia y transformación digital: lo que el nuevo servicio necesita desde el primer día."
-05,Áreas Silvestres Protegidas,,0,"TRANSITORIA hasta marzo de 2027. El personal de guardaparques se traspasa al SBAP: no se invierte en contenido nuevo para esta rama. Ver Parte 2.2."
-90,Transversal,,0,"Segunda ola. Común a todas las áreas: primeros auxilios, seguridad y salud, género, pueblos originarios, atención ciudadana."
-99,Gestión del Campus,,0,"Permanente. Plantillas, espacio de pruebas, manuales y material de instructores. Aquí viven la plantilla maestra y las guías de la propia Academia."
+01,Incendios Forestales,,1,"Primera ola. Es el área que se mantiene íntegra en SERNAFOR, y por eso la primera que recibe contenido. Los cursos del campus actual no se traen: se escribe de nuevo, sobre GC-000."
+02,Fiscalización y Legislación Forestal,,1,"Segunda ola. Función que se refuerza con la conversión a servicio público."
+03,"Fomento, Bosque Nativo y Restauración",,1,"Segunda ola. Núcleo del quehacer forestal permanente."
+04,Desarrollo Institucional y Personas,,1,"Primera ola. Inducción a SERNAFOR, probidad, transparencia y transformación digital: lo que el nuevo servicio necesita desde el primer día."
+05,Áreas Silvestres Protegidas,,1,"TRANSITORIA hasta marzo de 2027 y nace vacía: el personal de guardaparques se traspasa al SBAP, así que no se produce contenido nuevo para esta rama. Se crea igual porque el campo área es una lista cerrada y el perfil Guardaparque existe hasta el traspaso. Ver Parte 2.2."
+90,Transversal,,1,"Segunda ola. Común a todas las áreas: primeros auxilios, seguridad y salud, género, pueblos originarios, atención ciudadana."
+99,Gestión del Campus,,1,"Permanente. Plantillas, espacio de pruebas, manuales y material de instructores. Aquí viven la plantilla maestra y las guías de la propia Academia."
 
 # ─── Subcategorías (nivel 2) ─────────────────────────────────────────────────
 # Solo las que algún documento de diseño ya exige. No inventar más: cada
 # subcategoría es una frontera de permisos, y las que no tienen dueño sobran.
 
-01-FTC,Fundamentos Técnicos Comunes,01,0,"Itinerario de base técnica común para profesionales de la Gerencia, cualquiera sea su función. Lo inaugura IF-151. Ver IF-151_Diseno-de-curso, Parte 6."
-90-AUT,Formación de autores,90,0,"Cursos que forman a quienes crean cursos. Aquí vive TR-104. Ver prototipo pantalla 16."
+01-FTC,Fundamentos Técnicos Comunes,01,1,"Itinerario de base técnica común para profesionales de la Gerencia, cualquiera sea su función. Lo inaugura IF-151. Ver IF-151_Diseno-de-curso, Parte 6."
+90-AUT,Formación de autores,90,1,"Cursos que forman a quienes crean cursos. Aquí vive TR-104. Ver prototipo pantalla 16."
 
 # ─── Decisión pendiente que este archivo NO resuelve ─────────────────────────
 # IF-151 Parte 1.1 propone reservar bandas numéricas dentro de 01:
@@ -47,4 +54,6 @@ idnumber,nombre,padre,visible,descripcion
 # Son bandas de CÓDIGO de curso, no subcategorías, así que no van en este
 # archivo. Pero hay que decidirlas antes de codificar el segundo curso del
 # itinerario: «es una decisión de dos minutos hoy y un problema serio en tres
-# años si no se toma».
+# años si no se toma». Y ahora la decisión está entera sobre la mesa: la Academia
+# parte sin ningún curso, así que no hay numeración heredada que respetar ni con
+# qué chocar. Todo lo que se codifique desde acá nace con la banda que se elija.

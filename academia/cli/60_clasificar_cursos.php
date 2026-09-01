@@ -1,23 +1,29 @@
 <?php
-// Completa los ocho campos personalizados en los cursos que ya existen.
+// Revisa y corrige EN BLOQUE los ocho campos personalizados de los cursos del
+// sitio.
 //
-// Es la tarea más tediosa y la que más rinde: al terminarla, el catálogo y los
-// informes empiezan a funcionar sin construir nada más. Un curso con los campos
-// vacíos queda invisible en el catálogo filtrable y ausente de todo informe
-// institucional — es el olvido más frecuente del estándar.
+// CAMBIÓ DE PROPÓSITO, no sobra. Nació para clasificar los 36 cursos heredados
+// del campus viejo; esos cursos se descartaron y la Academia parte vacía, así que
+// hoy no hay nada heredado que clasificar. Lo que queda es otra cosa y es igual
+// de necesario: los cursos nuevos nacen duplicando GC-000 y heredan la
+// clasificación de la plantilla —«99 Gestión del Campus», estado «Archivado»—,
+// que es falsa para todos ellos. Un curso así no queda SIN clasificar: queda MAL
+// clasificado, que es peor, porque el catálogo lo muestra como si alguien lo
+// hubiera decidido.
 //
-// SE USA EN DOS PASOS, y tiene que ser así: la clasificación de los 36 cursos
-// reales no se puede escribir a ciegas desde un documento. El Anexo A trae los
-// nombres, no los nombres cortos con que están en la base.
+// Corrido sobre un sitio vacío no hace nada y no falla: exporta cero cursos y
+// aplica cero filas.
 //
-//   1) Exportar lo que hay, con una propuesta ya rellenada:
+// SE USA EN DOS PASOS, y tiene que ser así: la clasificación es una decisión
+// institucional y no se escribe a ciegas.
+//
+//   1) Exportar lo que hay:
 //        ... 60_clasificar_cursos.php --exportar
 //      Escribe academia/datos/cursos-clasificacion.csv con un curso por línea y
-//      una sugerencia deducida del nombre y de la categoría actual. Lo que no se
-//      puede deducir queda en blanco y marcado en la columna REVISAR.
+//      sus valores actuales. Lo que no se puede deducir queda en blanco y marcado
+//      en la columna REVISAR.
 //
-//   2) Revisar ese CSV a mano —es una decisión institucional, no técnica— y
-//      aplicarlo:
+//   2) Revisar ese CSV a mano y aplicarlo:
 //        ... 60_clasificar_cursos.php --dry-run
 //        ... 60_clasificar_cursos.php
 
@@ -32,7 +38,7 @@ const ACADEMIA_CAMPOS = ['area', 'nivel', 'perfil', 'modalidad', 'duracion',
                          'vigencia', 'financiamiento', 'estado'];
 
 $opciones = academia_cli_inicio(
-    'Completa los 8 campos personalizados de los cursos existentes.',
+    'Revisa y corrige en bloque los 8 campos personalizados de los cursos del sitio.',
     ['exportar' => false, 'force' => false]);
 
 $manejador = course_handler::create();
@@ -249,13 +255,14 @@ function academia_proponer_clasificacion(stdClass $curso, string $categoria): ar
     $cat = mb_strtolower($categoria);
 
     // ─── Área ───────────────────────────────────────────────────────────────
-    // Hoy los 35 cursos publicados son de incendios: es el hecho central del
-    // diagnóstico. Las dos excepciones son material de gestión del campus.
-    if (str_contains($cat, 'manuales de usuario') || str_contains($nombre, 'manuales de usuario')) {
-        $valores['area'] = '99 Gestión del Campus';
-    } else {
-        $valores['area'] = '01 Incendios Forestales';
-    }
+    // Ya no se deduce, y esto es un cambio de fondo. Cuando los 35 cursos
+    // heredados eran todos de incendios, «si no es gestión del campus, es
+    // incendios» acertaba casi siempre. La Academia parte vacía y con las siete
+    // áreas abiertas: ese mismo «else» mandaría un curso de Fiscalización al área
+    // de Incendios y lo dejaría ahí como si alguien lo hubiera decidido. El área
+    // es la primera pregunta del catálogo —campos-curso.csv dice que «debe
+    // coincidir con la categoría en que vive el curso»—, no la última adivinanza.
+    $motivos[] = 'área: tiene que coincidir con la categoría en que vive el curso';
 
     // ─── Nivel ──────────────────────────────────────────────────────────────
     // El orden de estas reglas se corrigió después de probarlas contra los 35
@@ -292,8 +299,10 @@ function academia_proponer_clasificacion(stdClass $curso, string $categoria): ar
     } else if (preg_match('/\bbásic[oa]|basic[oa]\b/u', $nombre)) {
         $valores['nivel'] = 'Básico';
 
-    // Y por último la serie numerada, solo si el número ABRE el nombre. Es el
-    // formato de las series 114-119 y 211-219, que son los 22 cursos ya limpios.
+    // Y por último la serie numerada, solo si el número ABRE el nombre. Venía del
+    // formato de las series 114-119 y 211-219 del campus viejo, pero sobrevive
+    // porque campos-curso.csv fija la misma convención hacia adelante: 1xx
+    // básico, 2xx intermedio, 3xx avanzado.
     } else if (preg_match('/^\s*1\d{2}\b/u', $curso->fullname)) {
         $valores['nivel'] = 'Básico';
     } else if (preg_match('/^\s*2\d{2}\b/u', $curso->fullname)) {
@@ -325,8 +334,10 @@ function academia_proponer_clasificacion(stdClass $curso, string $categoria): ar
     }
 
     // ─── Estado del ciclo de vida ───────────────────────────────────────────
-    // Cuatro cursos de prueba están publicados en producción, visibles para los
-    // 2.875 usuarios. No se archivan solos: se marcan para que alguien decida.
+    // La regla se queda aunque los cuatro cursos de prueba que la motivaron se
+    // hayan descartado con el resto del campus viejo: un curso llamado «prueba»
+    // vuelve a aparecer siempre, y publicado por descuido es exactamente lo que
+    // no debe pasar en un sitio que parte limpio.
     if (preg_match('/\b(prueba|pruebas|test|demo)\b/u', $nombre)) {
         $motivos[] = 'PARECE UN CURSO DE PRUEBA en producción — decidir si se archiva o se borra';
     } else {

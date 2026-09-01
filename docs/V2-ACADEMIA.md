@@ -20,34 +20,54 @@ línea: *la plataforma no es el problema, la arquitectura de información sí lo
 
 ---
 
-## La instancia v2 corre en paralelo, y en otra versión
+## La Academia corre en paralelo con el campus actual, y no hereda nada de él
 
-No reemplaza a producción: convive con ella en el mismo servidor, y además va por delante
-en versión.
+No es la evolución del campus: es un sitio distinto que empieza vacío. Convive con él en el
+mismo servidor y va por delante en versión, pero **no trae ni un usuario, ni un curso, ni un
+archivo**.
 
 ```
 172.31.2.41
 ├── coipo_moodle    8115   academia_prod   Moodle 4.5.10 · PHP 8.3
-│   producción, 2.869 usuarios · NO SE TOCA hasta octubre
+│   el campus actual: 2.869 usuarios, 37 cursos · archivo histórico, NO SE TOCA
 └── coipo_academia  8116   academia_v2     Moodle 5.2.1  · PHP 8.4
-    esta · clon de academia_prod, actualizado a 5.2
+    esta · instalación limpia, sin un solo usuario ni curso heredado
 ```
 
-**Por qué 5.2 y no seguir en 4.5.** El destino es Moodle 5.3 LTS + PHP 8.4 en octubre de 2026,
-que es lo que la Propuesta ya planifica —*«intervenir la plataforma una sola vez»*—. Pero
-construir v2 sobre 5.2 ahora consigue tres cosas que valen más que esperar:
+**Decidido el 31-08-2026.** Hasta ese día la Academia iba a ser un clon de `academia_prod`
+—`pg_dump` completo y `filedir` por hardlink— y este documento estaba escrito entero sobre ese
+supuesto. Ya no: instalación limpia con `install_database.php`, un puñado de cuentas nominadas
+de CONAF para construir y probar, y contenido nuevo sobre la plantilla maestra GC-000. Qué se
+hace con los 2.869 usuarios y los 37 cursos del campus es una decisión aparte, y está abierta.
 
-1. El salto 4.5 → 5.x se ensaya en un **clon desechable** antes de tocar producción.
-   `DROP DATABASE academia_v2` lo revierte entero.
-2. En octubre queda 5.2 → 5.3, que es un paso corto, en vez de 4.5 → 5.3, que son cuatro
-   versiones de golpe y con fecha encima.
-3. PHP 8.4 está en soporte activo hasta diciembre de 2026; **8.3 salió de soporte activo el
-   31 de diciembre de 2025** y solo recibe parches de seguridad.
+**Por qué 5.2, y por qué ahora.** Decidido el 01-09-2026: se instala **5.2.1 ya**, sin esperar
+a 5.3 LTS. 5.2 es la rama estable y soportada del día que se instala —seguridad hasta el 4 de
+octubre de 2027—, y PHP 8.4 está en soporte activo hasta diciembre de 2026; **8.3 salió de
+soporte activo el 31 de diciembre de 2025** y solo recibe parches de seguridad. Los dos
+números de PHP están comprobados contra el `public/admin/environment.xml` del propio tag
+v5.2.1: `<PHP version="8.3.0" level="required">` y ni un `<RESTRICT>` en el bloque de 5.2.
+
+**La razón que este documento daba antes ya no existe:** «el salto 4.5 → 5.x se ensaya en un
+clon desechable antes de tocar producción». No hay clon, no hay salto, y la Academia se
+instala limpia con `install_database.php` — no actualiza nada, así que no hay nada que
+ensayar. El campus actual actualizará cuando le toque o no actualizará nunca, según lo que se
+decida hacer con él, y esa es otra conversación.
+
+La razón que queda es más simple, y es la que vale: esperar a octubre dejaba cinco semanas de
+construcción detenida a cambio de nada, porque de todos modos hay que armar el sitio antes de
+que la versión importe.
+
+**Y en octubre de 2026 se sube a 5.3 LTS.** Ya no es una pregunta abierta: es trabajo
+planificado, y está en «Al poner la Academia en servicio», ítem 0. Para entonces será un
+upgrade de verdad —con cursos, cohortes y competencias adentro—, no un `install_database.php`
+sobre una base vacía. Sale barato justamente porque el sitio está armado con los scripts
+idempotentes de `academia/cli`: lo que el upgrade descoloque se vuelve a correr.
 
 **Por qué no PHP 8.5.** Moodle 5.2 no tiene ningún bloqueo superior de PHP —verificado en su
 `environment.xml`: mínimo 8.3.0 y ni un `<RESTRICT>`—, así que 8.5 pasaría la comprobación de
 entorno. Pero Moodle solo documenta 8.4.x como soportada. «No da error» no es «está
-soportado», y detrás hay datos personales de 2.869 funcionarios.
+soportado», y este sitio va a terminar con datos de funcionarios adentro aunque hoy esté
+vacío.
 
 ### El cambio que más rompe: la raíz web se movió a `public/`
 
@@ -76,37 +96,33 @@ Esa tabla es también el trabajo que le espera a `coipo_moodle` en octubre.
 Se levanta con [db/setup_bd_v2.sql](../db/setup_bd_v2.sql) y
 [.env.v2.example](../.env.v2.example), que traen el procedimiento completo.
 
-**Y hay un paso nuevo antes de los scripts:** el clon sale con el esquema de 4.5.10 y la imagen
-trae 5.2.1, así que hay que ejecutar `admin/cli/upgrade.php` y comprobar
-`check_database_schema.php`. Está en [academia/README.md](../academia/README.md), paso 0.
+**Y hay un paso 0 antes de los scripts:** la base `academia_v2` nace vacía, así que hay que
+instalar Moodle con `admin/cli/install_database.php` y comprobar `check_database_schema.php`.
+No es un upgrade: no hay nada que actualizar. Está en
+[academia/README.md](../academia/README.md), paso 0.
 
 Tres cosas más que conviene no descubrir en caliente:
 
-- **`MOODLE_NOEMAILEVER=true` es obligatorio.** El clon trae los 2.869 correos institucionales
-  reales. Sin ese freno, el cron de un entorno de pruebas le manda resúmenes de foro y avisos
-  de contraseña a funcionarios de verdad — y llegarían dos veces, una por instancia.
+- **`MOODLE_NOEMAILEVER=true` sigue siendo obligatorio, por otra razón.** Ya no protege los
+  2.869 buzones del campus —acá no están—, pero un sitio en construcción manda avisos de
+  matrícula, de foro y de cambio de contraseña a las cuentas nominadas que lo están armando, y
+  cada una de esas cuentas es una dirección institucional real. Se apaga cuando la Academia
+  tenga usuarios de verdad y SMTP decidido, no antes.
 - **El `CONNECTION LIMIT` es del rol, no de la base**, así que las dos instancias comparten un
-  solo techo de 60. Por eso `MaxRequestWorkers` está en **6** en este repositorio y en 50 en
-  producción: 50 + 6 + 2 crones = 58. Al promover v2, hay que devolverlo a 50.
-- **Del `moodledata` se clona SOLO `filedir`, y por hardlink.** Es la única parte
-  irremplazable: 11 de los 12 GB, y es el contenido de los PDF, los SCORM, las imágenes
-  incrustadas y las entregas. Al ser contenido direccionado por SHA1 —Moodle nunca reescribe
-  un archivo existente, solo crea o borra enlaces— compartir inodos es seguro y el clon cuesta
-  casi nada en disco.
+  solo techo de 60 que el 31-08-2026 se decidió no volver a ampliar. Por eso `MaxRequestWorkers`
+  está en **6** acá y en 50 en el campus: 50 + 6 + 2 crones + 2 de margen = 60. El 6 dejó de ser
+  provisorio, y ahí está lo que hay que entender: como el campus no se apaga nunca, subir este
+  número exige que alguien baje antes el del OTRO repositorio, y en ese orden. El reparto de
+  destino y por qué el orden importa están en `docker/apache-moodle.conf`.
+- **El `moodledata` de la Academia nace vacío.** No se clona `filedir` ni nada más: esos 11 GB
+  son el contenido de los 37 cursos que se descartaron, y traerlos sería arrastrar justamente
+  lo que la decisión del 31-08-2026 dejó fuera. La carpeta se crea con dueño UID 33 y Moodle la
+  puebla solo, empezando por el primer archivo que alguien suba a GC-000.
 
-  Todo lo demás (`cache/`, `temp/`, `sessions/`, `trashdir/`, `lang/`) Moodle lo recrea solo, y
-  copiarlo es peor que no hacerlo: caché rancia, sesiones ajenas, y sobre todo
-  `climaintenance.html`, que si viaja en la copia deja a v2 respondiendo «under maintenance» a
-  todo, healthcheck incluido.
-
-  **Y el orden importa: primero el `pg_dump`, después el `cp -al`.** Al revés, un archivo
-  subido en el intervalo queda referenciado en la base y sin contenido en disco. El
-  procedimiento completo, con la comprobación de que no falta ningún `contenthash`, está en
-  [.env.v2.example](../.env.v2.example).
-
-  Lo que **no** hay que confundir: los cursos no están en `moodledata`. La estructura, las
-  actividades, las matrículas, las calificaciones y el banco de preguntas están en la base.
-  `filedir` solo guarda el contenido de los archivos a los que esas actividades apuntan.
+  Con eso desaparece el `cp -al` y desaparece su riesgo: ya no hay un solo inodo compartido
+  entre la Academia y el campus, así que nada de lo que se haga acá puede tocar los archivos
+  del 8115. Y desaparece el orden `pg_dump` antes que `cp -al`, que existía para que no
+  quedaran archivos referenciados en la base y ausentes del disco.
 
 ---
 
@@ -130,17 +146,22 @@ Y su corolario, que es la regla que evita que 35 cursos se conviertan en 300:
 > **Una formación = un curso.** Las ediciones son cohortes y grupos dentro del mismo curso,
 > nunca cursos nuevos.
 
-Hoy ya hay un caso: «Curso C-111 Nivel 2» existe dos veces, como 1.ª edición en *Cursos CONAF*
+En el campus actual hay un caso: «Curso C-111 Nivel 2» existe dos veces, como 1.ª edición en *Cursos CONAF*
 y como 2.ª en *Cursos MBZ*, porque la edición se modeló como curso y el financiador como
 categoría. El campo `financiamiento` y la familia de cohortes `TEMP-` existen exactamente para
 que ese patrón no se multiplique por siete áreas.
 
 ### Las 7 áreas
 
-Se crean **vacías y ocultas**. Es el método de árbol paralelo: la estructura nueva convive con
-las 9 categorías actuales, no se mueve ni un curso, y el traslado es la Etapa 4 —octubre,
-junto con el salto a la próxima versión de largo soporte, para intervenir la plataforma una
-sola vez.
+Se crean **vacías pero VISIBLES**. El método de árbol paralelo —que las quería ocultas para no
+competir con las 9 categorías viejas— murió con la decisión del 31-08-2026: la Academia se
+instala de cero y estas 7 áreas son la única estructura que existe.
+
+Y hay una razón más dura para no ocultarlas, escrita en `academia/datos/categorias.csv`: **una
+categoría oculta oculta también los cursos que viven dentro**. Con `visible=0`, GC-000, IF-151
+y TR-104 —lo único que este repositorio construye— quedarían invisibles para cualquiera que no
+sea administrador, y el error es silencioso: nadie ve un mensaje, sencillamente no hay nada.
+Lo que se publica curso por curso es el CURSO, no el árbol.
 
 `01` Incendios Forestales · `02` Fiscalización y Legislación Forestal ·
 `03` Fomento, Bosque Nativo y Restauración · `04` Desarrollo Institucional y Personas ·
@@ -223,8 +244,10 @@ la pantalla 02 no necesita ningún plugin.
 `70_informes.php` crea tres: *Catálogo de cursos* (audiencia: todo el sitio), *Gestión — cursos
 por área y estado* y *Gestión — dotación por cohorte* (audiencia: rol Gestor de Área).
 
-El tablero no es para todo el mundo: muestra la brecha de formación de personas concretas, y
-con 2.869 funcionarios reales detrás eso es información de gestión.
+El tablero no es para todo el mundo: muestra la brecha de formación de personas concretas. Hoy
+la Academia tiene un puñado de cuentas de construcción y eso no se nota; el día que tenga la
+dotación detrás es información de gestión, y la audiencia acotada al rol Gestor de Área es lo
+que impide que deje de serlo.
 
 **Un límite honesto.** El generador da tabla, filtros, ordenamiento y descarga. **No** da las
 tarjetas ni los gráficos de barras del prototipo: esas pantallas son ilustrativas. Para un
@@ -329,9 +352,11 @@ dejan de medir.
    problema serio en tres años si no se toma.»
 4. **Las correspondencias NFPA/NWCG son una propuesta**, no doctrina. Ningún documento de
    INSUMO_MEJORA trae el mapeo hecho.
-5. **Los cuatro cursos de prueba publicados en producción.** La propuesta de clasificación los
-   detecta y los marca; qué se hace con ellos —archivar o borrar— es decisión del Gestor de
-   Área.
+5. **Qué se hace con los 2.869 usuarios y los 37 cursos del campus actual.** La decisión del
+   31-08-2026 los dejó fuera de la Academia y no dijo qué pasa después: si alguna vez se migran
+   las personas y con qué criterio, qué ocurre con el historial de certificaciones ya emitidas,
+   y hasta cuándo sigue encendido el 8115. Es la decisión más grande que queda abierta y no la
+   resuelve este repositorio.
 6. **TR-104 va con auto-matriculación restringida, no con sincronización de cohorte**, porque
    es catálogo abierto. Falta decidir qué cohorte la habilita.
 
@@ -345,9 +370,11 @@ si todo cuadra.
 Pero contar es la mitad. Lo que ninguna automatización reemplaza, y que el propio script
 imprime al final:
 
-1. Entrar por navegador y abrir un PDF de un curso → confirma que `moodledata` se **lee**.
-2. Subir un archivo y encontrarlo en el `filedir` del host → confirma que se **escribe** fuera
-   del contenedor, y con el dueño correcto.
+1. Subir un archivo a GC-000 y encontrarlo en el `filedir` del host → confirma que
+   `moodledata` se **escribe** fuera del contenedor, y con el dueño correcto.
+2. Volver a abrirlo desde el navegador → confirma que se **lee**. El orden se dio vuelta a
+   propósito: en un sitio recién instalado no hay ningún PDF heredado que abrir, así que
+   primero hay que poner uno.
 3. Abrir el catálogo, aplicar un filtro de área y **ver que la lista cambia**.
 4. Entrar con una cuenta que tenga rol Gestor de Área **solo en la categoría 01**, y comprobar
    que puede crear un curso en 01 y que **no ve** los de 04. Si ve los de 04, la delegación no
@@ -358,18 +385,43 @@ imprime al final:
 
 ---
 
-## Al promover v2 a producción
+## Al poner la Academia en servicio
 
-0. **Decidir contra qué versión se promueve.** Si es octubre o después, conviene subir primero
-   v2 de 5.2 a **5.3 LTS** y promover eso: 5.3 tiene soporte de seguridad hasta el 1 de
-   octubre de 2029, y 5.2 hasta el 4 de octubre de 2027. El paso 5.2 → 5.3 es corto.
-1. `MaxRequestWorkers` de vuelta a **50** en `docker/apache-moodle.conf`.
-2. `MOODLE_WWWROOT=https://academia.conaf.cl` y **`MOODLE_SSLPROXY=true`** — las dos siempre
+Ya no es «promover un clon»: no hay nada que reemplazar. El campus actual sigue vivo en el
+8115 con sus 37 cursos, y la Academia entra en servicio cuando tenga contenido, cuentas y un
+nombre por el que llegar. Lo que sí está decidido:
+
+0. **Subir a 5.3 LTS — octubre de 2026, ya decidido.** No es «decidir contra qué versión se
+   entra en servicio»: eso se resolvió el 01-09-2026 instalando 5.2.1 sin esperar. Lo que
+   queda es el upgrade, y conviene hacerlo **antes** de entrar en servicio: 5.3 tiene soporte
+   de seguridad hasta el 1 de octubre de 2029 y 5.2 solo hasta el 4 de octubre de 2027. El
+   paso es corto, pero para entonces ya habrá cursos adentro y por eso el orden importa:
+   respaldo de `academia_v2` y del `moodledata` primero, después `admin/cli/upgrade.php`,
+   después `check_database_schema.php` → `Database structure is ok.` Es el primer upgrade de
+   verdad de este sitio; el paso 0 de instalación no lo fue.
+1. `MaxRequestWorkers` a **16**, no a 50, y solo DESPUÉS de que alguien haya bajado a **36** el
+   del repositorio `coipo_moodle`. El campus del 8115 no deja de competir por el
+   `CONNECTION LIMIT` de 60 del rol: convive de forma permanente, y el 31-08-2026 se decidió no
+   pedir más conexiones ni crear un rol aparte. Por eso el orden no es negociable: si se sube
+   este primero, la ventana entre los dos despliegues suma 68 sobre 60 y el error 500 le toca al
+   campus, que es el que tiene gente adentro. El reparto completo, la regla que lo recalcula y
+   la consulta que avisa antes están en `docker/apache-moodle.conf`.
+2. `MOODLE_WWWROOT` con el dominio que se decida y **`MOODLE_SSLPROXY=true`** — las dos siempre
    juntas. Con `https://` y `sslproxy=false`, Moodle genera las URLs de sus recursos con
    `http://` dentro de una página servida por `https://`, el navegador las bloquea por
    contenido mixto y el sitio aparece sin CSS ni JS, sin ningún error visible.
 3. Purgar cachés y recompilar el CSS del tema: las URLs quedan incrustadas en el CSS cacheado.
-4. Cerrar en producción los dos hallazgos críticos que v2 no toca: respaldos automáticos y
-   correo saliente.
-5. Publicar las áreas (`visible = 1`) recién cuando empiece la Etapa 4.
-6. Apagar la instancia vieja y liberar `academia_v2`.
+4. **Respaldos de esta base y de este `moodledata`.** Antes esto decía que era problema de
+   producción, porque un clon desechable no vale la pena respaldar. Dejó de serlo el
+   31-08-2026: acá va a estar el único ejemplar del contenido nuevo y nadie más lo tiene.
+5. Publicar las áreas (`visible = 1`) a medida que cada una tenga cursos.
+
+Y lo que **no** está decidido, que es de fondo:
+
+- **Por qué nombre se llega a la Academia.** `academia.conaf.cl` apunta hoy al campus actual. O
+  la Academia toma ese nombre y el campus pasa a otro, o la Academia estrena uno propio. De eso
+  depende `MOODLE_WWWROOT` y no lo resuelve este documento.
+- **Qué pasa con el campus actual y cuándo.** Apagarlo se lleva por delante el historial de
+  certificaciones de 2.869 personas si antes nadie decidió qué hacer con él.
+- **Si `academia_v2` sigue llamándose así** cuando ya no es la versión 2 de nada, sino el sitio
+  definitivo. Renombrar la base cuesta menos ahora que con contenido dentro.

@@ -4,6 +4,15 @@ Esta carpeta contiene **ocho manuales** para usar la plataforma de cursos de CON
 **https://academia.conaf.cl**. Ahí están los cursos de prevención y combate de incendios
 forestales y del Sistema de Comando de Incidentes (SCI).
 
+> **De qué sitio hablan estos manuales, y de cuál no.** Del campus que está en marcha hoy:
+> Moodle 4.5.10, tema `boost_magnific`, 37 cursos, 2.869 personas y el curso de práctica
+> `MANUALES`. La **Academia** que se construye en este repositorio es otro sitio: otra
+> versión (Moodle 5.2.1), otro tema (`theme_academia`) y **parte vacía**, sin ningún curso y
+> con un puñado de cuentas nominadas. Todo lo que estos ocho manuales dicen de pantallas,
+> menús, direcciones y conteos describe el campus actual. Sirven mientras ese campus siga
+> vivo; **no sirven como manuales de la Academia** y no hay que reescribirlos para ella
+> hasta que exista y tenga contenido que enseñar.
+
 Hay un manual por cada **rol**. Un rol es el permiso que tiene una persona dentro de la
 plataforma: define qué puede hacer y qué no. Dos personas pueden mirar la misma pantalla y ver
 botones distintos, porque tienen roles distintos. Eso es normal y es a propósito.
@@ -102,29 +111,33 @@ Profesor sin permisos de edición y Estudiante.
 
 ## Cuentas de práctica
 
-> ### ⚠️ ESTAS SON CUENTAS DE DEMOSTRACIÓN — HAY QUE BORRARLAS
+> ### ⚠️ CREDENCIALES RETIRADAS — ESTAS CUENTAS HAY QUE DARLAS DE BAJA
 >
-> Las seis cuentas de abajo existen **solo para aprender con estos manuales**. Sus contraseñas
-> están escritas aquí, en un archivo del repositorio, así que **cualquiera que lea este texto
-> puede entrar con ellas**.
+> Hasta el 31-08-2026 este archivo publicaba las seis contraseñas en texto plano, y este
+> repositorio es **público**: se leían desde internet sin autenticarse. **Hay que darlas por
+> comprometidas.** Están además en el historial de git desde el primer commit, así que
+> haberlas quitado de aquí no las borra — la única medida que sirve es **cambiar o eliminar
+> las seis cuentas en la plataforma**.
 >
 > **Antes de abrir la plataforma a los funcionarios, hay que borrar las seis cuentas, el curso
 > de práctica y la categoría que los contiene** (ver la sección siguiente). La plataforma tiene
 > datos personales de 2.869 personas y eso está protegido por la Ley 19.628.
 
-Las seis fueron creadas y probadas: **las seis inician sesión correctamente**.
+Las seis cuentas existen **solo para aprender con estos manuales**. Sus contraseñas **no se
+publican en el repositorio**: se las pide al administrador de la plataforma, que las entrega
+por un canal aparte.
 
-| Rol | Nombre de usuario | Contraseña | Dónde tiene el rol |
-|---|---|---|---|
-| Manager (Gestor) | `manual.manager` | `Manager-campus26.` | En todo el sitio |
-| Creador de cursos | `manual.creador` | `Coursecreator-campus26.` | En todo el sitio |
-| Profesor | `manual.profesor` | `Editingteacher-campus26.` | Solo en el curso MANUALES |
-| Profesor sin permisos de edición | `manual.profesorne` | `Teacher-campus26.` | Solo en el curso MANUALES |
-| Estudiante | `manual.estudiante` | `Student-campus26.` | Solo en el curso MANUALES |
-| Usuario autenticado | `manual.autenticado` | `User-campus26.` | Sin ningún rol asignado |
+| Rol | Nombre de usuario | Dónde tiene el rol |
+|---|---|---|
+| Manager (Gestor) | `manual.manager` | En todo el sitio |
+| Creador de cursos | `manual.creador` | En todo el sitio |
+| Profesor | `manual.profesor` | Solo en el curso MANUALES |
+| Profesor sin permisos de edición | `manual.profesorne` | Solo en el curso MANUALES |
+| Estudiante | `manual.estudiante` | Solo en el curso MANUALES |
+| Usuario autenticado | `manual.autenticado` | Sin ningún rol asignado |
 
-Escriba usuario y contraseña **exactamente como salen en la tabla**. La plataforma distingue
-mayúsculas de minúsculas, y **el punto del final es parte de la contraseña**.
+Escriba el nombre de usuario **exactamente como sale en la tabla**. La plataforma distingue
+mayúsculas de minúsculas, y también las distingue en la contraseña que le entreguen.
 
 **No hay cuenta de Invitado**, y no puede haberla: la cuenta `guest` de Moodle no tiene
 contraseña. Vea el manual 6.
@@ -133,7 +146,8 @@ contraseña. Vea el manual 6.
 
 Toda contraseña nueva debe tener al menos **una letra mayúscula**, **un número** y **un
 símbolo** (por ejemplo `.` `-` `#`). Si le falta alguna, la plataforma la rechaza con un aviso
-en rojo. Por eso las contraseñas de práctica empiezan con mayúscula y terminan en punto.
+en rojo. La contraseña que le entreguen para practicar ya cumple esa regla; la que usted
+ponga después también tiene que cumplirla.
 
 ### ⚠️ El correo del sitio está apagado
 
@@ -207,13 +221,17 @@ curso, cuando quede vacía.
 
 ### Orden sugerido para limpiar
 
+0. **Primero, y el mismo día: cambiar la contraseña de las seis cuentas.** Estuvieron
+   publicadas en texto plano en un repositorio **público** y siguen en el historial de git
+   desde el primer commit, así que haberlas quitado de este archivo no las invalida:
+   mientras no se cambien, las seis siguen abriendo sesión en producción. Este paso no
+   depende de ninguno de los siguientes ni puede esperar a que se decida el resto.
 1. Dar de baja del curso MANUALES a las cuentas matriculadas.
 2. Borrar el curso MANUALES.
 3. Borrar la categoría "Manuales de usuario", ya vacía.
 4. Borrar las seis cuentas `manual.*`.
-5. Si se quiere conservar la documentación, borrar de este README y de la sección 2 de cada
-   manual las contraseñas escritas, o reemplazarlas por un texto del tipo "pídaselas al
-   administrador".
+5. Comprobar que no quedó ninguna contraseña escrita en la carpeta:
+   `grep -rn "campus26" manuales/` tiene que salir vacío.
 
 Nada de esto toca los **37 cursos** ni las **2.869 personas** reales de la plataforma: el curso
 de práctica y las cuentas `manual.*` son independientes.
@@ -224,6 +242,7 @@ de práctica y las cuentas `manual.*` son independientes.
 
 | Dato | Valor |
 |---|---|
+| Qué sitio es | El campus actual. La Academia nueva es otro sitio, en otra versión |
 | Dirección | https://academia.conaf.cl |
 | Plataforma | Moodle 4.5.10 |
 | Tema visual | `boost_magnific` |

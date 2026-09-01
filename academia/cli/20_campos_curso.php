@@ -8,8 +8,11 @@
 // que no existe.
 //
 // OJO CON EL ORDEN. Siete de los ocho campos quedan como obligatorios, así que
-// desde que este script corre, el formulario de curso los exige. Ejecutar
-// 60_clasificar_cursos.php inmediatamente después.
+// desde que este script corre, el formulario de curso los exige. En un sitio
+// vacío eso no deja nada a medias —no hay cursos heredados—, pero sí cambia el
+// trabajo de quien cree un curso de ahí en adelante: son siete decisiones antes
+// de poder guardar. Correrlo ANTES que 80 y 90, que crean cursos y los completan
+// solos.
 //
 //   docker compose exec -u www-data app php /opt/academia/cli/20_campos_curso.php --dry-run
 //   docker compose exec -u www-data app php /opt/academia/cli/20_campos_curso.php
@@ -120,7 +123,8 @@ foreach ($filas as $fila) {
         if ($catactual->get('name') !== ACADEMIA_CATEGORIA_CAMPOS) {
             $reporte->omitido($etiqueta,
                 'ya existe en la categoría «' . $catactual->get('name') . '» — revisar a mano ' .
-                'antes de tocarlo: puede ser el campo «Tipo Curso» heredado del campus viejo');
+                'antes de tocarlo: en una instalación limpia solo puede venir de un plugin, ' .
+                'y un campo de plugin no se toca desde acá');
             continue;
         }
 
@@ -174,9 +178,13 @@ academia_purgar_caches($reporte);
 $codigo = $reporte->resumen();
 
 cli_writeln('');
-cli_writeln('Siguiente paso OBLIGATORIO: 60_clasificar_cursos.php');
-cli_writeln('Los campos obligatorios bloquean el formulario de curso hasta que estén');
-cli_writeln('completos. Un curso sin clasificar además queda invisible en el catálogo y');
+cli_writeln('Desde acá, los campos obligatorios bloquean el formulario de curso hasta que');
+cli_writeln('estén completos. Un curso sin clasificar queda invisible en el catálogo y');
 cli_writeln('ausente de todo informe, que es el olvido más frecuente del estándar.');
+cli_writeln('');
+cli_writeln('No hay cursos heredados que clasificar: el sitio está vacío. 60_clasificar_');
+cli_writeln('cursos.php pasa a ser la revisión en bloque de los cursos que la Academia vaya');
+cli_writeln('creando, y sobre todo de los que nazcan duplicando GC-000: esos heredan la');
+cli_writeln('clasificación de la plantilla, no la suya.');
 
 exit($codigo);

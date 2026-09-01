@@ -27,8 +27,10 @@ traslado.log
 #
 # La barra inicial ancla el patrón a la raíz del repositorio, y NO es opcional:
 # git en Windows compara sin distinguir mayúsculas, así que un "Moodle/" suelto
-# también ignoraba plugins/theme/boost_magnific/scss/moodle/ y dejaba el tema
-# sin sus estilos.
+# también ignoraba plugins/theme/boost_magnific/scss/moodle/ y dejaba ese tema
+# sin sus estilos. boost_magnific ya salió del repositorio, pero el ancla se
+# queda: el próximo plugin vendorizado que traiga un scss/moodle/ desaparecería
+# igual, y el síntoma —un tema sin estilos— no apunta a git por ninguna parte.
 /Moodle/
 /moodledata/
 

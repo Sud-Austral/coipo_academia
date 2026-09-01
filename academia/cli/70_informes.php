@@ -188,8 +188,11 @@ foreach ($vistas as $clave => $vista) {
         $reporte->corregido("$nombre → audiencia", 'todos los usuarios del sitio');
     } else {
         // El tablero, no. Muestra la brecha de formación de personas concretas:
-        // es información de gestión, y con 2.869 funcionarios reales detrás eso
-        // no se publica a todo el mundo «por comodidad».
+        // es información de gestión y no se publica a todo el mundo «por
+        // comodidad». Hoy detrás hay un puñado de cuentas de construcción, así que
+        // la restricción todavía no protege a nadie — se pone ahora porque
+        // ponerla el día que entren las personas reales es el día en que a nadie
+        // se le ocurre.
         $rolgestor = $DB->get_record('role', ['shortname' => 'gestorarea'], 'id');
         $roles = $rolgestor ? [(int)$rolgestor->id] : [];
         if (!$roles) {
@@ -217,8 +220,10 @@ foreach ($DB->get_records_select('reportbuilder_report', $DB->sql_like('name', '
 
 cli_writeln('');
 cli_writeln('VERIFICACIÓN QUE VALE: abrir el catálogo en el navegador, aplicar un filtro de');
-cli_writeln('área y ver que la lista cambia. Si sale vacío o sin filtros, el problema no');
-cli_writeln('está en el informe: son cursos sin clasificar. Correr 60_clasificar_cursos.php.');
+cli_writeln('área y ver que la lista cambia. Con el sitio recién instalado sale vacío y eso');
+cli_writeln('es correcto: no hay cursos. La prueba de verdad va después de 80 y 90, con');
+cli_writeln('GC-000, IF-151 y TR-104 dentro. Si con ellos sigue vacío, el problema no está');
+cli_writeln('en el informe: son cursos sin clasificar. Correr 60_clasificar_cursos.php.');
 
 exit($codigo);
 

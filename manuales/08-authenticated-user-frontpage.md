@@ -56,10 +56,10 @@ Para practicar con este manual se creó una cuenta de prueba. Úsela solo para a
 |---|---|
 | Dirección del sitio | https://academia.conaf.cl |
 | Nombre de usuario | `manual.autenticado` |
-| Contraseña | `User-campus26.` |
+| Contraseña | Se la pide al administrador de la plataforma. No está escrita en este manual, a propósito |
 | Rol asignado | Ninguno en particular. Es una cuenta sin rol especial: sirve exactamente para ver cómo se comporta un usuario normal recién ingresado |
 
-**Ojo con esto, es importante:** la contraseña se escribe tal cual está en la tabla. Respete las mayúsculas, el número y el punto del final. La letra `U` va en mayúscula. El punto final es parte de la contraseña, no es puntuación de la frase.
+**Ojo con esto, es importante:** la contraseña se escribe tal cual se la entregaron. Respete las mayúsculas, los números y los signos. Si termina en un punto, ese punto es parte de la contraseña, no es puntuación de la frase.
 
 ### 2.1 Aviso serio sobre la contraseña
 
@@ -135,16 +135,16 @@ Un **navegador** es el programa con el que se ve internet. En su computador prob
 
     Todo en minúsculas. El punto del medio va incluido. No lleva espacios.
 13. Haga clic dentro de la **segunda** casilla. Dice "Contraseña".
-14. Escriba: `User-campus26.`
+14. Escriba la contraseña que le entregó el administrador.
 
-    La `U` va en mayúscula. Lleva un guion. Termina en punto.
+    Respete las mayúsculas y los signos, tal cual se la dictaron.
 
     **Ojo:** mientras escribe la contraseña no verá las letras, sino puntitos o asteriscos. Es normal y es a propósito, para que nadie que pase por detrás la lea.
 15. Haga clic en el botón **Acceder**, justo debajo de las casillas. También puede presionar Enter.
 
 **Lo que debería ver:** la página se recarga. En la esquina superior derecha ya **no** dice "Acceder": ahora aparece **su nombre** junto a un círculo pequeño. Eso confirma que entró.
 
-**Si ve un mensaje rojo que dice "Nombre de usuario o contraseña incorrecto":** vuelva a escribir la contraseña con calma. El error más frecuente es olvidar la mayúscula inicial o el punto del final. Revise también que la tecla **Bloq Mayús** de su teclado no esté encendida (suele tener una lucecita en el teclado).
+**Si ve un mensaje rojo que dice "Nombre de usuario o contraseña incorrecto":** vuelva a escribir la contraseña con calma. El error más frecuente es dejar afuera una mayúscula o un signo del final. Revise también que la tecla **Bloq Mayús** de su teclado no esté encendida (suele tener una lucecita en el teclado).
 
 ---
 
@@ -323,7 +323,7 @@ Esta tabla es para que no pierda tiempo buscando botones que no existen para ust
 
 | Qué ve usted | Qué pasó | Qué hacer |
 |---|---|---|
-| "Nombre de usuario o contraseña incorrecto" | Escribió mal alguno de los dos | Escriba de nuevo con calma. Revise la mayúscula inicial, el guion y el punto final. Revise que la tecla Bloq Mayús esté apagada |
+| "Nombre de usuario o contraseña incorrecto" | Escribió mal alguno de los dos | Escriba de nuevo con calma. Revise las mayúsculas y los signos. Revise que la tecla Bloq Mayús esté apagada |
 | Olvidó su contraseña | No hay recuperación automática | **Pídala al administrador de la plataforma.** El correo está desactivado y el botón de recuperación no funciona |
 | "Mis cursos" aparece vacío | Todavía no lo han inscrito en ningún curso | Avise a su jefatura o al administrador para que lo matriculen |
 | Ve el nombre de un curso pero al hacer clic no lo deja entrar | Puede ver el título, pero no está matriculado | Pida al profesor del curso o al administrador que lo inscriba |

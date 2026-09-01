@@ -50,6 +50,20 @@ $comprobar('base de datos', $CFG->dbname, fn($v) => $v !== 'academia_prod',
 cli_writeln('        sitio: ' . $CFG->wwwroot);
 cli_writeln('        moodle: ' . $CFG->release);
 
+// La Academia se instaló vacía a propósito: sin los 2.869 funcionarios y sin los
+// 37 cursos del campus viejo. Esta cuenta es el detector de que alguien apuntó
+// esta instancia a un clon por equivocación, y sale mucho más barata que
+// descubrirlo después mirando el catálogo. Se cuenta desde el id 3 porque el 1 es
+// el invitado y el 2 el administrador que crea la instalación.
+$usuarios = $DB->count_records_select('user', 'deleted = 0 AND id > 2');
+$cursos   = $DB->count_records_select('course', 'id > 1');
+cli_writeln("        cuentas: $usuarios   ·   cursos: $cursos");
+if ($usuarios > 50) {
+    $avisar('cuentas de usuario', $usuarios,
+        'la Academia parte con un puñado de cuentas nominadas. Este número dice que ' .
+        'esta base salió de un clon de producción, no de una instalación limpia.');
+}
+
 // ═══════════════════════════════════════════════════════════════════════════
 cli_writeln('');
 cli_separator();
@@ -132,7 +146,9 @@ if ($campoarea) {
          WHERE d.fieldid = ? AND d.intvalue IS NOT NULL AND d.intvalue > 0", [$campoarea->id]);
     $comprobar('cursos con el campo `area` completo', $clasificados, $totalcursos,
         'los que faltan quedan invisibles en el catálogo y ausentes de todo informe. ' .
-        'Ejecutar 60_clasificar_cursos.php --exportar y revisar el CSV.');
+        'Con el sitio recién instalado esto es 0 de 0 y está bien. El caso que hay que ' .
+        'mirar es otro y esta línea NO lo ve: un curso duplicado de GC-000 trae `area` ' .
+        'completo, pero con el valor de la plantilla. Eso se detecta mirando el catálogo.');
 } else {
     $fallos++;
     cli_writeln('  FALLA  no existe el campo `area`');
@@ -251,8 +267,9 @@ $comprobar('SCORM en ventana emergente', $scormpopup, 0,
 // ─── Correo: en v2 tiene que estar frenado ──────────────────────────────────
 $comprobar('MOODLE_NOEMAILEVER', empty($CFG->noemailever) ? 'APAGADO' : 'encendido',
     'encendido',
-    'v2 es un clon con 2.869 correos institucionales reales. Sin este freno, el cron ' .
-    'les manda avisos desde un entorno de pruebas.');
+    'la Academia se está construyendo: sin este freno, el cron manda avisos de foro y ' .
+    'de contraseña desde un sitio a medio armar. Apagarlo es una decisión con fecha, ' .
+    'no un ajuste que se corrija acá.');
 
 // ─── Tareas adhoc en bucle ──────────────────────────────────────────────────
 $fallando = (int)$DB->count_records_select('task_adhoc', 'faildelay > 0');
@@ -277,21 +294,29 @@ cli_separator();
 cli_writeln('');
 cli_writeln('LO QUE ESTO NO VERIFICA, Y HAY QUE MIRAR CON LOS PROPIOS OJOS');
 cli_writeln('');
-cli_writeln('  1. Entrar por navegador como administrador. Abrir un curso y abrir un PDF:');
-cli_writeln('     confirma que moodledata se LEE.');
+cli_writeln('  1. Entrar por navegador como administrador. Subir un PDF a la carpeta de');
+cli_writeln('     material de GC-000 y abrirlo: confirma que moodledata se LEE. El sitio');
+cli_writeln('     parte con moodledata vacío, así que primero hay que poner algo adentro.');
 cli_writeln('  2. Subir un archivo desde la web y encontrarlo en el filedir del host:');
 cli_writeln('     confirma que se ESCRIBE fuera del contenedor, y con el dueño correcto.');
 cli_writeln('  3. Abrir el catálogo, aplicar un filtro de área y ver que la lista cambia.');
 cli_writeln('     Si sale vacío, el problema son cursos sin clasificar, no el informe.');
-cli_writeln('  4. Crear una cuenta de prueba con rol Gestor de Área SOLO en la categoría 01,');
-cli_writeln('     entrar con ella, y comprobar que puede crear un curso en 01 y que NO ve');
-cli_writeln('     los de 04. Si ve los de 04, la delegación no está implementada por muy');
+cli_writeln('  4. Poner primero un curso cualquiera, oculto, en la categoría 04 —sin él la');
+cli_writeln('     prueba no prueba nada, porque en un sitio vacío «no ve los de 04» se cumple');
+cli_writeln('     solo—. Después crear una cuenta de prueba con rol Gestor de Área SOLO en la');
+cli_writeln('     categoría 01, entrar con ella y comprobar que puede crear un curso en 01 y');
+cli_writeln('     que NO ve el de 04. Si lo ve, la delegación no está implementada por muy');
 cli_writeln('     creado que esté el rol.');
 cli_writeln('  5. Entrar a IF-151 con una cuenta de estudiante: la lección 2 tiene que');
 cli_writeln('     aparecer BLOQUEADA hasta aprobar la evaluación 1.');
 cli_writeln('  6. Recorrer el catálogo y una lección en un TELÉFONO REAL, no en el emulador.');
-cli_writeln('  7. Comprobar que coipo_moodle en el puerto 8115 sigue respondiendo 200 y que');
-cli_writeln('     su mdl_course no cambió. La instancia paralela solo sirve si es paralela.');
+cli_writeln('  7. Comprobar que coipo_moodle en el puerto 8115 sigue respondiendo 200. Es el');
+cli_writeln('     archivo histórico mientras siga vivo, y las dos instancias comparten el rol');
+cli_writeln('     `academia` de PostgreSQL: si esta se lleva las conexiones, la que atiende a');
+cli_writeln('     la gente empieza a dar 500. El techo del rol es 60 y se reparte entre las');
+cli_writeln('     dos; el reparto vigente, el orden en que se cambia y las consultas de');
+cli_writeln('     pg_stat_activity que lo miden están en docker/apache-moodle.conf y en el');
+cli_writeln('     bloque "Concurrencia" de .env.v2.example.');
 cli_writeln('');
 cli_writeln('  Y borrar la cuenta de prueba del punto 4 al terminar.');
 cli_writeln('');

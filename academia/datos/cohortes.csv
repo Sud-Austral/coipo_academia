@@ -1,11 +1,13 @@
 # Cohortes de la Academia CONAF. Se crean a nivel de sistema.
 # Fuente: prototipo pantalla 13 sección 2, y Anexo C.2 de la Propuesta.
 #
-# Hoy la plataforma tiene CERO cohortes. Son la pieza que permite matricular a un
-# grupo completo y, sobre todo, CONSULTAR por él: mientras no existan, «región»
-# no es un atributo y la pregunta «¿cuántos brigadistas del Biobío completaron la
-# malla estándar este año?» no tiene respuesta posible — no por falta de
-# herramienta de reportes, sino porque el dato no existe.
+# El campus actual tiene CERO cohortes, y por eso «región» no es un atributo suyo
+# y la pregunta «¿cuántos brigadistas del Biobío completaron la malla estándar
+# este año?» no tiene respuesta posible — no por falta de herramienta de reportes,
+# sino porque el dato no existe. Son la pieza que permite matricular a un grupo
+# completo y, sobre todo, CONSULTAR por él. La diferencia acá es de orden: se
+# crean antes de que entre la primera persona, no después de tener miles sin
+# clasificar.
 #
 # TRES FAMILIAS INDEPENDIENTES. Cada persona pertenece a una de cada familia, y
 # al cruzarlas se obtiene cualquier segmento sin crear cohortes nuevas. Esa es la
@@ -13,10 +15,11 @@
 # cruce de tres, no una cuarta.
 #
 # Y ES LO QUE REEMPLAZA A LOS CURSOS DUPLICADOS POR EDICIÓN. Una formación es un
-# curso; las ediciones son cohortes. Hoy «Curso C-111 Nivel 2» existe dos veces
-# —1.ª edición en Cursos CONAF y 2.ª en Cursos MBZ— porque la edición se modeló
-# como curso y el financiador como categoría. Sin esta regla, ese patrón se
-# multiplica por siete áreas.
+# curso; las ediciones son cohortes. En el campus actual «Curso C-111 Nivel 2»
+# existe dos veces —1.ª edición en Cursos CONAF y 2.ª en Cursos MBZ— porque la
+# edición se modeló como curso y el financiador como categoría. Ese campus no se
+# trae, así que acá la regla no corrige nada: impide. Sin ella, el mismo patrón
+# vuelve a nacer y se multiplica por siete áreas.
 
 idnumber,nombre,familia,descripcion
 # ─── Familia territorial · 16, una por Dirección Regional ────────────────────
@@ -52,7 +55,7 @@ PERF-ADM,Administrativo y apoyo,ocupacional,Personal administrativo y de apoyo
 # ─── Familia de temporada · TEMP-AAAA-AA ─────────────────────────────────────
 # Una por temporada operativa. Crece en una cada año: la crea el administrador de
 # plataforma al planificar la temporada, no un script.
-TEMP-2025-26,Temporada 2025-2026,temporada,Temporada operativa 2025-2026
+TEMP-2025-26,Temporada 2025-2026,temporada,"Temporada ya cerrada. Nace vacía y se queda vacía: la Academia parte sin historial y nadie se matricula hacia atrás. Existe para que la serie no empiece en la temporada vigente"
 TEMP-2026-27,Temporada 2026-2027,temporada,Temporada operativa 2026-2027 — vigente
 TEMP-2027-28,Temporada 2027-2028,temporada,Temporada operativa 2027-2028 — en planificación
 
@@ -86,7 +89,12 @@ PERF-AUTOR,Autores habilitados de la Academia,funcional,"Habilitación para crea
 #
 # ─── Cómo se llenan ──────────────────────────────────────────────────────────
 #
-# Este script crea las cohortes VACÍAS. Poblarlas es otra cosa:
+# Este script crea las cohortes VACÍAS, y por ahora es lo único que puede hacer:
+# la Academia se instala sin usuarios, con un puñado de cuentas nominadas de
+# CONAF para construir y probar. Los funcionarios del campus actual no están, y
+# si algún día entran es una decisión aparte que este archivo no toma.
+#
+# Poblarlas, cuando corresponda:
 #   · a mano o por CSV mientras la identidad sea manual (hoy);
 #   · sincronizadas desde el directorio institucional en la etapa 2 del
 #     escalamiento, que desarrolla la UIA. Ahí la pertenencia deja de mantenerse

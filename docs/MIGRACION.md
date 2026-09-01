@@ -3,6 +3,18 @@
 Procedimiento completo desde el volcado original hasta el sitio funcionando en el servidor
 CONAF. Requiere que `docs/TRASLADO.md` (fase F0) ya esté terminado y verificado.
 
+> **Esto es el registro de lo que se le hizo al campus del 8115, no un procedimiento vigente.**
+> Se ejecutó y se verificó el 30-07-2026 y se conserva entero porque ese sitio sigue vivo y
+> porque las fases F1–F5 son la única explicación de por qué `academia_prod` es como es. **La
+> Academia no pasa por ninguna de ellas**: se instala vacía con `admin/cli/install_database.php`
+> y no hay volcado, ni MariaDB temporal, ni `dbtransfer`.
+>
+> Dos cosas de acá dejaron de describir el repositorio de hoy, y no se corrigen comando por
+> comando porque falsearían lo que realmente se corrió: la imagen construye **Moodle 5.2.1 con
+> la raíz web en `public/`**, no 4.5.10, y de los cuatro plugins que se nombran más abajo **solo
+> queda `mod_customcert`** — los otros tres salieron del repositorio el 01-09-2026. Antes de
+> copiar un bloque de este documento, leer la sección «Plugins no-core» de `CLAUDE.md`.
+
 ## Por qué hay un paso intermedio con MariaDB
 
 `bitnami_moodle.sql` es un volcado de **MariaDB** (verificado en su cabecera:
@@ -37,7 +49,10 @@ ellos **tienen tablas con datos**: `dbtransfer` recorre únicamente las tablas d
 `install.xml` del código en disco, así que sin el plugin instalado sus datos **no se copian a
 PostgreSQL y se pierden sin ningún mensaje de error**.
 
-Ya están los cuatro vendorizados en `plugins/`, y el `Dockerfile` los instala:
+Los cuatro se vendorizaron en `plugins/` y el `Dockerfile` de entonces los instalaba. Esta
+tabla es el registro de esa migración, no el estado de hoy: el 01-09-2026 se borraron tres
+de los cuatro del repositorio, porque la Academia se instala vacía y no hay base heredada
+cuyos plugins registrados haya que respetar. El motivo de cada uno está en el `Dockerfile`.
 
 | Componente | En la base | Vendorizado | Origen |
 |---|---|---|---|
@@ -131,7 +146,14 @@ $DCM run --rm app php -v                       # PHP 8.3.x
 $DCM run --rm app php -m | grep -E '^(pgsql|mysqli|gd|intl|zip|soap|exif)$'
 $DCM run --rm app head -3 /var/www/html/version.php
 
-# Los cuatro plugins no-core deben estar en su sitio
+# Los cuatro plugins no-core deben estar en su sitio.
+#
+# OJO: esto vale para la imagen de coipo_moodle (4.5.10), que es la que se
+# construía cuando se escribió este procedimiento. La imagen de coipo_academia
+# ya NO copia estos tres —se borraron del repositorio el 01-09-2026— y el
+# `ls -d` fallaría con «No such file or directory». Si alguien está verificando
+# la 5.2.1, lo que corresponde comprobar son mod/customcert y theme/academia
+# bajo public/, no acá.
 $DCM run --rm app ls /var/www/html/mod/customcert/element | wc -l    # 19
 $DCM run --rm app ls -d /var/www/html/admin/tool/mergeusers \
                        /var/www/html/blocks/configurable_reports \

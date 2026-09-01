@@ -272,6 +272,13 @@ cli_writeln('Lo que la plantilla NO puede traer resuelto:');
 cli_writeln('  · el contenido H5P, que se crea dentro de Moodle y no se puede dejar vacío');
 cli_writeln('  · la plantilla gráfica del certificado, que se arma arrastrando elementos');
 cli_writeln('  · las preguntas, que son de cada curso');
+cli_writeln('');
+cli_writeln('Y UNA TRAMPA QUE AHORA IMPORTA MÁS QUE ANTES, porque duplicar esta plantilla es');
+cli_writeln('la única forma en que van a nacer los cursos: al duplicarla se copian también');
+cli_writeln('sus ocho campos. El curso nuevo nace en «99 Gestión del Campus» y con estado');
+cli_writeln('«Archivado». No queda sin clasificar: queda MAL clasificado, que es peor,');
+cli_writeln('porque el catálogo lo muestra como si alguien lo hubiera decidido.');
+cli_writeln('Reclasificarlo es el primer paso después de duplicar, no el último.');
 
 exit($codigo);
 

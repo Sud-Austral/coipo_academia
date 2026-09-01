@@ -16,6 +16,12 @@
 //      Si el config.php apunta a academia_prod, se niegan a correr salvo que se
 //      pase --permitir-produccion de forma explícita.
 //
+//      OJO CON EL SENTIDO, QUE SE DIO VUELTA. `academia_prod` es hoy el campus
+//      viejo, que queda como archivo histórico; `academia_v2` es la Academia que
+//      se está construyendo. El freno protege al archivo. A la Academia no la
+//      protege nadie, y eso hay que decidirlo antes de que tenga adentro trabajo
+//      que no exista en ninguna otra parte.
+//
 // Se ejecutan desde el contenedor, SIEMPRE como www-data:
 //
 //   docker compose exec -u www-data app php /opt/academia/cli/10_categorias.php

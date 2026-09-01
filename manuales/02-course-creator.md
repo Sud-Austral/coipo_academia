@@ -57,21 +57,24 @@ Para entrar a la plataforma necesita dos datos: un **nombre de usuario** y una *
 |---|---|
 | Dirección de la plataforma | https://academia.conaf.cl |
 | Nombre de usuario | `manual.creador` |
-| Contraseña | `Coursecreator-campus26.` |
+| Contraseña | Se la pide al administrador de la plataforma. No está escrita en este manual, a propósito |
 | Su rol | Creador de cursos (Course creator) |
 | Dónde tiene el rol | En toda la plataforma |
 
 ### Cómo escribir la contraseña
 
-La contraseña se escribe **exactamente** así: `Coursecreator-campus26.`
+La contraseña no está escrita en este manual, a propósito: se la entrega el administrador de
+la plataforma, y solo a usted. Escríbala **exactamente** como se la hayan dado.
 
 Fíjese en tres cosas:
 
-1. La primera letra es **C mayúscula**.
-2. Hay un **guion** (el signo `-`) después de "Coursecreator".
-3. Al final va un **punto**. Ese punto es parte de la contraseña.
+1. Las **mayúsculas y las minúsculas** cuentan: una letra grande y la misma letra chica no
+   son lo mismo para la plataforma.
+2. Los **signos** son parte de la contraseña, igual que las letras. Un guion es un guion.
+3. Si la contraseña **termina en un signo** —un punto, por ejemplo—, ese signo también va.
+   No es la puntuación de la frase.
 
-Si escribe todo en minúsculas, no entra. La plataforma diferencia mayúsculas de minúsculas.
+Si la escribe toda en minúsculas cuando no lo era, no entra.
 
 ### Aviso importante sobre la contraseña
 
@@ -143,7 +146,7 @@ Esto es opcional pero le ahorra tiempo.
    Ojo: es todo en minúsculas y lleva un punto en el medio. No lleva espacios.
 
 5. Haga un clic dentro de la **segunda** casilla. Dice "Contraseña".
-6. Escriba: `Coursecreator-campus26.`
+6. Escriba la contraseña que le entregó el administrador.
 
    **Lo que debería ver:** en vez de letras aparecen puntitos negros o asteriscos. Es normal: la plataforma tapa la contraseña para que nadie la lea por encima de su hombro.
 
@@ -155,7 +158,7 @@ Esto es opcional pero le ahorra tiempo.
 
 | Lo que ve | Qué hacer |
 |---|---|
-| "Nombre de usuario o contraseña incorrectos" | Vuelva a escribir la contraseña despacio. Fíjese en la C mayúscula, el guion y el punto final. |
+| "Nombre de usuario o contraseña incorrectos" | Vuelva a escribir la contraseña despacio, tal cual se la entregaron. Fíjese en las mayúsculas y en los signos: cuentan todos. |
 | Salen letras mayúsculas cuando escribe minúsculas | Apriete una vez la tecla **Bloq Mayús** (a la izquierda del teclado, arriba de Shift). Vuelva a escribir. |
 | Sigue sin entrar después de 3 intentos | **No siga probando.** Escríbale al administrador del sitio. Recuerde: el correo de recuperación no funciona en esta plataforma. |
 
@@ -526,7 +529,7 @@ Hágalo la primera vez que entre.
 
    **Lo que debería ver:** una pantalla nueva con tres casillas de texto, una debajo de la otra.
 
-5. Haga clic dentro de la primera casilla, **Contraseña actual**, y escriba la que tiene ahora: `Coursecreator-campus26.`
+5. Haga clic dentro de la primera casilla, **Contraseña actual**, y escriba la contraseña con la que acaba de entrar.
 6. Haga clic dentro de la segunda casilla, **Contraseña nueva**, y escriba la que quiere usar.
 7. Haga clic dentro de la tercera casilla, **Contraseña nueva (de nuevo)**, y escriba exactamente lo mismo que en la segunda.
 8. Baje hasta el final de la página girando la rueda del mouse hacia usted.
@@ -593,7 +596,7 @@ Una persona puede tener los dos roles a la vez. No se estorban.
 
 | Lo que ve | Qué pasó | Qué hacer |
 |---|---|---|
-| "Nombre de usuario o contraseña incorrectos" | Escribió mal algo | Revise mayúsculas, el guion y el punto final. Revise que **Bloq Mayús** esté apagado |
+| "Nombre de usuario o contraseña incorrectos" | Escribió mal algo | Revise mayúsculas, minúsculas y signos: cuentan todos. Revise que **Bloq Mayús** esté apagado |
 | Pinchó "¿Olvidó su contraseña?" y no llega nada | **El correo está desactivado en la plataforma.** No es una demora: no va a llegar nunca | Pídale al administrador del sitio que le restablezca la contraseña |
 | Aviso rojo: "El nombre corto ya se está usando" | Ya hay otro curso con ese nombre corto. Debe ser único en toda la plataforma | Cambie el nombre corto: agregue el año, la región o un número. Guarde de nuevo |
 | Aviso rojo bajo una casilla al guardar | Falta un campo obligatorio | Suba mirando el formulario hasta el texto rojo. Llene esa casilla. Guarde de nuevo |

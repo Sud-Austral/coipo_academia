@@ -13,7 +13,7 @@ unset($CFG);
 global $CFG;
 $CFG = new stdClass();
 
-// getenv() funciona con mod_php —php:8.3-apache hereda el entorno del
+// getenv() funciona con mod_php —php:8.4-apache hereda el entorno del
 // contenedor— y también en CLI. El respaldo con $_SERVER es por si algún día
 // esto pasa a php-fpm.
 function conaf_env(string $clave, ?string $defecto = null): ?string {

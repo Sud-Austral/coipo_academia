@@ -55,10 +55,10 @@ Estos son los datos para el **curso de práctica**. Úselos para aprender sin mi
 |---|---|
 | Dirección de la plataforma | https://academia.conaf.cl |
 | Nombre de usuario | `manual.manager` |
-| Contraseña | `Manager-campus26.` |
+| Contraseña | Se la pide al administrador de la plataforma. No está escrita en este manual, a propósito |
 | Su rol | Manager (Gestor), en todo el sitio |
 
-Escríbalos **exactamente así**, con el punto y el guion. La plataforma distingue mayúsculas de minúsculas.
+Escriba el nombre de usuario **exactamente así**, con el punto del medio. La contraseña, tal cual se la hayan dictado: la plataforma distingue mayúsculas de minúsculas.
 
 ### 2.1 Aviso muy importante sobre la contraseña
 
@@ -98,7 +98,7 @@ Por eso: cambie su contraseña por una que usted recuerde y anótela en un lugar
 3. Haga clic dentro de la primera casilla, la que dice **Nombre de usuario**.
 4. Escriba: `manual.manager`
 5. Haga clic dentro de la segunda casilla, la que dice **Contraseña**.
-6. Escriba: `Manager-campus26.`
+6. Escriba la contraseña que le entregó el administrador.
 7. Verá puntos negros en vez de letras. Es normal: la plataforma esconde la contraseña para que nadie la lea por encima de su hombro.
 8. Haga clic en el botón **Acceder**, justo debajo de las dos casillas.
 

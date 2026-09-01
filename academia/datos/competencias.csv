@@ -7,12 +7,24 @@
 # cuándo hasta cuándo. La segunda es la pregunta que importa cuando ocurre algo, y
 # es la única que un servicio público puede necesitar responder formalmente.
 #
-# El subsistema ya viene instalado en Moodle y está apagado. La malla numerada de
-# incendios YA ES un marco de competencias: lo único que falta es escribirlo.
+# El subsistema viene con Moodle y 95_ajustes_sitio.php lo deja encendido, sin
+# suponer en qué estado venía la instalación. La malla numerada de incendios YA
+# ES un marco de competencias: lo único que falta es escribirlo. Y es lo único
+# que se hereda del campus actual — la malla es doctrina de la Gerencia, no
+# cursos de una plataforma. Los 37 cursos no se traen; la numeración, sí.
 #
 # ESCALA DE LOGRO — tres valores, el último marcado como «competente»:
 #   No demostrada · En desarrollo · Demostrada
 # El script la crea como escala global si no existe.
+#
+# CASI NINGUNA DE ESTAS COMPETENCIAS TIENE TODAVÍA UN CURSO QUE LA ACREDITE, y no
+# es un error del archivo. La Academia parte sin cursos: los únicos que existen
+# son los que construye este repositorio, IF-151 y TR-104, y son los dos únicos
+# que la columna descripcion nombra como «la acredita». Las demás —la seguridad
+# de IF-C108, la motosierra de IF-C114, el SCI de IF-C213— apuntan a cursos que
+# hay que construir, no a cursos que estén en alguna parte. El marco se escribe
+# completo igual: describe qué habilita la Academia, y eso no depende de cuánto
+# de ella esté hecho.
 #
 # Columnas:
 #   marco    idnumber del marco al que pertenece la fila
@@ -30,7 +42,7 @@ MARCO-IF,marco,MARCO-IF,Protección contra Incendios Forestales,,,"La malla de i
 MARCO-IF,unidad,IF-U1,Malla Estándar,,,"Nivel básico operativo. Es el itinerario del brigadista."
 MARCO-IF,competencia,IF-C101,Aplica los fundamentos de la protección contra incendios forestales,IF-U1,,
 MARCO-IF,competencia,IF-C107,Aplica las medidas de seguridad y salud ocupacional en operaciones,IF-U1,NFPA 1051 Wildland Fire Fighter I,"Lección de seguridad: es de las prioritarias para rediseño instruccional, porque el costo de un error no es una respuesta mala en un cuestionario."
-MARCO-IF,competencia,IF-C108,Detiene o ajusta la operación cuando falta una condición de seguridad,IF-U1,NWCG L-180 Human Factors,"La acredita IF-108. Ver prototipo pantalla 12."
+MARCO-IF,competencia,IF-C108,Detiene o ajusta la operación cuando falta una condición de seguridad,IF-U1,NWCG L-180 Human Factors,"La acreditará IF-108, que todavía hay que construir. Ver prototipo pantalla 12."
 MARCO-IF,competencia,IF-C114,Opera motosierra conforme a protocolo,IF-U1,NWCG S-212 Wildland Fire Chain Saws,
 MARCO-IF,competencia,IF-C115,Aplica primeros auxilios en terreno,IF-U1,,
 
@@ -60,8 +72,9 @@ MARCO-TR,competencia,TR-C104,Diseña y publica un curso conforme al estándar de
 # La pantalla 13 pide que «cada competencia lleve un campo de correspondencia con
 # NFPA 1051 / NWCG», porque ese mapeo es lo que hace que el certificado de un
 # brigadista chileno sea interpretable por cualquier organización de incendios
-# del hemisferio. La necesidad ya existe y hoy se resuelve con un curso hecho a
-# la medida: «Certificados C-111 para apoyo internacional».
+# del hemisferio. La necesidad ya existe: en el campus actual se resolvió con un
+# curso hecho a la medida, «Certificados C-111 para apoyo internacional», que no
+# se trae. Acá el dato va en la competencia, que es donde corresponde.
 #
 # PERO Moodle no tiene campos personalizados en competencias. El script escribe
 # la correspondencia dentro de la DESCRIPCIÓN de cada competencia, que es donde

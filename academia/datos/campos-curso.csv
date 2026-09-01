@@ -1,20 +1,23 @@
 # Los ocho campos personalizados de curso de la Academia CONAF.
 # Fuente: prototipo pantalla 13 sección 1, y Anexo C.1 de la Propuesta.
 #
-# Hoy la plataforma tiene UN campo («Tipo Curso»). Estos ocho son los que
-# después permiten filtrar el catálogo y construir cualquier informe. Sin ellos
-# ni el catálogo de la pantalla 02 ni el tablero de la pantalla 08 existen: la
-# reportería es 20 % herramienta y 80 % modelo de datos.
+# El campus actual tiene UN campo («Tipo Curso») y ese es todo su modelo de
+# datos. La Academia se instala vacía, así que estos ocho existen antes que el
+# primer curso: son los que permiten filtrar el catálogo y construir cualquier
+# informe. Sin ellos ni el catálogo de la pantalla 02 ni el tablero de la
+# pantalla 08 existen: la reportería es 20 % herramienta y 80 % modelo de datos.
 #
 # REGLA DE ORO — los siete campos de clasificación son LISTAS CERRADAS, nunca
 # texto libre. Un campo libre produce «Incendios», «incendios forestales», «IF»
 # y «Prot. Incendios» en el mismo sistema, y con eso ningún informe agrupa bien.
 #
-# ORDEN DE EJECUCIÓN — importa:
-#   obligatorio=1 hace que el formulario de curso EXIJA el campo. Desde que este
-#   script corre, editar cualquiera de los 36 cursos existentes sin completarlo
-#   queda bloqueado. Por eso 60_clasificar_cursos.php va inmediatamente después,
-#   no «cuando se pueda».
+# ORDEN DE EJECUCIÓN — importa, y ahora mira hacia adelante y no hacia atrás:
+#   obligatorio=1 hace que el formulario de curso EXIJA el campo. Ya no hay 36
+#   cursos existentes que puedan quedar bloqueados —no hay ninguno—, pero sí hay
+#   algo peor: un curso creado ANTES que sus campos nace sin clasificar, queda
+#   fuera del catálogo filtrable y de todo informe, y nadie lo nota. Por eso este
+#   script corre antes que 80_plantilla_maestra.php y 90_cursos_esqueleto.php,
+#   que son los que crean GC-000, IF-151 y TR-104.
 #
 # Columnas:
 #   shortname     el nombre corto del campo; es el que usan los informes
@@ -32,7 +35,7 @@ perfil,Perfil destinatario,select,1,"Brigadista|Jefe de cuadrilla|Guardaparque|F
 modalidad,Modalidad,select,1,"e-learning autoinstruccional|Blended|Presencial con soporte",,,"Cómo se cursa. Alimenta la planificación y la logística."
 duracion,Duración (horas),number,1,,1,200,"Horas cronológicas de dedicación estimada, no minutos de contenido. Alimenta los reportes de carga formativa."
 vigencia,Vigencia de la certificación (meses),number,1,,0,60,"0 = no vence. Los valores previstos son 0, 12, 24, 36 y 60. Alimenta el elemento Expiry del certificado."
-financiamiento,Fuente de financiamiento,select,0,"CONAF|MBZ|KIZUNA-JICA|Otra cooperación internacional|Otro",,,"Saca al financiador del árbol de categorías. Hoy el mismo curso está duplicado porque cambió de financiador: este campo es lo que lo evita."
+financiamiento,Fuente de financiamiento,select,0,"CONAF|MBZ|KIZUNA-JICA|Otra cooperación internacional|Otro",,,"Saca al financiador del árbol de categorías. En el campus actual el mismo curso está duplicado porque cambió de financiador; ese campus no se trae, así que acá el campo no corrige nada: impide que el patrón vuelva a nacer."
 estado,Estado del ciclo de vida,select,1,"Desarrollo|Piloto|Vigente|En revisión|Archivado",,,"Distingue lo vigente de lo obsoleto. Un curso pasa a Vigente cuando el Gestor de Área aplica la lista de verificación."
 
 # ─── Dos cosas que este archivo deja anotadas, no resueltas ──────────────────
@@ -49,4 +52,6 @@ estado,Estado del ciclo de vida,select,1,"Desarrollo|Piloto|Vigente|En revisión
 #    Son siete y siete, pero no las mismas siete. Mientras no se alineen, la
 #    comparación «quién debía tomar el curso» contra «quién lo tomó» —que es la
 #    razón declarada de esa familia de cohortes— no se puede hacer para esos dos
-#    valores. Ver el mismo aviso en cohortes.csv.
+#    valores. Alinearlas hoy no cuesta nada: no hay ni un curso clasificado ni
+#    una cohorte poblada que haya que volver a tocar. Ver el mismo aviso en
+#    cohortes.csv.

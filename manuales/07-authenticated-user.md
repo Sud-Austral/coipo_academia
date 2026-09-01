@@ -76,12 +76,12 @@ Para practicar con este manual sin miedo a equivocarse, use esta cuenta:
 |---|---|
 | Dirección del sitio | https://academia.conaf.cl |
 | Nombre de usuario | `manual.autenticado` |
-| Contraseña | `User-campus26.` |
+| Contraseña | Se la pide al administrador de la plataforma. No está escrita en este manual, a propósito |
 | Rol | Usuario autenticado, sin ningún curso asignado |
 
-Escriba el usuario y la contraseña **tal cual salen en la tabla**, respetando mayúsculas y minúsculas. Para la plataforma, `User` y `user` no son la misma cosa.
+Escriba el usuario **tal cual sale en la tabla** y la contraseña **tal cual se la entregaron**, respetando mayúsculas y minúsculas. Para la plataforma, una letra grande y la misma letra chica no son la misma cosa.
 
-Fíjese que la contraseña termina en un punto. Ese punto es parte de la contraseña.
+Si la contraseña trae signos —un punto, un guion, un signo de admiración—, esos signos también se escriben. No son puntuación de la frase.
 
 ### 2.2 Su cuenta real
 
@@ -173,7 +173,7 @@ Ojo: no la confunda con el buscador de Google que aparece al centro de la págin
 1. Haga un clic dentro de la **primera casilla**. Dice "Nombre de usuario".
 2. Escriba su nombre de usuario. Para practicar: `manual.autenticado`
 3. Haga un clic dentro de la **segunda casilla**. Dice "Contraseña".
-4. Escriba su contraseña. Para practicar: `User-campus26.`
+4. Escriba su contraseña. La de la cuenta de práctica se la entrega el administrador de la plataforma.
 5. Verá que la contraseña no se muestra: aparecen puntitos o asteriscos. Es a propósito, para que nadie la lea por encima del hombro.
 6. Haga un clic en el botón **Acceder**, debajo de las casillas.
 

@@ -1,9 +1,10 @@
 <?php
 // Crea el árbol de áreas temáticas de la Academia, vacío y oculto.
 //
-// NO mueve ni un curso. Es el método de árbol paralelo de la Parte 3.4 de la
-// Propuesta: la estructura nueva coexiste con las 9 categorías actuales y el
-// traslado es la Etapa 4, en octubre.
+// Este árbol es TODO el árbol. La Academia se instala vacía y los 37 cursos del
+// campus viejo se descartan, así que acá no hay nada que coexistir ni que
+// trasladar después: lo que este script crea es la estructura definitiva, y todo
+// curso que llegue a existir va a nacer dentro de ella.
 //
 //   docker compose exec -u www-data app php /opt/academia/cli/10_categorias.php --dry-run
 //   docker compose exec -u www-data app php /opt/academia/cli/10_categorias.php
@@ -52,12 +53,13 @@ foreach ($filas as $fila) {
             $difiere['parent'] = $idpadre;
         }
 
-        // La visibilidad NO se corrige. Si alguien ya publicó el área porque
-        // empezó la Etapa 4, volver a ocultarla desde un script sería un
-        // retroceso silencioso justo en el momento de mayor riesgo.
+        // La visibilidad NO se corrige. Un área se publica cuando tiene algo
+        // adentro, y eso lo decide una persona mirando el área, no un CSV escrito
+        // meses antes. Volver a ocultarla desde un script sería un retroceso
+        // silencioso.
         if ((int)$actual->visible !== $visible) {
             cli_writeln("    (visible={$actual->visible} en el sitio, $visible en el CSV — " .
-                'se respeta el sitio: la publicación del área es una decisión de la Etapa 4)');
+                'se respeta el sitio: publicar un área es una decisión de quien la gestiona)');
         }
 
         if (!$difiere) {

@@ -201,9 +201,10 @@ $codigo = $reporte->resumen();
 
 cli_writeln('');
 cli_writeln('Falta vincular cada competencia a su curso: eso lo hace 90_cursos_esqueleto.php');
-cli_writeln('para IF-151 y TR-104, y hay que hacerlo a mano en los cursos ya existentes');
-cli_writeln('(Curso → Más → Competencias). Una competencia sin curso que la acredite no la');
-cli_writeln('alcanza nadie nunca.');
+cli_writeln('para IF-151 y TR-104. Las demás quedan sin ningún curso que las acredite, y así');
+cli_writeln('van a seguir hasta que alguien construya ese curso: el marco se carga completo a');
+cli_writeln('propósito, para que se vea cuánto falta. Una competencia sin curso que la');
+cli_writeln('acredite no la alcanza nadie nunca.');
 cli_writeln('');
 cli_writeln('Y OJO CON EL CRON: al encender competencias, las tareas programadas se cargan');
 cli_writeln('más. Si siguen corriendo cada 4 minutos en vez de cada 1, la emisión de');

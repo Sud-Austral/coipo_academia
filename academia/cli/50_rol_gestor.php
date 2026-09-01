@@ -192,9 +192,12 @@ cli_writeln('institucional, no técnica (Propuesta, Parte 4.1). Se asigna entran
 cli_writeln('categoría de área → Permisos → Asignar roles.');
 cli_writeln('');
 cli_writeln('CÓMO SE COMPRUEBA QUE FUNCIONA — y es la verificación que de verdad importa:');
+cli_writeln('  0. Poner primero un curso cualquiera, oculto, dentro de la categoría 04. Sin');
+cli_writeln('     eso la prueba no prueba nada: en un sitio vacío «no ve los cursos de 04»');
+cli_writeln('     se cumple solo, porque no hay ninguno que ver.');
 cli_writeln('  1. Asignar el rol a una cuenta de prueba SOLO en la categoría 01.');
 cli_writeln('  2. Entrar con esa cuenta: debe poder crear un curso en 01...');
-cli_writeln('  3. ...y NO debe ver los cursos de 04.');
+cli_writeln('  3. ...y NO debe ver el curso de 04.');
 cli_writeln('Si el punto 3 falla, la delegación no está implementada, por muy creado que');
 cli_writeln('esté el rol. Esa restricción es lo único que permite que siete gerencias');
 cli_writeln('convivan en una sola plataforma.');
