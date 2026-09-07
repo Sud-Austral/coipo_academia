@@ -1,0 +1,221 @@
+# Manifiesto derivado del codigo. Los archivos ya estaban abiertos cuando se
+# escribio: documenta lo que hay y deja constancia de lo que falta declarar.
+# No incluye el arbol del complemento de terceros, que no es material propio.
+
+archivos:
+
+  - ruta: academia/datos/categorias.csv
+    sha256: "[PENDIENTE] sin calcular"
+    origen: "[PENDIENTE] quien lo entrego y cuando"
+    contiene_pii: "[VERIFICAR] archivo de decisiones de estructura; la evidencia no incluye su contenido y no hay conteo posible de patrones"
+    puede_versionarse: true
+    uso: define el arbol de categorias que aplica el primer guion de la secuencia
+
+  - ruta: academia/datos/campos-curso.csv
+    sha256: "[PENDIENTE] sin calcular"
+    origen: "[PENDIENTE] quien lo entrego y cuando"
+    contiene_pii: "[VERIFICAR] archivo de decisiones de estructura; sin conteo disponible"
+    puede_versionarse: true
+    uso: define los campos de clasificacion que se agregan a los cursos
+
+  - ruta: academia/datos/cohortes.csv
+    sha256: "[PENDIENTE] sin calcular"
+    origen: "[PENDIENTE] quien lo entrego y cuando"
+    contiene_pii: "[VERIFICAR] una cohorte agrupa personas; este archivo es el candidato mas probable del repositorio a contener nombres, correos o identificadores de usuario, y la evidencia no incluye su contenido, de modo que no hay conteo posible. Revisar antes de sellar."
+    puede_versionarse: "[VERIFICAR] depende de lo anterior"
+    uso: define las cohortes que crea el tercer guion de la secuencia
+
+  - ruta: academia/datos/competencias.csv
+    sha256: "[PENDIENTE] sin calcular"
+    origen: "[PENDIENTE] quien lo entrego y cuando"
+    contiene_pii: "[VERIFICAR] archivo de decisiones de estructura; sin conteo disponible"
+    puede_versionarse: true
+    uso: define el marco de competencias que se carga en la plataforma
+
+  - ruta: academia/datos/banco-IF-151.xml
+    sha256: "[PENDIENTE] sin calcular"
+    origen: "[PENDIENTE] quien lo entrego y cuando"
+    contiene_pii: "[VERIFICAR] banco de preguntas; el riesgo esta en los enunciados, que pueden citar casos reales; sin conteo disponible"
+    puede_versionarse: true
+    uso: contenido evaluativo importable a la plataforma
+
+  - ruta: academia/herramientas/convertir-banco-IF-151.py
+    sha256: "[PENDIENTE] sin calcular"
+    origen: "[PENDIENTE] quien lo entrego y cuando"
+    contiene_pii: "[VERIFICAR] sin coincidencias de patron RUT, correo ni telefono; conteo 0"
+    puede_versionarse: true
+    uso: convierte el banco de preguntas al formato que la plataforma importa
+
+  - ruta: db/setup_bd.sql
+    sha256: "[PENDIENTE] sin calcular"
+    origen: "[PENDIENTE] quien lo entrego y cuando"
+    contiene_pii: "[VERIFICAR] guion de creacion de base; el riesgo esta en credenciales, no en datos personales; sin conteo disponible"
+    puede_versionarse: true
+    uso: crea la base de datos de la primera instalacion
+
+  - ruta: db/setup_bd_v2.sql
+    sha256: "[PENDIENTE] sin calcular"
+    origen: "[PENDIENTE] quien lo entrego y cuando"
+    contiene_pii: "[VERIFICAR] guion de creacion de base que ademas consulta las tablas de usuarios y cursos de la plataforma; consulta, no las copia; sin conteo disponible"
+    puede_versionarse: true
+    uso: crea y verifica la base de datos de la segunda instalacion
+
+  - ruta: .env.example
+    sha256: "[PENDIENTE] sin calcular"
+    origen: "[PENDIENTE] quien lo entrego y cuando"
+    contiene_pii: "[VERIFICAR] plantilla de variables, no los valores reales; sin coincidencias de patron RUT, correo ni telefono; conteo 0"
+    puede_versionarse: true
+    uso: enumera las variables que espera el despliegue de la primera instalacion
+
+  - ruta: .env.v2.example
+    sha256: "[PENDIENTE] sin calcular"
+    origen: "[PENDIENTE] quien lo entrego y cuando"
+    contiene_pii: "[VERIFICAR] plantilla de variables, no los valores reales; sin coincidencias de patron RUT, correo ni telefono; conteo 0"
+    puede_versionarse: true
+    uso: enumera las variables que espera el despliegue de la segunda instalacion
+
+  - ruta: .env.migracion.example
+    sha256: "[PENDIENTE] sin calcular"
+    origen: "[PENDIENTE] quien lo entrego y cuando"
+    contiene_pii: "[VERIFICAR] plantilla de variables, no los valores reales; sin coincidencias de patron RUT, correo ni telefono; conteo 0"
+    puede_versionarse: true
+    uso: enumera las variables que espera el escenario de migracion
+
+  - ruta: docker/config.php
+    sha256: "[PENDIENTE] sin calcular"
+    origen: "[PENDIENTE] quien lo entrego y cuando"
+    contiene_pii: "[VERIFICAR] es el archivo de configuracion de la plataforma, donde vive la conexion a base de datos; categoria de riesgo alto para credenciales; sin conteo disponible"
+    puede_versionarse: "[VERIFICAR] depende de si toma sus valores del entorno o los lleva escritos"
+    uso: configura la plataforma dentro del contenedor
+
+  - ruta: docker/apache-moodle.conf
+    sha256: "[PENDIENTE] sin calcular"
+    origen: "[PENDIENTE] quien lo entrego y cuando"
+    contiene_pii: "[VERIFICAR] sin coincidencias de patron RUT, correo ni telefono; conteo 0"
+    puede_versionarse: true
+    uso: configura el servidor web que sirve la plataforma
+
+  - ruta: docker/php.ini
+    sha256: "[PENDIENTE] sin calcular"
+    origen: "[PENDIENTE] quien lo entrego y cuando"
+    contiene_pii: "[VERIFICAR] sin coincidencias de patron RUT, correo ni telefono; conteo 0"
+    puede_versionarse: true
+    uso: configura el motor de ejecucion
+
+  - ruta: docker/moodle-crontab
+    sha256: "[PENDIENTE] sin calcular"
+    origen: "[PENDIENTE] quien lo entrego y cuando"
+    contiene_pii: "[VERIFICAR] sin coincidencias de patron RUT, correo ni telefono; conteo 0"
+    puede_versionarse: true
+    uso: declara las tareas periodicas de la plataforma
+
+  - ruta: docker/health.php
+    sha256: "[PENDIENTE] sin calcular"
+    origen: "[PENDIENTE] quien lo entrego y cuando"
+    contiene_pii: "[VERIFICAR] sin coincidencias de patron RUT, correo ni telefono; conteo 0"
+    puede_versionarse: true
+    uso: comprobacion de estado del servicio
+
+  - ruta: docker-compose.yml
+    sha256: "[PENDIENTE] sin calcular"
+    origen: "[PENDIENTE] quien lo entrego y cuando"
+    contiene_pii: "[VERIFICAR] sin coincidencias de patron RUT, correo ni telefono; conteo 0"
+    puede_versionarse: true
+    uso: define como se levantan los servicios
+
+  - ruta: docker-compose.migracion.yml
+    sha256: "[PENDIENTE] sin calcular"
+    origen: "[PENDIENTE] quien lo entrego y cuando"
+    contiene_pii: "[VERIFICAR] sin coincidencias de patron RUT, correo ni telefono; conteo 0"
+    puede_versionarse: true
+    uso: define los servicios del escenario de migracion
+
+  - ruta: Dockerfile
+    sha256: "[PENDIENTE] sin calcular"
+    origen: "[PENDIENTE] quien lo entrego y cuando"
+    contiene_pii: "[VERIFICAR] sin coincidencias de patron RUT, correo ni telefono; conteo 0"
+    puede_versionarse: true
+    uso: empaqueta la plataforma en contenedor
+
+  - ruta: .dockerignore
+    sha256: "[PENDIENTE] sin calcular"
+    origen: "[PENDIENTE] quien lo entrego y cuando"
+    contiene_pii: "[VERIFICAR] sin coincidencias de patron RUT, correo ni telefono; conteo 0"
+    puede_versionarse: true
+    uso: excluye rutas del empaquetado
+
+  - ruta: .gitignore
+    sha256: "[PENDIENTE] sin calcular"
+    origen: "[PENDIENTE] quien lo entrego y cuando"
+    contiene_pii: "[VERIFICAR] sin coincidencias de patron RUT, correo ni telefono; conteo 0"
+    puede_versionarse: true
+    uso: declara que queda fuera del control de versiones
+
+  - ruta: .github/workflows/deploy-prod.yml
+    sha256: "[PENDIENTE] sin calcular"
+    origen: "[PENDIENTE] quien lo entrego y cuando"
+    contiene_pii: "[VERIFICAR] archivos de despliegue: el riesgo esta en rutas y servidores, no en datos personales; sin conteo disponible"
+    puede_versionarse: true
+    uso: despliega la plataforma en produccion
+
+  - ruta: .github/workflows/readme.yml
+    sha256: "[PENDIENTE] sin calcular"
+    origen: "[PENDIENTE] quien lo entrego y cuando"
+    contiene_pii: "[VERIFICAR] sin coincidencias de patron RUT, correo ni telefono; conteo 0"
+    puede_versionarse: true
+    uso: flujo automatico asociado a la documentacion del repositorio
+
+  - ruta: docs/nginx-academia.conf
+    sha256: "[PENDIENTE] sin calcular"
+    origen: "[PENDIENTE] quien lo entrego y cuando"
+    contiene_pii: "[VERIFICAR] configuracion de servidor: suele contener nombres de dominio y direcciones internas; sin conteo disponible"
+    puede_versionarse: true
+    uso: configuracion del servidor que publica la plataforma
+
+  - ruta: docs/nginx-academia2.conf
+    sha256: "[PENDIENTE] sin calcular"
+    origen: "[PENDIENTE] quien lo entrego y cuando"
+    contiene_pii: "[VERIFICAR] mismo caso que la version anterior; sin conteo disponible"
+    puede_versionarse: true
+    uso: segunda configuracion del servidor, correspondiente a la segunda instalacion
+
+  - ruta: INSUMO_MEJORA/Academia-CONAF_Propuesta-Institucional.docx
+    sha256: "[PENDIENTE] sin calcular"
+    origen: "[PENDIENTE] quien lo entrego y cuando"
+    contiene_pii: "[VERIFICAR] documento ofimatico; el analizador no accede a su contenido ni a sus metadatos de autoria, de modo que no hay conteo posible. Los documentos de este tipo conservan nombre de autor en sus propiedades."
+    puede_versionarse: "[VERIFICAR] depende de lo anterior"
+    uso: propuesta que origina el trabajo de este repositorio
+
+  - ruta: INSUMO_MEJORA/IF-151_Diseno-de-curso_Academia-CONAF.docx
+    sha256: "[PENDIENTE] sin calcular"
+    origen: "[PENDIENTE] quien lo entrego y cuando"
+    contiene_pii: "[VERIFICAR] mismo caso que el anterior; sin conteo disponible"
+    puede_versionarse: "[VERIFICAR] depende de lo anterior"
+    uso: diseno del curso cuyo banco de preguntas se incluye
+
+  - ruta: INSUMO_MEJORA/prototipo-academia-conaf.html
+    sha256: "[PENDIENTE] sin calcular"
+    origen: "[PENDIENTE] quien lo entrego y cuando"
+    contiene_pii: "[VERIFICAR] un prototipo de pantallas suele llevar datos de ejemplo que a veces son reales; sin conteo disponible"
+    puede_versionarse: "[VERIFICAR] depende de lo anterior"
+    uso: prototipo de las pantallas propuestas
+
+  - ruta: docs/entrevista-avance.md
+    sha256: "[PENDIENTE] sin calcular"
+    origen: "[PENDIENTE] quien lo entrego y cuando"
+    contiene_pii: "[VERIFICAR] el registro de una entrevista es, por definicion, material que involucra a personas identificables; la evidencia no incluye su contenido y no hay conteo posible. Revisar antes de sellar."
+    puede_versionarse: "[VERIFICAR] depende de lo anterior"
+    uso: deja constancia del avance conversado
+
+  - ruta: CLAUDE.md
+    sha256: "[PENDIENTE] sin calcular"
+    origen: "[PENDIENTE] quien lo entrego y cuando"
+    contiene_pii: "[VERIFICAR] sin coincidencias de patron RUT, correo ni telefono; conteo 0"
+    puede_versionarse: true
+    uso: instrucciones de trabajo sobre el propio repositorio
+
+hallazgos:
+  - "Tres rutas concentran el riesgo y ninguna se pudo inspeccionar: academia/datos/cohortes.csv, porque una cohorte agrupa personas; docs/entrevista-avance.md, porque registra una conversacion; y los dos documentos ofimaticos de INSUMO_MEJORA, que conservan metadatos de autoria. El repositorio esta publicado como publico, lo que hace que la revision sea urgente y no opcional."
+  - "docker/config.php es el archivo de configuracion de la plataforma. Hay que confirmar que toma la conexion a base de datos del entorno y no la lleva escrita."
+  - "El arbol plugins/mod/customcert es codigo de terceros incorporado al repositorio y no se inventaria aqui. Su version, su origen y si fue modificado localmente son [PENDIENTE]."
+  - "[PENDIENTE] Ninguna de las rutas de arriba tiene declarado su origen."
