@@ -373,6 +373,12 @@ matrículas y roles.
 
 ---
 
+> **Nota (2026-10-24):** `mejoras.md` y `mejoras.pdf`, citados en este archivo, **no están en `origin/main`** (VERIFICADO con
+> `git ls-files`; `.gitignore` excluye `*.sql` salvo `db/setup_bd.sql` y `db/setup_bd_v2.sql`, pero no menciona `mejoras`). Tampoco `moodle_db.sql`.
+> Si existen, viven fuera del repositorio. Además, `.github/workflows/readme.yml` sigue disparando el generador de README en cada push
+> a `main`; el hub `coipo_aireadme` quitó esa automatización de su propio repo el 2026-09-26 por agotar la cuota de Actions:
+> pendiente de confirmar por el equipo si aquí debe seguir activo.
+
 ## Estado y pendientes
 
 ### Hecho y verificado en el servidor

@@ -62,5 +62,12 @@ El orden de ejecución y qué hace cada script están en [academia/README.md](ac
   que construyen la Academia son direcciones institucionales reales y un sitio a medio armar
   manda avisos a destajo.
 
+Más documentación: [`insumos/00-PROBLEMA.md`](insumos/00-PROBLEMA.md) y [`insumos/01-SOLUCION.md`](insumos/01-SOLUCION.md)
+(problema y solución deducidos del código el 2026-09-07), [`docs/GUIA-OPERATIVA.md`](docs/GUIA-OPERATIVA.md) (cómo se hace un curso).
+
+**Estado:** este README y los documentos de `insumos/` son del 2026-09-07 y el repo no tiene commits posteriores (VERIFICADO con
+`git log`). La frase «en octubre de 2026 se sube a 5.3 LTS» no la pude comprobar: la imagen sigue fijada a Moodle `v5.2.1`
+(`Dockerfile`, `docker-compose.yml`).
+
 Las reglas generales del proyecto —higiene, secretos, verificación— están en
 [CLAUDE.md](CLAUDE.md).
