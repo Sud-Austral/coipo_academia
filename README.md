@@ -65,9 +65,11 @@ El orden de ejecución y qué hace cada script están en [academia/README.md](ac
 Más documentación: [`insumos/00-PROBLEMA.md`](insumos/00-PROBLEMA.md) y [`insumos/01-SOLUCION.md`](insumos/01-SOLUCION.md)
 (problema y solución deducidos del código el 2026-09-07), [`docs/GUIA-OPERATIVA.md`](docs/GUIA-OPERATIVA.md) (cómo se hace un curso).
 
-**Estado:** este README y los documentos de `insumos/` son del 2026-09-07 y el repo no tiene commits posteriores (VERIFICADO con
-`git log`). La frase «en octubre de 2026 se sube a 5.3 LTS» no la pude comprobar: la imagen sigue fijada a Moodle `v5.2.1`
-(`Dockerfile`, `docker-compose.yml`).
+**Estado (revisado el 2026-11-24):** después del 2026-09-07 solo hubo commits de documentación (`HUSKY_AUDIT.md`,
+`docs/LINEA_BASE_PUBLICADO.md`, retiro del generador de README); ningún cambio de código (VERIFICADO con `git log`).
+El plan «en octubre de 2026 se sube a 5.3 LTS» **no se ha hecho en el repositorio**: la imagen sigue fijada a Moodle `v5.2.1`
+(`Dockerfile`, `docker-compose.yml`). La línea base del 2026-10-26 registró el workflow `deploy-prod.yml` en **failure**; su
+estado actual no lo comprobé.
 
 Las reglas generales del proyecto —higiene, secretos, verificación— están en
 [CLAUDE.md](CLAUDE.md).

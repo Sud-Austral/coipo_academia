@@ -375,9 +375,12 @@ matrículas y roles.
 
 > **Nota (2026-10-24):** `mejoras.md` y `mejoras.pdf`, citados en este archivo, **no están en `origin/main`** (VERIFICADO con
 > `git ls-files`; `.gitignore` excluye `*.sql` salvo `db/setup_bd.sql` y `db/setup_bd_v2.sql`, pero no menciona `mejoras`). Tampoco `moodle_db.sql`.
-> Si existen, viven fuera del repositorio. Además, `.github/workflows/readme.yml` sigue disparando el generador de README en cada push
-> a `main`; el hub `coipo_aireadme` quitó esa automatización de su propio repo el 2026-09-26 por agotar la cuota de Actions:
-> pendiente de confirmar por el equipo si aquí debe seguir activo.
+> Si existen, viven fuera del repositorio (sigue así el 2026-11-24). El antiguo `.github/workflows/readme.yml` (generador
+> `coipo_aireadme`) **se eliminó** en el commit 033f797 (2026-10-25): el único workflow es `deploy-prod.yml` y el README se edita a mano.
+>
+> Otros documentos posteriores: `docs/LINEA_BASE_PUBLICADO.md` (2026-10-26, mediciones GET de lo publicado; registró
+> `deploy-prod.yml` en **failure** en 0f67cd0 y e1f5f31, motivo no comprobado) y `HUSKY_AUDIT.md` (2026-10-23: no aplica Husky,
+> no hay `package.json`).
 
 ## Estado y pendientes
 
