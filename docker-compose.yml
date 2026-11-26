@@ -34,10 +34,11 @@ services:
       # conexión a la base y que moodledata sea escribible. Es además la ruta
       # que usa el smoke test del despliegue CONAF.
       test: ["CMD", "curl", "-fsS", "-o", "/dev/null", "http://localhost/health"]
-      interval: 30s
+      interval: 60s
       timeout: 10s
-      retries: 5
+      retries: 3
       start_period: 120s
+      start_interval: 5s  # R7: cada 5 s mientras arranca
     restart: unless-stopped
 
   cron:
