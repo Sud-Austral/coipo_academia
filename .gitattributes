@@ -1,2 +1,5 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# La base de la versión: LF siempre (patrones/version).
+VERSION text eol=lf
